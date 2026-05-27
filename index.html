@@ -10,11 +10,9 @@
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3EH%3C/text%3E%3C/svg%3E">
 </head>
 <body class="bg-[#0A0A0A] text-white">
-    <!-- Navbar -->
     <nav class="sticky top-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-lg border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex items-center justify-between h-20">
-                <!-- Logo -->
                 <a href="index.html" class="flex items-center gap-3">
                     <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#EAB308] to-yellow-600 flex items-center justify-center">
                         <span class="font-bold text-[#0A0A0A] text-xl tracking-tighter">HE</span>
@@ -22,7 +20,6 @@
                     <span class="font-semibold text-2xl tracking-tighter">Hicham Eddarhmoumi</span>
                 </a>
 
-                <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center gap-9 text-sm font-medium">
                     <a href="index.html" class="nav-link text-white">Home</a>
                     <a href="portfolio.html" class="nav-link text-white">Portfolio</a>
@@ -31,7 +28,6 @@
                     <a href="pricing.html" class="nav-link text-white">Pricing</a>
                 </div>
 
-                <!-- CTA Button -->
                 <div class="hidden md:block">
                     <a href="contact.html" 
                        class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-[#EAB308] hover:bg-yellow-500 active:bg-yellow-600 transition-all text-[#0A0A0A] font-semibold text-sm tracking-wider">
@@ -39,7 +35,6 @@
                     </a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="md:hidden p-2 text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -48,7 +43,6 @@
             </div>
         </div>
 
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-[#0A0A0A]">
             <div class="px-6 py-8 flex flex-col gap-4 text-lg">
                 <a href="index.html" class="py-2 nav-link">Home</a>
@@ -62,17 +56,15 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="max-w-7xl mx-auto px-6 pt-16 pb-20">
+    <header class="max-w-7xl mx-auto px-6 pt-10 pb-12 md:pt-16 md:pb-20">
         <div class="grid md:grid-cols-12 gap-x-8 items-center">
-            <!-- Text Content -->
             <div class="md:col-span-7">
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 mb-6">
                     <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
                     <span class="text-sm font-medium text-emerald-400">Available for select projects in 2026</span>
                 </div>
 
-                <h1 class="text-7xl md:text-8xl font-bold tracking-tighter leading-none mb-4">
+                <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-4">
                     HICHAM<br>EDDARHMOUMI
                 </h1>
                 
@@ -106,17 +98,15 @@
                 </div>
             </div>
 
-            <!-- Avatar -->
             <div class="md:col-span-5 mt-12 md:mt-0 flex justify-center md:justify-end">
                 <div class="relative">
-                    <div class="w-80 h-80 rounded-full bg-gradient-to-br from-[#EAB308] via-yellow-600 to-amber-700 p-1.5 shadow-2xl">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-[#EAB308] via-yellow-600 to-amber-700 p-1.5 shadow-2xl">
                         <div class="w-full h-full rounded-full bg-[#0A0A0A] flex items-center justify-center overflow-hidden">
-                            <!-- Premium Avatar Illustration -->
-                            <div class="relative w-64 h-64">
+                            <div class="relative w-56 h-56 md:w-64 md:h-64">
                                 <img 
                                 src="assets/images/mypic.png" 
                                 alt="Hicham Eddarhmoumi"
-                                class="object-cover rounded-full shadow-2xl transition-transform duration-300 "
+                                class="object-cover rounded-full shadow-2xl transition-transform duration-300"
                                 />
                             </div>
                         </div>
