@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get in touch • Hicham Eddarhmoumi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#0A0A0A] text-white">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-lg border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#EAB308] to-yellow-600 flex items-center justify-center"><span class="font-bold text-[#0A0A0A] text-xl tracking-tighter">HE</span></div>
+                    <span class="font-semibold text-2xl tracking-tighter">Hicham Eddarhmoumi</span>
+                </a>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-9 text-sm font-medium">
+                    <a href="index.html" class="nav-link text-white">Home</a>
+                    <a href="portfolio.html" class="nav-link text-white">Portfolio</a>
+                    <a href="process.html" class="nav-link text-white">Process</a>
+                    <a href="services.html" class="nav-link text-white">Services</a>
+                    <a href="pricing.html" class="nav-link text-white">Pricing</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="contact.html" 
+                       class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-[#EAB308] hover:bg-yellow-500 active:bg-yellow-600 transition-all text-[#0A0A0A] font-semibold text-sm tracking-wider">
+                        HIRE ME
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-6 py-8 border-t border-zinc-800 flex flex-col gap-4 text-lg bg-[#0A0A0A]">
+            <a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a>
+            <a href="process.html">Process</a><a href="pricing.html">Pricing</a>
+            <a href="contact.html" class="mt-3 bg-[#EAB308] text-[#0A0A0A] text-center py-4 rounded-2xl font-semibold">HIRE ME</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="max-w-5xl mx-auto px-6 pt-14 pb-10">
+        <div class="text-center">
+            <span class="text-[#EAB308] tracking-[4px] text-xs font-semibold">LET'S CREATE TOGETHER</span>
+            <h1 class="text-7xl font-bold tracking-tighter mt-3">Get in touch</h1>
+        </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 pb-20">
+        <div class="grid lg:grid-cols-5 gap-x-16 gap-y-14">
+            
+            <!-- Contact Info -->
+            <div class="lg:col-span-2">
+                <div class="space-y-9">
+                    <!-- Email -->
+                    <div class="flex gap-5">
+                        <div class="w-11 h-11 rounded-2xl bg-yellow-500/10 flex-shrink-0 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#EAB308]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2.009 2.009 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <div>
+                            <div class="text-xs tracking-widest text-zinc-500">EMAIL</div>
+                            <a href="mailto:hixgraphix.pro@gmail.com" class="text-xl font-medium hover:text-[#EAB308] transition">hixgraphix.pro@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="flex gap-5">
+                        <div class="w-11 h-11 rounded-2xl bg-yellow-500/10 flex-shrink-0 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#EAB308]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2 3 3 0 013 3v1m6 0a3 3 0 01-3-3m6 0a3 3 0 01-3 3m2 9a2 2 0 01-2 2 15 15 0 01-6 0 2 2 0 01-2-2m6 0v3m-6-3v3"/></svg>
+                        </div>
+                        <div>
+                            <div class="text-xs tracking-widest text-zinc-500">PHONE / WHATSAPP</div>
+                            <a href="tel:+212653342503" class="text-xl font-medium hover:text-[#EAB308] transition">+212 6 53 34 25 03</a>
+                        </div>
+                    </div>
+
+                    <!-- Socials -->
+                    <div>
+                        <div class="text-xs tracking-widest text-zinc-500 mb-4">FIND ME ON</div>
+                        <div class="space-y-3 text-lg">
+                            <a href="#" class="flex items-center gap-3 group"><span class="text-[#EAB308] group-hover:underline">Instagram</span> <span class="text-sm text-zinc-500">@Hicham.edd</span></a>
+                            <a href="#" class="flex items-center gap-3 group"><span class="text-[#EAB308] group-hover:underline">Behance</span> <span class="text-sm text-zinc-500">Hicham Eddarhmoumi</span></a>
+                            <a href="#" class="flex items-center gap-3 group"><span class="text-[#EAB308] group-hover:underline">LinkedIn</span> <span class="text-sm text-zinc-500">Hicham Eddarhmoumi</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="lg:col-span-3">
+                <form id="contact-form" class="space-y-5">
+                    <div>
+                        <label class="text-xs tracking-widest text-zinc-400 block mb-1.5">Full name</label>
+                        <input type="text" name="name" required class="form-input w-full px-5 py-3.5 rounded-2xl text-lg placeholder:text-zinc-600" placeholder="Your full name">
+                    </div>
+                    
+                    <div>
+                        <label class="text-xs tracking-widest text-zinc-400 block mb-1.5">Email Address</label>
+                        <input type="email" name="email" required class="form-input w-full px-5 py-3.5 rounded-2xl text-lg placeholder:text-zinc-600" placeholder="you@company.com">
+                    </div>
+
+                    <div>
+                        <label class="text-xs tracking-widest text-zinc-400 block mb-1.5">Phone Number <span class="text-zinc-500">(optional)</span></label>
+                        <input type="tel" name="phone" class="form-input w-full px-5 py-3.5 rounded-2xl text-lg placeholder:text-zinc-600" placeholder="+212 6XX XXX XXX">
+                    </div>
+
+                    <div>
+                        <label class="text-xs tracking-widest text-zinc-400 block mb-1.5">Service type</label>
+                        <select name="service" class="form-input w-full px-5 py-3.5 rounded-2xl text-lg bg-[#111111]">
+                            <option value="">Select a service...</option>
+                            <option>Logo Design</option>
+                            <option>Brand Identity</option>
+                            <option>Social Media Posts</option>
+                            <option>Video Editing</option>
+                            <option>Website Design</option>
+                            <option>Starter Package</option>
+                            <option>Professional Package</option>
+                            <option>Premium Package</option>
+                            <option>Full Brand Package</option>
+                            <option>Custom Project</option>
+                            <option>Just contacting</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="text-xs tracking-widest text-zinc-400 block mb-1.5">Message</label>
+                        <textarea name="message" rows="6" required class="form-input w-full px-5 py-4 rounded-3xl text-lg placeholder:text-zinc-600 resize-y" placeholder="Tell me about your project, goals, and timeline..."></textarea>
+                    </div>
+
+                    <!-- File Upload -->
+                    <div>
+                        <label class="text-xs tracking-widest text-zinc-400 block mb-2">
+                            Attach a file <span class="text-zinc-500">(optional)</span>
+                        </label>
+                        
+                        <div class="border border-dashed border-zinc-700 hover:border-[#EAB308] transition-colors rounded-2xl p-6">
+                            <input type="file" id="file-upload" name="attachment" class="hidden" 
+                                   accept="image/*,.pdf,.mp4,.mov,.avi">
+                            
+                            <label for="file-upload" class="cursor-pointer flex flex-col items-center text-center">
+                                <div class="w-11 h-11 rounded-2xl bg-zinc-800 flex items-center justify-center mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 0115 8v.5M12 12v9m-4-4l4 4 4-4" />
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-zinc-300">Click to upload or drag & drop</span>
+                                <span class="text-xs text-zinc-500 mt-1">Images, PDF, MP4 (max 5MB)</span>
+                            </label>
+                            
+                            <!-- Selected file info -->
+                            <div id="file-info" class="mt-4 hidden">
+                                <div class="flex items-center justify-between bg-zinc-900 rounded-xl px-4 py-2 text-sm">
+                                    <div class="flex items-center gap-2">
+                                        <span id="file-name" class="text-emerald-400 font-medium"></span>
+                                    </div>
+                                    <button type="button" id="remove-file" 
+                                            class="text-zinc-500 hover:text-red-400 transition-colors">×</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" 
+                            class="w-full py-4 text-lg font-semibold rounded-2xl bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-900 transition flex items-center justify-center gap-2 text-white">
+                        Send message 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </button>
+                    
+                    <p class="text-center text-xs text-zinc-500 pt-1">I usually reply within 24 hours.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-t border-zinc-800 py-8">
+        <div class="max-w-7xl mx-auto px-6 text-center text-sm text-zinc-500">© Copyright - Hicham Eddarhmoumi. All rights reserved.</div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // File Upload Handler
+        const fileInput = document.getElementById('file-upload');
+        const fileInfo = document.getElementById('file-info');
+        const fileNameDisplay = document.getElementById('file-name');
+        const removeFileBtn = document.getElementById('remove-file');
+
+        if (fileInput) {
+            fileInput.addEventListener('change', function() {
+                if (this.files.length > 0) {
+                    const file = this.files[0];
+                    const maxSize = 5 * 1024 * 1024; // 5MB
+
+                    // Validate file size
+                    if (file.size > maxSize) {
+                        alert('File is too large! Maximum size allowed is 5MB.');
+                        this.value = '';
+                        fileInfo.classList.add('hidden');
+                        return;
+                    }
+
+                    // Show file info
+                    fileNameDisplay.textContent = `${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)`;
+                    fileInfo.classList.remove('hidden');
+                }
+            });
+        }
+
+        // Remove selected file
+        if (removeFileBtn) {
+            removeFileBtn.addEventListener('click', function() {
+                fileInput.value = '';
+                fileInfo.classList.add('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

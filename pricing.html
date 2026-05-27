@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing &amp; Packages • Hicham Eddarhmoumi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#0A0A0A] text-white">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-lg border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#EAB308] to-yellow-600 flex items-center justify-center"><span class="font-bold text-[#0A0A0A] text-xl tracking-tighter">HE</span></div>
+                    <span class="font-semibold text-2xl tracking-tighter">Hicham Eddarhmoumi</span>
+                </a>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-9 text-sm font-medium">
+                    <a href="index.html" class="nav-link text-white">Home</a>
+                    <a href="portfolio.html" class="nav-link text-white">Portfolio</a>
+                    <a href="process.html" class="nav-link text-white">Process</a>
+                    <a href="services.html" class="nav-link text-white">Services</a>
+                    <a href="pricing.html" class="nav-link text-white">Pricing</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="contact.html" 
+                       class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-[#EAB308] hover:bg-yellow-500 active:bg-yellow-600 transition-all text-[#0A0A0A] font-semibold text-sm tracking-wider">
+                        HIRE ME
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-6 py-8 border-t border-zinc-800 flex flex-col gap-4 text-lg bg-[#0A0A0A]">
+            <a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a>
+            <a href="process.html">Process</a><a href="pricing.html" class="text-[#EAB308]">Pricing</a><a href="contact.html">Contact</a>
+            <a href="contact.html" class="mt-3 bg-[#EAB308] text-[#0A0A0A] text-center py-4 rounded-2xl font-semibold">HIRE ME</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="max-w-4xl mx-auto px-6 pt-16 pb-10 text-center">
+        <span class="text-[#EAB308] tracking-[3px] text-xs font-semibold">TRANSPARENT PRICING</span>
+        <h1 class="text-6xl md:text-7xl font-bold tracking-tighter mt-3">Pricing &amp; Packages</h1>
+        <p class="mt-4 text-xl text-zinc-400">Clear, transparent pricing. Choose the package that fits your needs.</p>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="max-w-6xl mx-auto px-6 pb-16">
+        <div class="grid lg:grid-cols-3 gap-6">
+            
+            <!-- Starter -->
+            <div class="pricing-card premium-card rounded-3xl p-8 flex flex-col">
+                <div>
+                    <h3 class="font-semibold text-3xl">Starter</h3>
+                    <p class="text-sm text-zinc-400 mt-1">Perfect for small businesses &amp; startups</p>
+                    
+                    <div class="my-8">
+                        <span class="text-6xl font-bold">1,400</span>
+                        <span class="text-zinc-400"> MAD / project</span>
+                    </div>
+
+                    <ul class="space-y-3.5 text-sm">
+                        <li class="flex gap-3"><span class="text-emerald-400 mt-1">✓</span> Logo Design (2 concepts)</li>
+                        <li class="flex gap-3"><span class="text-emerald-400 mt-1">✓</span> 10 Social Media Posts</li>
+                        <li class="flex gap-3"><span class="text-emerald-400 mt-1">✓</span> Basic Brand Guidelines</li>
+                        <li class="flex gap-3"><span class="text-emerald-400 mt-1">✓</span> 1 Revision Round</li>
+                        <li class="flex gap-3"><span class="text-emerald-400 mt-1">✓</span> All source files</li>
+                    </ul>
+                </div>
+                <a href="contact.html?plan=Starter" class="mt-auto block text-center py-4 rounded-2xl border border-zinc-700 hover:bg-zinc-900 font-medium mt-10">Choose Starter</a>
+            </div>
+
+            <!-- Professional - Most Popular -->
+            <div class="pricing-card popular premium-card rounded-3xl p-8 flex flex-col border-[#EAB308]">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-semibold text-3xl">Professional</h3>
+                        <p class="text-sm text-zinc-400 mt-1">Best value for growing brands</p>
+                    </div>
+                    <div class="px-4 py-1 text-xs rounded-full bg-[#EAB308] text-[#0A0A0A] font-bold tracking-wider">MOST POPULAR</div>
+                </div>
+                
+                <div class="my-8">
+                    <span class="text-6xl font-bold">3,500</span>
+                    <span class="text-zinc-400"> MAD / project</span>
+                </div>
+
+                <ul class="space-y-3.5 text-sm">
+                    <li class="flex gap-3"><span class="text-emerald-400 mt-1">✓</span> Full Logo + Brand Identity</li>
+                    <li class="flex gap-3"><span class="text-emerald-400 mt-1">✓</span> 30 Social Media Assets</li>
+                    <li class="flex gap-3"><span class="text-emerald-400 mt-1">✓</span> 60-second Video Editing</li>
+                    <li class="flex gap-3"><span class="text-emerald-400 mt-1">✓</span> Complete Brand Guidelines</li>
+                    <li class="flex gap-3"><span class="text-emerald-400 mt-1">✓</span> 3 Revision Rounds</li>
+                    <li class="flex gap-3"><span class="text-emerald-400 mt-1">✓</span> Priority Support</li>
+                </ul>
+                
+                <a href="contact.html?plan=Professional" class="mt-auto block text-center py-4 rounded-2xl bg-[#EAB308] hover:bg-yellow-400 text-[#0A0A0A] font-semibold mt-10">Choose Professional</a>
+            </div>
+
+            <!-- Premium -->
+            <div class="pricing-card premium-card rounded-3xl p-8 flex flex-col">
+                <div>
+                    <h3 class="font-semibold text-3xl">Premium</h3>
+                    <p class="text-sm text-zinc-400 mt-1">Complete digital presence</p>
+                    
+                    <div class="my-8">
+                        <span class="text-6xl font-bold">6,500</span>
+                        <span class="text-zinc-400"> MAD / project</span>
+                    </div>
+
+                    <ul class="space-y-3.5 text-sm">
+                        <li class="flex gap-3"><span class="text-emerald-400 mt-1">✓</span> Full Brand Identity</li>
+                        <li class="flex gap-3"><span class="text-emerald-400 mt-1">✓</span> Custom Website Design</li>
+                        <li class="flex gap-3"><span class="text-emerald-400 mt-1">✓</span> Professional Video Production</li>
+                        <li class="flex gap-3"><span class="text-emerald-400 mt-1">✓</span> Social Media Strategy + Content</li>
+                        <li class="flex gap-3"><span class="text-emerald-400 mt-1">✓</span> Unlimited Revisions</li>
+                        <li class="flex gap-3"><span class="text-emerald-400 mt-1">✓</span> 1 Month Support &amp; Training</li>
+                    </ul>
+                </div>
+                <a href="contact.html?plan=Premium" class="mt-auto block text-center py-4 rounded-2xl border border-zinc-700 hover:bg-zinc-900 font-medium mt-10">Choose Premium</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Quote -->
+    <div class="max-w-3xl mx-auto px-6 pb-24 text-center">
+        <div class="premium-card rounded-3xl p-12">
+            <h2 class="text-4xl font-semibold tracking-tight">Need something custom?</h2>
+            <p class="mt-3 text-lg text-zinc-400">Every project is unique. Let's discuss your exact needs and I'll create a custom quote.</p>
+            
+            <a href="contact.html" class="mt-8 inline-flex items-center justify-center gap-3 px-10 py-4 rounded-2xl bg-[#EAB308] hover:bg-yellow-400 active:bg-yellow-500 transition-all text-[#0A0A0A] font-semibold text-lg">
+                Get Custom Quote
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+        </div>
+    </div>
+
+    <footer class="border-t border-zinc-800 py-8 text-center text-sm text-zinc-500">© Copyright - Hicham Eddarhmoumi. All rights reserved.</footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
