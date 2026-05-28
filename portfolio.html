@@ -4,73 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio • Hicham Eddarhmoumi</title>
+    
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- إعدادات الألوان الموحدة للموقع كاملو -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'gold': '#EAB308',
+              'gold-dark': '#CA8A04',
+              'dark-bg': '#0A0A0A',
+              'card-bg': '#111111'
+            }
+          }
+        }
+      };
+    </script>
+    
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3EH%3C/text%3E%3C/svg%3E">
 </head>
-<body class="bg-[#0A0A0A] text-white">
+<body class="bg-dark-bg text-white">
     <!-- Navbar -->
     <nav class="sticky top-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-lg border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex items-center justify-between h-20">
                 <a href="index.html" class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#EAB308] to-yellow-600 flex items-center justify-center">
-                        <span class="font-bold text-[#0A0A0A] text-xl tracking-tighter">HE</span>
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center">
+                        <span class="font-bold text-dark-bg text-xl tracking-tighter">HE</span>
                     </div>
-                    <span class="font-semibold text-2xl tracking-tighter">Hicham Eddarhmoumi</span>
+                    <span class="font-semibold text-xl sm:text-2xl tracking-tighter truncate max-w-[180px] sm:max-w-none">Hicham Eddarhmoumi</span>
                 </a>
 
                 <div class="hidden md:flex items-center gap-9 text-sm font-medium">
-                    <a href="index.html" class="nav-link text-white">Home</a>
-                    <a href="portfolio.html" class="nav-link text-white">Portfolio</a>
-                    <a href="process.html" class="nav-link text-white">Process</a>
-                    <a href="services.html" class="nav-link text-white">Services</a>
-                    <a href="pricing.html" class="nav-link text-white">Pricing</a>
+                    <a href="index.html" class="nav-link text-white hover:text-gold transition-colors">Home</a>
+                    <a href="portfolio.html" class="nav-link text-white hover:text-gold transition-colors">Portfolio</a>
+                    <a href="process.html" class="nav-link text-white hover:text-gold transition-colors">Process</a>
+                    <a href="services.html" class="nav-link text-white hover:text-gold transition-colors">Services & Pricing</a>
+                    <a href="Packages.html" class="nav-link text-white hover:text-gold transition-colors">Packages</a>
                 </div>
 
                 <div class="hidden md:block">
                     <a href="contact.html" 
-                       class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-[#EAB308] hover:bg-yellow-500 active:bg-yellow-600 transition-all text-[#0A0A0A] font-semibold text-sm tracking-wider">
+                       class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-gold hover:bg-yellow-500 active:bg-yellow-600 transition-all text-dark-bg font-semibold text-sm tracking-wider">
                         HIRE ME
                     </a>
                 </div>
 
+                <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="md:hidden p-2 text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
         </div>
 
+        <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-[#0A0A0A]">
             <div class="px-6 py-8 flex flex-col gap-4 text-lg">
-                <a href="index.html" class="py-2 nav-link">Home</a>
-                <a href="portfolio.html" class="py-2 nav-link">Portfolio</a>
-                <a href="process.html" class="py-2 nav-link">Process</a>
-                <a href="services.html" class="py-2 nav-link">Services</a>
-                <a href="pricing.html" class="py-2 nav-link">Pricing</a>
+                <a href="index.html" class="py-2 nav-link hover:text-gold transition-colors">Home</a>
+                <a href="portfolio.html" class="py-2 nav-link hover:text-gold transition-colors">Portfolio</a>
+                <a href="process.html" class="py-2 nav-link hover:text-gold transition-colors">Process</a>
+                <a href="services.html" class="py-2 nav-link hover:text-gold transition-colors">Services & Pricing</a>
+                <a href="Packages.html" class="py-2 nav-link hover:text-gold transition-colors">Packages</a>
                 <a href="contact.html" 
-                   class="mt-4 inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-[#EAB308] text-[#0A0A0A] font-semibold">HIRE ME</a>
+                   class="mt-4 inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-gold text-dark-bg font-semibold">HIRE ME</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero -->
     <div class="max-w-5xl mx-auto px-6 pt-16 pb-10 text-center">
-        <span class="text-[#EAB308] tracking-[3px] text-xs font-semibold">SELECTED WORK</span>
+        <span class="text-gold tracking-[3px] text-xs font-semibold">SELECTED WORK</span>
         <h1 class="text-7xl font-bold tracking-tighter mt-2">Portfolio</h1>
         <p class="text-xl text-zinc-400 mt-3">Real projects. Real impact.<br>Selected works in branding, design &amp; digital storytelling.</p>
     </div>
 
-    <!-- Filters -->
+    <!-- Filters Section (FIXED HOVER STATES) -->
     <div class="max-w-7xl mx-auto px-6 mb-8">
-        <div class="flex flex-wrap gap-2">
-            <button data-filter="all" class="filter-btn active px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 bg-[#EAB308] text-[#0A0A0A]">All Projects</button>
-            <button data-filter="logo" class="filter-btn px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 hover:bg-zinc-900">Logo Design</button>
-            <button data-filter="brand" class="filter-btn px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 hover:bg-zinc-900">Brand Identity</button>
-            <button data-filter="social" class="filter-btn px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 hover:bg-zinc-900">Social Media</button>
-            <button data-filter="video" class="filter-btn px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 hover:bg-zinc-900">Video Editing</button>
-            <button data-filter="website" class="filter-btn px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 hover:bg-zinc-900">Website Design</button>
+        <div class="flex flex-wrap justify-center md:justify-start gap-2">
+            <!-- 
+               Each button below now shares identical dynamic classes.
+               If a button has the class "active", it automatically turns gold with dark text.
+               If it's hovered WHILE active, it smoothly transitions to a slightly darker gold without turning black.
+            -->
+            <button data-filter="all" class="filter-btn active px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 text-white transition-all hover:bg-zinc-900 [&.active]:bg-gold [&.active]:text-dark-bg [&.active]:border-gold hover:[&.active]:bg-yellow-500">All Projects</button>
+            <button data-filter="logo" class="filter-btn px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 text-white transition-all hover:bg-zinc-900 [&.active]:bg-gold [&.active]:text-dark-bg [&.active]:border-gold hover:[&.active]:bg-yellow-500">Logo & Brand</button>
+            <button data-filter="social" class="filter-btn px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 text-white transition-all hover:bg-zinc-900 [&.active]:bg-gold [&.active]:text-dark-bg [&.active]:border-gold hover:[&.active]:bg-yellow-500">Social Media</button>
+            <button data-filter="video" class="filter-btn px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 text-white transition-all hover:bg-zinc-900 [&.active]:bg-gold [&.active]:text-dark-bg [&.active]:border-gold hover:[&.active]:bg-yellow-500">Video Editing</button>
+            <button data-filter="website" class="filter-btn px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 text-white transition-all hover:bg-zinc-900 [&.active]:bg-gold [&.active]:text-dark-bg [&.active]:border-gold hover:[&.active]:bg-yellow-500">UI / UX Design</button>
         </div>
     </div>
 
@@ -78,51 +104,90 @@
     <div class="max-w-7xl mx-auto px-6 pb-20">
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <!-- EcoBloom -->
-            <div class="project-card premium-card rounded-3xl overflow-hidden" data-category="logo">
-                <div class="h-64 bg-gradient-to-br from-orange-900 to-amber-950 flex items-center justify-center relative project-image">
+            <!-- Koki Project -->
+            <div class="project-card premium-card rounded-3xl overflow-hidden bg-card-bg border border-zinc-800" data-category="logo">
+                <div class="h-64 bg-gradient-to-br from-green-900 to-emerald-950 flex items-center justify-center relative project-image">
                     <div class="text-center">
-                        <div class="mx-auto w-20 h-20 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-2xl flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-[#0A0A0A]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                        <div class="mx-auto w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-600 rounded-2xl flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-dark-bg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                         </div>
-                        <span class="text-xs tracking-widest text-amber-300">HAND-DRAWN + DIGITAL</span>
                     </div>
-                    <div class="absolute top-5 right-5 px-3 py-1 text-xs rounded-full bg-black/60 backdrop-blur">2025</div>
+                    <div class="absolute top-5 right-5 px-3 py-1 text-xs rounded-full bg-black/60 backdrop-blur">2026</div>
                 </div>
                 <div class="p-6">
                     <div class="flex justify-between items-start">
                         <div>
-                            <h3 class="font-semibold text-2xl">EcoBloom</h3>
-                            <span class="text-xs px-3 py-px rounded bg-yellow-900/40 text-yellow-400">LOGO DESIGN</span>
+                            <h3 class="font-semibold text-2xl">Koki</h3>
+                            <span class="text-xs px-3 py-px rounded bg-green-900/40 text-green-400">BRAND IDENTITY</span>
                         </div>
                     </div>
-                    <p class="text-sm text-zinc-400 mt-3 line-clamp-2">Minimalist organic logo for a sustainable skincare brand. Hand-drawn + digital refinement.</p>
-                    <a href="portfolio-pages/ecobloom.html"   class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 flex items-center justify-center gap-2 group">View Project <span class="group-hover:translate-x-0.5 transition">→</span></a>
+                    <p class="text-sm text-zinc-400 mt-3 line-clamp-2">Candy-themed brand identity featuring a fresh green and white color palette and playful typography.</p>
+                    <a href="portfolio-pages/ecobloom.html" class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 hover:text-gold flex items-center justify-center gap-2 group transition-all">View Project <span class="group-hover:translate-x-0.5 transition">→</span></a>
                 </div>
             </div>
 
-            <!-- VoltForge -->
-            <div class="project-card premium-card rounded-3xl overflow-hidden" data-category="logo">
-                <div class="h-64 bg-gradient-to-br from-blue-900 to-sky-950 flex items-center justify-center relative project-image">
+            <!-- Jnane El Yasmine -->
+            <div class="project-card premium-card rounded-3xl overflow-hidden bg-card-bg border border-zinc-800" data-category="social">
+                <div class="h-64 bg-gradient-to-br from-blue-900 to-indigo-950 flex items-center justify-center relative project-image">
                     <div class="text-center">
-                        <div class="mx-auto w-20 h-20 bg-gradient-to-br from-sky-400 to-blue-600 rounded-2xl flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-11 h-11 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        <div class="mx-auto w-20 h-20 bg-gradient-to-br from-indigo-400 to-blue-600 rounded-2xl flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
                         </div>
                     </div>
                     <div class="absolute top-5 right-5 px-3 py-1 text-xs rounded-full bg-black/60">2025</div>
                 </div>
                 <div class="p-6">
                     <div>
-                        <h3 class="font-semibold text-2xl">VoltForge</h3>
-                        <span class="text-xs px-3 py-px rounded bg-blue-900/40 text-blue-400">LOGO DESIGN</span>
+                        <h3 class="font-semibold text-2xl">Jnane El Yasmine</h3>
+                        <span class="text-xs px-3 py-px rounded bg-blue-900/40 text-blue-400">SOCIAL MEDIA</span>
                     </div>
-                    <p class="text-sm text-zinc-400 mt-3">Bold tech logo for an electric vehicle charging startup. Modern + powerful.</p>
-                    <a href="portfolio-pages/ecobloom.html"   class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 flex items-center justify-center gap-2 group">View Project <span class="group-hover:translate-x-0.5 transition">→</span></a>
+                    <p class="text-sm text-zinc-400 mt-3">Creative promotional posts and visual assets targeting the sale of commercial sports clothing shops.</p>
+                    <a href="portfolio-pages/ecobloom.html" class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 hover:text-gold flex items-center justify-center gap-2 group transition-all">View Project <span class="group-hover:translate-x-0.5 transition">→</span></a>
+                </div>
+            </div>
+
+            <!-- PRO-YAL -->
+            <div class="project-card premium-card rounded-3xl overflow-hidden bg-card-bg border border-zinc-800" data-category="video">
+                <div class="h-64 bg-gradient-to-br from-orange-900 via-amber-950 to-red-950 flex items-center justify-center relative project-image">
+                    <div class="text-center">
+                        <div class="mx-auto w-20 h-20 bg-gradient-to-br from-amber-400 to-orange-600 rounded-2xl flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                        </div>
+                    </div>
+                    <div class="absolute top-5 right-5 px-3 py-1 text-xs rounded-full bg-black/60">2025</div>
+                </div>
+                <div class="p-6">
+                    <div>
+                        <h3 class="font-semibold text-2xl">PRO-YAL</h3>
+                        <span class="text-xs px-3 py-px rounded bg-orange-900/40 text-orange-400">VIDEO EDITING</span>
+                    </div>
+                    <p class="text-sm text-zinc-400 mt-3">Technical promotional video highlighting plaster projection machines with dynamic texture close-ups and precise zooms.</p>
+                    <a href="portfolio-pages/ecobloom.html" class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 hover:text-gold flex items-center justify-center gap-2 group transition-all">View Project <span class="group-hover:translate-x-0.5 transition">→</span></a>
+                </div>
+            </div>
+
+            <!-- SehaLink Mobile UI -->
+            <div class="project-card premium-card rounded-3xl overflow-hidden bg-card-bg border border-zinc-800" data-category="website">
+                <div class="h-64 bg-gradient-to-br from-teal-900 to-emerald-950 flex items-center justify-center relative project-image">
+                    <div class="text-center">
+                        <div class="mx-auto w-20 h-20 bg-gradient-to-br from-emerald-400 to-teal-600 rounded-2xl flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                        </div>
+                    </div>
+                    <div class="absolute top-5 right-5 px-3 py-1 text-xs rounded-full bg-black/60">2026</div>
+                </div>
+                <div class="p-6">
+                    <div>
+                        <h3 class="font-semibold text-2xl">Healthcare App</h3>
+                        <span class="text-xs px-3 py-px rounded bg-emerald-900/40 text-emerald-400">UI / UX DESIGN</span>
+                    </div>
+                    <p class="text-sm text-zinc-400 mt-3">Comprehensive mobile app ecosystem featuring a Patient Profile Hub and detailed post-consultation summaries.</p>
+                    <a href="portfolio-pages/ecobloom.html" class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 hover:text-gold flex items-center justify-center gap-2 group transition-all">View Project <span class="group-hover:translate-x-0.5 transition">→</span></a>
                 </div>
             </div>
 
             <!-- Lumina Atelier -->
-            <div class="project-card premium-card rounded-3xl overflow-hidden" data-category="brand">
+            <div class="project-card premium-card rounded-3xl overflow-hidden bg-card-bg border border-zinc-800" data-category="logo">
                 <div class="h-64 bg-gradient-to-br from-purple-900 via-violet-950 to-fuchsia-950 flex items-center justify-center relative project-image">
                     <div class="text-center">
                         <div class="mx-auto w-20 h-20 bg-gradient-to-br from-fuchsia-400 to-purple-600 rounded-2xl flex items-center justify-center mb-4">
@@ -136,33 +201,13 @@
                         <h3 class="font-semibold text-2xl">Lumina Atelier</h3>
                         <span class="text-xs px-3 py-px rounded bg-purple-900/40 text-purple-400">BRAND IDENTITY</span>
                     </div>
-                    <p class="text-sm text-zinc-400 mt-3">Complete brand identity for a luxury candle &amp; home fragrance studio.</p>
-                    <a href="portfolio-pages/ecobloom.html"   class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 flex items-center justify-center gap-2 group">View Project <span class="group-hover:translate-x-0.5 transition">→</span></a>
-                </div>
-            </div>
-
-            <!-- Brew Haven -->
-            <div class="project-card premium-card rounded-3xl overflow-hidden" data-category="social">
-                <div class="h-64 bg-gradient-to-br from-red-900 to-orange-950 flex items-center justify-center relative project-image">
-                    <div class="text-center">
-                        <div class="mx-auto w-20 h-20 bg-gradient-to-br from-orange-400 to-red-600 rounded-2xl flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-                        </div>
-                    </div>
-                    <div class="absolute top-5 right-5 px-3 py-1 text-xs rounded-full bg-black/60">2025</div>
-                </div>
-                <div class="p-6">
-                    <div>
-                        <h3 class="font-semibold text-2xl">Brew Haven</h3>
-                        <span class="text-xs px-3 py-px rounded bg-orange-900/40 text-orange-400">SOCIAL MEDIA</span>
-                    </div>
-                    <p class="text-sm text-zinc-400 mt-3">30-day Instagram &amp; TikTok campaign for a specialty coffee shop.</p>
-                    <a href="portfolio-pages/ecobloom.html"   class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 flex items-center justify-center gap-2 group">View Project <span class="group-hover:translate-x-0.5 transition">→</span></a>
+                    <p class="text-sm text-zinc-400 mt-3">Complete brand identity for a luxury candle &amp; home fragrance studio with modern typography.</p>
+                    <a href="portfolio-pages/ecobloom.html" class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 hover:text-gold flex items-center justify-center gap-2 group transition-all">View Project <span class="group-hover:translate-x-0.5 transition">→</span></a>
                 </div>
             </div>
 
             <!-- Moroccan Soul -->
-            <div class="project-card premium-card rounded-3xl overflow-hidden" data-category="video">
+            <div class="project-card premium-card rounded-3xl overflow-hidden bg-card-bg border border-zinc-800" data-category="video">
                 <div class="h-64 bg-gradient-to-br from-red-950 to-zinc-950 flex items-center justify-center relative project-image">
                     <div class="text-center">
                         <div class="mx-auto w-20 h-20 bg-gradient-to-br from-red-400 to-rose-600 rounded-2xl flex items-center justify-center mb-4">
@@ -177,35 +222,16 @@
                         <span class="text-xs px-3 py-px rounded bg-red-900/40 text-red-400">VIDEO EDITING</span>
                     </div>
                     <p class="text-sm text-zinc-400 mt-3">Cinematic brand film for a luxury riad in Marrakech (2:30 min).</p>
-                    <a href="portfolio-pages/ecobloom.html"   class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 flex items-center justify-center gap-2 group">View Project <span class="group-hover:translate-x-0.5 transition">→</span></a>
+                    <a href="portfolio-pages/ecobloom.html" class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 hover:text-gold flex items-center justify-center gap-2 group transition-all">View Project <span class="group-hover:translate-x-0.5 transition">→</span></a>
                 </div>
             </div>
-
-            <!-- Atlas Studio -->
-            <div class="project-card premium-card rounded-3xl overflow-hidden" data-category="website">
-                <div class="h-64 bg-gradient-to-br from-teal-900 to-emerald-950 flex items-center justify-center relative project-image">
-                    <div class="text-center">
-                        <div class="mx-auto w-20 h-20 bg-gradient-to-br from-emerald-400 to-teal-600 rounded-2xl flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                        </div>
-                    </div>
-                    <div class="absolute top-5 right-5 px-3 py-1 text-xs rounded-full bg-black/60">2025</div>
-                </div>
-                <div class="p-6">
-                    <div>
-                        <h3 class="font-semibold text-2xl">Atlas Studio</h3>
-                        <span class="text-xs px-3 py-px rounded bg-emerald-900/40 text-emerald-400">WEBSITE DESIGN</span>
-                    </div>
-                    <p class="text-sm text-zinc-400 mt-3">Modern portfolio website for a photography &amp; motion studio.</p>
-                    <a href="portfolio-pages/ecobloom.html"   class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 flex items-center justify-center gap-2 group">View Project <span class="group-hover:translate-x-0.5 transition">→</span></a>
-                </div>
-            </div>
+            
         </div>
     </div>
 
     <!-- Project Modal -->
     <div id="project-modal" class="hidden fixed inset-0 z-[100] items-center justify-center bg-black/90 p-4">
-        <div id="modal-content" class="max-w-5xl w-full bg-[#0A0A0A] border border-zinc-800 rounded-3xl overflow-hidden shadow-2xl"></div>
+        <div id="modal-content" class="max-w-5xl w-full bg-dark-bg border border-zinc-800 rounded-3xl overflow-hidden shadow-2xl"></div>
     </div>
 
     <footer class="border-t border-zinc-800 py-8 text-center text-sm text-zinc-500">© Hicham Eddarhmoumi. All rights reserved.</footer>

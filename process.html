@@ -4,211 +4,269 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Process • Hicham Eddarhmoumi</title>
+    <meta name="description" content="Transparent, collaborative design and video editing workflows tailored to your project goals.">
+    
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration matching your custom variables -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'gold': '#EAB308',
+              'gold-dark': '#CA8A04',
+              'dark-bg': '#0A0A0A',
+              'card-bg': '#111111'
+            }
+          }
+        }
+      };
+    </script>
+    
+    <!-- Global CSS Stylesheet containing your custom design tokens -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3EH%3C/text%3E%3C/svg%3E">
 </head>
-<body class="bg-[#0A0A0A] text-white">
+<body class="bg-dark-bg text-white antialiased">
+
     <!-- Navbar -->
-    <nav class="sticky top-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-lg border-b border-zinc-800">
+    <nav class="sticky top-0 z-50 bg-dark-bg/95 backdrop-blur-lg border-b border-zinc-800/80">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#EAB308] to-yellow-600 flex items-center justify-center">
-                        <span class="font-bold text-[#0A0A0A] text-xl tracking-tighter">HE</span>
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center transition-transform group-hover:scale-105">
+                        <span class="font-bold text-dark-bg text-xl tracking-tighter">HE</span>
                     </div>
-                    <span class="font-semibold text-2xl tracking-tighter">Hicham Eddarhmoumi</span>
+                    <span class="font-semibold text-xl sm:text-2xl tracking-tighter truncate max-w-[180px] sm:max-w-none">Hicham Eddarhmoumi</span>
                 </a>
 
+                <!-- Desktops Navigation -->
                 <div class="hidden md:flex items-center gap-9 text-sm font-medium">
-                    <a href="index.html" class="nav-link text-white">Home</a>
-                    <a href="portfolio.html" class="nav-link text-white">Portfolio</a>
-                    <a href="process.html" class="nav-link text-white">Process</a>
-                    <a href="services.html" class="nav-link text-white">Services</a>
-                    <a href="pricing.html" class="nav-link text-white">Pricing</a>
+                    <a href="index.html" class="nav-link text-zinc-400">Home</a>
+                    <a href="portfolio.html" class="nav-link text-zinc-400">Portfolio</a>
+                    <a href="process.html" class="nav-link text-zinc-400">Process</a>
+                    <a href="services.html" class="nav-link text-zinc-400">Services & Pricing</a>
+                    <a href="Packages.html" class="nav-link text-zinc-400">Packages</a>
                 </div>
 
                 <div class="hidden md:block">
-                    <a href="contact.html" 
-                       class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-[#EAB308] hover:bg-yellow-500 active:bg-yellow-600 transition-all text-[#0A0A0A] font-semibold text-sm tracking-wider">
+                    <a href="contact.html" class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-gold hover:bg-yellow-500 active:bg-yellow-600 transition-all text-dark-bg font-semibold text-sm tracking-wider shadow-lg shadow-gold/10 hover:shadow-gold/20">
                         HIRE ME
                     </a>
                 </div>
 
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <!-- Mobile Menu Button Hooks -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-white focus:outline-none" aria-label="Toggle Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-[#0A0A0A]">
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-dark-bg">
             <div class="px-6 py-8 flex flex-col gap-4 text-lg">
-                <a href="index.html" class="py-2 nav-link">Home</a>
-                <a href="portfolio.html" class="py-2 nav-link">Portfolio</a>
-                <a href="process.html" class="py-2 nav-link">Process</a>
-                <a href="services.html" class="py-2 nav-link">Services</a>
-                <a href="pricing.html" class="py-2 nav-link">Pricing</a>
-                <a href="contact.html" 
-                   class="mt-4 inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-[#EAB308] text-[#0A0A0A] font-semibold">HIRE ME</a>
+                <a href="index.html" class="nav-link py-2 text-zinc-300">Home</a>
+                <a href="portfolio.html" class="nav-link py-2 text-zinc-300">Portfolio</a>
+                <a href="process.html" class="nav-link py-2 text-zinc-300">Process</a>
+                <a href="services.html" class="nav-link py-2 text-zinc-300">Services & Pricing</a>
+                <a href="Packages.html" class="nav-link py-2 text-zinc-300">Packages</a>
+                <a href="contact.html" class="mt-4 inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-gold text-dark-bg font-semibold text-center">HIRE ME</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <div class="max-w-4xl mx-auto px-6 pt-16 pb-12 text-center">
-        <span class="text-[#EAB308] text-xs tracking-[4px] font-semibold">HOW I WORK</span>
-        <h1 class="text-6xl md:text-7xl font-bold tracking-tighter mt-3">Our Process</h1>
-        <p class="mt-4 text-xl text-zinc-400 max-w-md mx-auto">Transparent, collaborative workflows tailored to every project.<br>See exactly how we turn your vision into reality.</p>
-    </div>
+    <!-- Premium Clean Centered Header Component -->
+    <header class="max-w-4xl mx-auto px-6 pt-24 pb-16 text-center flex flex-col items-center">
+        <span class="text-gold text-xs sm:text-sm tracking-[0.25em] font-bold uppercase mb-3 block">HOW WE WORK</span>
+        <h1 class="section-title text-5xl sm:text-6xl md:text-7xl font-bold tracking-tighter text-white pb-3">Our Process</h1>
+        <p class="text-lg sm:text-xl text-zinc-400 max-w-xl mx-auto leading-relaxed mt-8">
+            Transparent, collaborative workflows engineered for impact. See exactly how your vision translates into premium digital execution.
+        </p>
+    </header>
 
-    <div class="max-w-6xl mx-auto px-6 pb-24 space-y-6">
+    <!-- Process Accordions Container (Perfected Linear Flow for Phone & Desktop Grid) -->
+    <main class="max-w-6xl mx-auto px-6 pb-32 space-y-6">
         
-        <!-- Logo Design Process -->
+        <!-- Logo Design Process Module -->
         <div class="premium-card rounded-3xl overflow-hidden">
-            <div class="process-header px-8 py-6 flex items-center justify-between bg-zinc-900/70 cursor-pointer hover:bg-zinc-800/70 transition-colors">
+            <div class="process-header px-8 py-6 flex items-center justify-between select-none">
                 <div class="flex items-center gap-4">
-                    <div class="w-9 h-9 rounded-xl bg-yellow-500 flex items-center justify-center flex-shrink-0"><span class="text-[#0A0A0A] text-xl">✎</span></div>
-                    <div>
-                        <span class="font-semibold text-2xl">Logo Design Process</span>
-                        <span class="ml-3 text-xs px-3 py-px rounded-full bg-yellow-900/60 text-yellow-400">12 Steps</span>
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center flex-shrink-0">
+                        <span class="text-dark-bg text-lg font-bold">✎</span>
+                    </div>
+                    <div class="flex items-center flex-wrap gap-y-1">
+                        <h3 class="font-semibold text-xl sm:text-2xl tracking-tight">Logo Design Process</h3>
+                        <span class="ml-3 text-xs px-2.5 py-0.5 rounded-full bg-yellow-950/60 text-gold border border-yellow-900/40 font-medium">12 Steps</span>
                     </div>
                 </div>
-                <div class="process-arrow text-2xl text-zinc-400 transition-transform">⌄</div>
+                <div class="process-arrow text-xl text-zinc-500 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </div>
             </div>
-            <div class="process-content px-8 pb-8 grid md:grid-cols-2 gap-x-10 gap-y-6 text-sm">
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6 flex-shrink-0">01</div><div><span class="font-medium">Initial Consultation</span><div class="text-xs text-zinc-500">Call or meeting to understand your brand story and goals.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6 flex-shrink-0">07</div><div><span class="font-medium">Hand Sketching</span><div class="text-xs text-zinc-500">Draw many rough logo ideas by hand.</div></div></div>
-                
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6 flex-shrink-0">02</div><div><span class="font-medium">Project Brief &amp; Questionnaire</span><div class="text-xs text-zinc-500">Fill detailed questions about your vision.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6 flex-shrink-0">08</div><div><span class="font-medium">Digital Concept Development</span><div class="text-xs text-zinc-500">Turn best sketches into clean digital versions.</div></div></div>
-
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6 flex-shrink-0">03</div><div><span class="font-medium">Competitor Research</span><div class="text-xs text-zinc-500">Analyze what your competitors are doing.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6 flex-shrink-0">09</div><div><span class="font-medium">Typography Exploration</span><div class="text-xs text-zinc-500">Choose and test different fonts.</div></div></div>
-
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6 flex-shrink-0">04</div><div><span class="font-medium">Target Audience Analysis</span><div class="text-xs text-zinc-500">Define who your customers are.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6 flex-shrink-0">10</div><div><span class="font-medium">Color Palette Development</span><div class="text-xs text-zinc-500">Create perfect color combinations.</div></div></div>
-
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6 flex-shrink-0">05</div><div><span class="font-medium">Brand Values &amp; Personality</span><div class="text-xs text-zinc-500">Clarify your brand character and message.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6 flex-shrink-0">11</div><div><span class="font-medium">Concept Presentation</span><div class="text-xs text-zinc-500">Show you 3–4 strong directions.</div></div></div>
-
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6 flex-shrink-0">06</div><div><span class="font-medium">Moodboard Creation</span><div class="text-xs text-zinc-500">Collect inspiring images, colors, and styles.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6 flex-shrink-0">12</div><div><span class="font-medium">Feedback, Revisions &amp; Final Delivery</span><div class="text-xs text-zinc-500">Make changes + deliver all file formats.</div></div></div>
+            <div class="process-content px-8 border-t border-zinc-900/60">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 py-4">
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">01</div><div><span class="font-semibold text-zinc-200">Initial Consultation</span><div class="text-xs text-zinc-500 mt-1">Strategic alignment session to map your brand narrative and core criteria.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">02</div><div><span class="font-semibold text-zinc-200">Project Brief &amp; Discovery</span><div class="text-xs text-zinc-500 mt-1">Deconstruct target user parameters and refine project directives.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">03</div><div><span class="font-semibold text-zinc-200">Competitor Auditing</span><div class="text-xs text-zinc-500 mt-1">Analyzing industry positioning variables to assure visual market distinction.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">04</div><div><span class="font-semibold text-zinc-200">Audience Analysis</span><div class="text-xs text-zinc-500 mt-1">Isolating target demographics to refine focus points.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">05</div><div><span class="font-semibold text-zinc-200">Core Value Definition</span><div class="text-xs text-zinc-500 mt-1">Solidifying brand character priorities before moving to production lines.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">06</div><div><span class="font-semibold text-zinc-200">Moodboard Engineering</span><div class="text-xs text-zinc-500 mt-1">Assembling targeted stylistic templates to align sensory objectives early.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">07</div><div><span class="font-semibold text-zinc-200">Hand Sketching</span><div class="text-xs text-zinc-500 mt-1">Ideation phase on paper to map composition fluidly without digital constraints.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">08</div><div><span class="font-semibold text-zinc-200">Digital Concept Architecture</span><div class="text-xs text-zinc-500 mt-1">Translating top sketches into precision vector structures via Illustrator.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">09</div><div><span class="font-semibold text-zinc-200">Typography Curation</span><div class="text-xs text-zinc-500 mt-1">Sourcing and modifications of typographic styles to mirror brand tone.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">10</div><div><span class="font-semibold text-zinc-200">Color System Development</span><div class="text-xs text-zinc-500 mt-1">Formulating functional palette contrasts ready for digital and print execution.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">11</div><div><span class="font-semibold text-zinc-200">Direction Presentation</span><div class="text-xs text-zinc-500 mt-1">Reviewing 3–4 robust strategic design directions styled in layout mocks.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">12</div><div><span class="font-semibold text-zinc-200">Refinement &amp; Master Handover</span><div class="text-xs text-zinc-500 mt-1">Iterating on preferences and delivering complete source vectors and formats.</div></div></div>
+                </div>
             </div>
         </div>
 
-        <!-- Social Media Posts Process -->
+        <!-- Social Media Posts Process Module -->
         <div class="premium-card rounded-3xl overflow-hidden">
-            <div class="process-header px-8 py-6 flex items-center justify-between bg-zinc-900/70 cursor-pointer hover:bg-zinc-800/70 transition-colors">
+            <div class="process-header px-8 py-6 flex items-center justify-between select-none">
                 <div class="flex items-center gap-4">
-                    <div class="w-9 h-9 rounded-xl bg-yellow-500 flex items-center justify-center flex-shrink-0"><span class="text-[#0A0A0A] text-xl">📱</span></div>
-                    <div>
-                        <span class="font-semibold text-2xl">Social Media Posts Process</span>
-                        <span class="ml-3 text-xs px-3 py-px rounded-full bg-yellow-900/60 text-yellow-400">10 Steps</span>
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center flex-shrink-0">
+                        <span class="text-dark-bg text-lg font-bold">📱</span>
+                    </div>
+                    <div class="flex items-center flex-wrap gap-y-1">
+                        <h3 class="font-semibold text-xl sm:text-2xl tracking-tight">Social Media Posts Process</h3>
+                        <span class="ml-3 text-xs px-2.5 py-0.5 rounded-full bg-yellow-950/60 text-gold border border-yellow-900/40 font-medium">10 Steps</span>
                     </div>
                 </div>
-                <div class="process-arrow text-2xl text-zinc-400 transition-transform">⌄</div>
+                <div class="process-arrow text-xl text-zinc-500 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </div>
             </div>
-            <div class="process-content px-8 pb-8 grid md:grid-cols-2 gap-x-10 gap-y-6 text-sm">
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">01</div><div><span class="font-medium">Goal Setting</span><div class="text-xs text-zinc-500">Define what you want to achieve (sales, awareness...).</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">02</div><div><span class="font-medium">Audience Research</span><div class="text-xs text-zinc-500">Understand who will see your posts.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">03</div><div><span class="font-medium">Content Calendar Planning</span><div class="text-xs text-zinc-500">Plan what to post and when.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">04</div><div><span class="font-medium">Visual Style Development</span><div class="text-xs text-zinc-500">Create a consistent look for all posts.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">05</div><div><span class="font-medium">Copywriting Themes</span><div class="text-xs text-zinc-500">Write the tone and message for your brand.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">06</div><div><span class="font-medium">Graphic Concepts</span><div class="text-xs text-zinc-500">Design several post ideas.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">07</div><div><span class="font-medium">Asset Creation</span><div class="text-xs text-zinc-500">Make static posts, carousels, stories, reels.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">08</div><div><span class="font-medium">Review &amp; Approval</span><div class="text-xs text-zinc-500">You check and approve everything.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">09</div><div><span class="font-medium">Scheduling Preparation</span><div class="text-xs text-zinc-500">Prepare files ready for posting.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">10</div><div><span class="font-medium">Performance Tips</span><div class="text-xs text-zinc-500">Give you advice on best posting times and tracking.</div></div></div>
+            <div class="process-content px-8 border-t border-zinc-900/60">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 py-4">
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">01</div><div><span class="font-semibold text-zinc-200">Goal Mapping</span><div class="text-xs text-zinc-500 mt-1">Isolating micro-metrics (engagement multipliers, link paths, awareness targets).</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">02</div><div><span class="font-semibold text-zinc-200">Feed Research</span><div class="text-xs text-zinc-500 mt-1">Investigating current audience consumption layouts to design thumb-stopping graphics.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">03</div><div><span class="font-semibold text-zinc-200">Content Matrix Planning</span><div class="text-xs text-zinc-500 mt-1">Structuring layout timelines and aesthetic delivery cycles.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">04</div><div><span class="font-semibold text-zinc-200">Visual System Architecture</span><div class="text-xs text-zinc-500 mt-1">Locking grid, color rules, and layout parameters for speed and continuity.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">05</div><div><span class="font-semibold text-zinc-200">Copywriting Theme Sourcing</span><div class="text-xs text-zinc-500 mt-1">Injecting crisp tone dynamics into secondary graphics messaging lines.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">06</div><div><span class="font-semibold text-zinc-200">Graphic Concepts</span><div class="text-xs text-zinc-500 mt-1">Drafting variant structural cards to identify top layouts.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">07</div><div><span class="font-semibold text-zinc-200">Asset Production</span><div class="text-xs text-zinc-500 mt-1">High-fidelity rendering of carousels, dynamic stories, and custom asset layouts.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">08</div><div><span class="font-semibold text-zinc-200">Client Sign-Off Pipeline</span><div class="text-xs text-zinc-500 mt-1">Centralized dashboard asset review to easily lock design choices.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">09</div><div><span class="font-semibold text-zinc-200">Scheduling Handover</span><div class="text-xs text-zinc-500 mt-1">Packaging optimal, uncompressed exports mapped clean for engine deployment.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">10</div><div><span class="font-semibold text-zinc-200">Performance Optimization</span><div class="text-xs text-zinc-500 mt-1">Providing tactical context frameworks on posting weights and delivery style metrics.</div></div></div>
+                </div>
             </div>
         </div>
 
-        <!-- Brand Identity Process -->
+        <!-- Brand Identity Process Module -->
         <div class="premium-card rounded-3xl overflow-hidden">
-            <div class="process-header px-8 py-6 flex items-center justify-between bg-zinc-900/70 cursor-pointer hover:bg-zinc-800/70 transition-colors">
+            <div class="process-header px-8 py-6 flex items-center justify-between select-none">
                 <div class="flex items-center gap-4">
-                    <div class="w-9 h-9 rounded-xl bg-yellow-500 flex items-center justify-center flex-shrink-0"><span class="text-[#0A0A0A] text-xl">◆</span></div>
-                    <div>
-                        <span class="font-semibold text-2xl">Brand Identity Process</span>
-                        <span class="ml-3 text-xs px-3 py-px rounded-full bg-yellow-900/60 text-yellow-400">12 Steps</span>
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center flex-shrink-0">
+                        <span class="text-dark-bg text-lg font-bold">◆</span>
+                    </div>
+                    <div class="flex items-center flex-wrap gap-y-1">
+                        <h3 class="font-semibold text-xl sm:text-2xl tracking-tight">Brand Identity Process</h3>
+                        <span class="ml-3 text-xs px-2.5 py-0.5 rounded-full bg-yellow-950/60 text-gold border border-yellow-900/40 font-medium">12 Steps</span>
                     </div>
                 </div>
-                <div class="process-arrow text-2xl text-zinc-400 transition-transform">⌄</div>
+                <div class="process-arrow text-xl text-zinc-500 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </div>
             </div>
-            <div class="process-content px-8 pb-8 grid md:grid-cols-2 gap-x-10 gap-y-6 text-sm">
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">01</div><div><span class="font-medium">Discovery Workshop</span><div class="text-xs text-zinc-500">Deep talk about your brand vision.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">07</div><div><span class="font-medium">Logo Refinement</span><div class="text-xs text-zinc-500">Polish the chosen logo.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">02</div><div><span class="font-medium">Competitor Analysis</span><div class="text-xs text-zinc-500">Study the market.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">08</div><div><span class="font-medium">Color Palette Creation</span><div class="text-xs text-zinc-500">Design official colors.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">03</div><div><span class="font-medium">Brand Strategy</span><div class="text-xs text-zinc-500">Define positioning and long-term goals.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">09</div><div><span class="font-medium">Typography System</span><div class="text-xs text-zinc-500">Choose fonts for all uses.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">04</div><div><span class="font-medium">Personality &amp; Voice</span><div class="text-xs text-zinc-500">Create your brand character and tone.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">10</div><div><span class="font-medium">Brand Guidelines</span><div class="text-xs text-zinc-500">Make the official rule book.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">05</div><div><span class="font-medium">Moodboard &amp; Visual Direction</span><div class="text-xs text-zinc-500">Build the overall aesthetic.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">11</div><div><span class="font-medium">Collateral Design</span><div class="text-xs text-zinc-500">Design business cards, social templates, etc.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">06</div><div><span class="font-medium">Logo Concept Development</span><div class="text-xs text-zinc-500">Create multiple logo directions.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">12</div><div><span class="font-medium">Implementation &amp; Rollout</span><div class="text-xs text-zinc-500">Final files + how to use the brand.</div></div></div>
+            <div class="process-content px-8 border-t border-zinc-900/60">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 py-4">
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">01</div><div><span class="font-semibold text-zinc-200">Discovery Workshop</span><div class="text-xs text-zinc-500 mt-1">Deep structural immersion to evaluate market paths, values, and vision profiles.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">02</div><div><span class="font-semibold text-zinc-200">Landscape Auditing</span><div class="text-xs text-zinc-500 mt-1">Uncovering competitor visual blind spots to ensure design distinctiveness.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">03</div><div><span class="font-semibold text-zinc-200">Core Strategy Definition</span><div class="text-xs text-zinc-500 mt-1">Mapping position properties to drive systematic, long-range scaling goals.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">04</div><div><span class="font-semibold text-zinc-200">Persona &amp; Voice Mapping</span><div class="text-xs text-zinc-500 mt-1">Structuring custom aesthetic characteristics to humanize target output loops.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">05</div><div><span class="font-semibold text-zinc-200">Visual System Direction</span><div class="text-xs text-zinc-500 mt-1">Curating imagery textures and design structures to calibrate overall direction.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">06</div><div><span class="font-semibold text-zinc-200">Logo Construct Iteration</span><div class="text-xs text-zinc-500 mt-1">Building varied exploratory geometry models targeting the core message vectors.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">07</div><div><span class="font-semibold text-zinc-200">Logo Optimization</span><div class="text-xs text-zinc-500 mt-1">Fine-tuning micro proportions and lines on selected visual paths.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">08</div><div><span class="font-semibold text-zinc-200">Color Space Engineering</span><div class="text-xs text-zinc-500 mt-1">Verifying spectrum scalability constraints for both RGB engines and print media.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">09</div><div><span class="font-semibold text-zinc-200">Typography Architecture</span><div class="text-xs text-zinc-500 mt-1">Constructing font pairing systems tailored across high-scale applications.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">10</div><div><span class="font-semibold text-zinc-200">Brand Guideline Synthesis</span><div class="text-xs text-zinc-500 mt-1">Creating the blueprint handbook outlining rules for design elements.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">11</div><div><span class="font-semibold text-zinc-200">Collateral Ecosystem Layout</span><div class="text-xs text-zinc-500 mt-1">Drafting stationery packages, digital frameworks, and presentation assets.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">12</div><div><span class="font-semibold text-zinc-200">System Integration &amp; Deployment</span><div class="text-xs text-zinc-500 mt-1">Deploying asset packages alongside custom guidance for application onboarding.</div></div></div>
+                </div>
             </div>
         </div>
 
-        <!-- Video Editing Process -->
+        <!-- Video Editing Process Module -->
         <div class="premium-card rounded-3xl overflow-hidden">
-            <div class="process-header px-8 py-6 flex items-center justify-between bg-zinc-900/70 cursor-pointer hover:bg-zinc-800/70 transition-colors">
+            <div class="process-header px-8 py-6 flex items-center justify-between select-none">
                 <div class="flex items-center gap-4">
-                    <div class="w-9 h-9 rounded-xl bg-yellow-500 flex items-center justify-center flex-shrink-0"><span class="text-[#0A0A0A] text-xl">▶</span></div>
-                    <div>
-                        <span class="font-semibold text-2xl">Video Editing Process</span>
-                        <span class="ml-3 text-xs px-3 py-px rounded-full bg-yellow-900/60 text-yellow-400">11 Steps</span>
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center flex-shrink-0">
+                        <span class="text-dark-bg text-lg font-bold">▶</span>
+                    </div>
+                    <div class="flex items-center flex-wrap gap-y-1">
+                        <h3 class="font-semibold text-xl sm:text-2xl tracking-tight">Video Editing Process</h3>
+                        <span class="ml-3 text-xs px-2.5 py-0.5 rounded-full bg-yellow-950/60 text-gold border border-yellow-900/40 font-medium">11 Steps</span>
                     </div>
                 </div>
-                <div class="process-arrow text-2xl text-zinc-400 transition-transform">⌄</div>
+                <div class="process-arrow text-xl text-zinc-500 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </div>
             </div>
-            <div class="process-content px-8 pb-8 grid md:grid-cols-2 gap-x-10 gap-y-6 text-sm">
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">01</div><div><span class="font-medium">Project Briefing</span><div class="text-xs text-zinc-500">Understand the story and style you want.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">07</div><div><span class="font-medium">Transitions &amp; Effects</span><div class="text-xs text-zinc-500">Add smooth movements and effects.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">02</div><div><span class="font-medium">Footage Review</span><div class="text-xs text-zinc-500">Watch all raw videos.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">08</div><div><span class="font-medium">Audio Cleaning</span><div class="text-xs text-zinc-500">Remove noise and balance sound.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">03</div><div><span class="font-medium">Organize Files</span><div class="text-xs text-zinc-500">Clean and sort all clips.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">09</div><div><span class="font-medium">Music &amp; Sound Design</span><div class="text-xs text-zinc-500">Add background music and effects.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">04</div><div><span class="font-medium">Storyboard Creation</span><div class="text-xs text-zinc-500">Plan the sequence of the video.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">10</div><div><span class="font-medium">Color Grading</span><div class="text-xs text-zinc-500">Make colors cinematic and consistent.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">05</div><div><span class="font-medium">Rough Cut</span><div class="text-xs text-zinc-500">Put the story together quickly.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">11</div><div><span class="font-medium">Final Review &amp; Delivery</span><div class="text-xs text-zinc-500">Your approval + export all formats.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">06</div><div><span class="font-medium">Detailed Editing</span><div class="text-xs text-zinc-500">Cut and adjust timing precisely.</div></div></div>
+            <div class="process-content px-8 border-t border-zinc-900/60">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 py-4">
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">01</div><div><span class="font-semibold text-zinc-200">Narrative Briefing</span><div class="text-xs text-zinc-500 mt-1">Deconstructing pacing metrics, audience triggers, and structural tone specs.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">02</div><div><span class="font-semibold text-zinc-200">Footage Logging &amp; Inspection</span><div class="text-xs text-zinc-500 mt-1">Auditing multi-cam takes and grading raw captured data properties.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">03</div><div><span class="font-semibold text-zinc-200">Asset File Pipeline Organization</span><div class="text-xs text-zinc-500 mt-1">Syncing audio fields, sorting proxies, and optimizing timeline workspaces.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">04</div><div><span class="font-semibold text-zinc-200">Structural Storyboarding</span><div class="text-xs text-zinc-500 mt-1">Plotting sequence nodes to establish smooth tension flow before trimming.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">05</div><div><span class="font-semibold text-zinc-200">Assembly / Rough Cut Selection</span><div class="text-xs text-zinc-500 mt-1">Carving narrative shapes onto timelines to confirm framework continuity.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">06</div><div><span class="font-semibold text-zinc-200">Precision Pace Editing</span><div class="text-xs text-zinc-500 mt-1">Tightening framing choices, trimming loose spaces, and maximizing impact flow.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">07</div><div><span class="font-semibold text-zinc-200">Kinetic Transitions &amp; Tracking</span><div class="text-xs text-zinc-500 mt-1">Applying seamless visual tracking adjustments and frame transitions.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">08</div><div><span class="font-semibold text-zinc-200">Audio Optimization &amp; Cleanup</span><div class="text-xs text-zinc-500 mt-1">Isolating dialogues, stripping ambient room hiss, and balancing gain floors.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">09</div><div><span class="font-semibold text-zinc-200">Sound Design Architecture</span><div class="text-xs text-zinc-500 mt-1">Sourcing background underscores and layered spatial effects to drive realism.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">10</div><div><span class="font-semibold text-zinc-200">Cinematic Color Grading</span><div class="text-xs text-zinc-500 mt-1">Custom color corrections and grading to evoke deep cinematic mood consistency.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">11</div><div><span class="font-semibold text-zinc-200">Master Export Generation</span><div class="text-xs text-zinc-500 mt-1">Encoding pristine ProRes/H.264 formats custom-fit for final viewing engines.</div></div></div>
+                </div>
             </div>
         </div>
 
-        <!-- Website Design Process -->
+        <!-- Website Design Process Module -->
         <div class="premium-card rounded-3xl overflow-hidden">
-            <div class="process-header px-8 py-6 flex items-center justify-between bg-zinc-900/70 cursor-pointer hover:bg-zinc-800/70 transition-colors">
+            <div class="process-header px-8 py-6 flex items-center justify-between select-none">
                 <div class="flex items-center gap-4">
-                    <div class="w-9 h-9 rounded-xl bg-yellow-500 flex items-center justify-center flex-shrink-0"><span class="text-[#0A0A0A] text-xl">💻</span></div>
-                    <div>
-                        <span class="font-semibold text-2xl">Website Design Process</span>
-                        <span class="ml-3 text-xs px-3 py-px rounded-full bg-yellow-900/60 text-yellow-400">12 Steps</span>
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center flex-shrink-0">
+                        <span class="text-dark-bg text-lg font-bold">💻</span>
+                    </div>
+                    <div class="flex items-center flex-wrap gap-y-1">
+                        <h3 class="font-semibold text-xl sm:text-2xl tracking-tight">Website Design Process</h3>
+                        <span class="ml-3 text-xs px-2.5 py-0.5 rounded-full bg-yellow-950/60 text-gold border border-yellow-900/40 font-medium">12 Steps</span>
                     </div>
                 </div>
-                <div class="process-arrow text-2xl text-zinc-400 transition-transform">⌄</div>
+                <div class="process-arrow text-xl text-zinc-500 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </div>
             </div>
-            <div class="process-content px-8 pb-8 grid md:grid-cols-2 gap-x-10 gap-y-6 text-sm">
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">01</div><div><span class="font-medium">Goals &amp; Requirements Meeting</span><div class="text-xs text-zinc-500">Discuss what the website must do.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">07</div><div><span class="font-medium">Design Review</span><div class="text-xs text-zinc-500">You check the designs.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">02</div><div><span class="font-medium">Competitor Research</span><div class="text-xs text-zinc-500">See what others in your field are doing.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">08</div><div><span class="font-medium">Revisions</span><div class="text-xs text-zinc-500">Make all requested changes.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">03</div><div><span class="font-medium">Sitemap Planning</span><div class="text-xs text-zinc-500">Map all pages and structure.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">09</div><div><span class="font-medium">Development</span><div class="text-xs text-zinc-500">Turn design into real working website.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">04</div><div><span class="font-medium">Wireframing</span><div class="text-xs text-zinc-500">Create simple black &amp; white layouts.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">10</div><div><span class="font-medium">Responsive Testing</span><div class="text-xs text-zinc-500">Test on phone, tablet, and computer.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">05</div><div><span class="font-medium">User Flow Design</span><div class="text-xs text-zinc-500">Plan how visitors will move on the site.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">11</div><div><span class="font-medium">Speed &amp; SEO Optimization</span><div class="text-xs text-zinc-500">Make it fast and ready for Google.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">06</div><div><span class="font-medium">High-Fidelity UI Design</span><div class="text-xs text-zinc-500">Design beautiful full-color mockups.</div></div></div>
-                <div class="process-step flex gap-4"><div class="font-mono text-yellow-400 w-6">12</div><div><span class="font-medium">Launch &amp; Handover</span><div class="text-xs text-zinc-500">Go live + give you all files and training.</div></div></div>
+            <div class="process-content px-8 border-t border-zinc-900/60">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 py-4">
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">01</div><div><span class="font-semibold text-zinc-200">Requirements Architecture</span><div class="text-xs text-zinc-500 mt-1">Defining conversion mechanics, app data requirements, and user action targets.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">02</div><div><span class="font-semibold text-zinc-200">Structural Competitor Tracking</span><div class="text-xs text-zinc-500 mt-1">Reviewing market platforms to build enhanced, faster operational alternatives.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">03</div><div><span class="font-semibold text-zinc-200">Sitemap Blueprinting</span><div class="text-xs text-zinc-500 mt-1">Drafting navigation pipelines to secure optimal user interaction tracking.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">04</div><div><span class="font-semibold text-zinc-200">Structural Wireframing</span><div class="text-xs text-zinc-500 mt-1">Building low-fidelity content layouts without getting distracted by visual polish.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">05</div><div><span class="font-semibold text-zinc-200">User Flow Mapping</span><div class="text-xs text-zinc-500 mt-1">Refining click paths to ensure friction-free conversion loops for target clients.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">06</div><div><span class="font-semibold text-zinc-200">High-Fidelity UI Generation</span><div class="text-xs text-zinc-500 mt-1">Crafting pixel-perfect interface layouts inside Figma using custom components.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">07</div><div><span class="font-semibold text-zinc-200">Layout Asset Review</span><div class="text-xs text-zinc-500 mt-1">Evaluating static frameworks against visual expectations and project boundaries.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">08</div><div><span class="font-semibold text-zinc-200">Revision Cycles</span><div class="text-xs text-zinc-500 mt-1">Iterating on composition variables to establish structural balance across designs.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">09</div><div><span class="font-semibold text-zinc-200">Front-End Production Block</span><div class="text-xs text-zinc-500 mt-1">Translating mockups into semantic code modules and crisp interaction nodes.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">10</div><div><span class="font-semibold text-zinc-200">Responsive Breakpoint Testing</span><div class="text-xs text-zinc-500 mt-1">Ensuring performance across mobile viewports, tablet configurations, and ultra-wides.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">11</div><div><span class="font-semibold text-zinc-200">Core Performance Optimization</span><div class="text-xs text-zinc-500 mt-1">Compressing dynamic assets, implementing clean SEO parameters, and auditing code speed.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">12</div><div><span class="font-semibold text-zinc-200">Engine Deployment &amp; Onboarding</span><div class="text-xs text-zinc-500 mt-1">Going live alongside personalized documentation to manage updating pipelines.</div></div></div>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
 
-    <footer class="border-t border-zinc-800 py-8 text-center text-sm text-zinc-500">© Copyright - Hicham Eddarhmoumi. All rights reserved.</footer>
+    <!-- Footer -->
+    <footer class="bg-dark-bg py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-sm text-zinc-600">
+            © Copyright — Hicham Eddarhmoumi. All rights reserved.
+        </div>
+    </footer>
 
+    <!-- Core Interactive Application Script -->
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -5,60 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hicham Eddarhmoumi • Graphic Designer &amp; Video Editor</title>
     <meta name="description" content="Premium graphic design, brand identity, social media content &amp; cinematic video editing. Based in Casablanca, Morocco.">
+    
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- إعدادات الألوان الموحدة للموقع كاملو -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'gold': '#EAB308',
+              'gold-dark': '#CA8A04',
+              'dark-bg': '#0A0A0A',
+              'card-bg': '#111111'
+            }
+          }
+        }
+      };
+    </script>
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3EH%3C/text%3E%3C/svg%3E">
 </head>
-<body class="bg-[#0A0A0A] text-white">
+<body class="bg-dark-bg text-white">
+    <!-- Navbar -->
     <nav class="sticky top-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-lg border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex items-center justify-between h-20">
                 <a href="index.html" class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#EAB308] to-yellow-600 flex items-center justify-center">
-                        <span class="font-bold text-[#0A0A0A] text-xl tracking-tighter">HE</span>
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center">
+                        <span class="font-bold text-dark-bg text-xl tracking-tighter">HE</span>
                     </div>
-                    <span class="font-semibold text-2xl tracking-tighter">Hicham Eddarhmoumi</span>
+                    <!-- خط مرن للـ Navbar باش ميتزاحمش في الشاشات الصغيرة -->
+                    <span class="font-semibold text-xl sm:text-2xl tracking-tighter truncate max-w-[180px] sm:max-w-none">Hicham Eddarhmoumi</span>
                 </a>
 
                 <div class="hidden md:flex items-center gap-9 text-sm font-medium">
-                    <a href="index.html" class="nav-link text-white">Home</a>
-                    <a href="portfolio.html" class="nav-link text-white">Portfolio</a>
-                    <a href="process.html" class="nav-link text-white">Process</a>
-                    <a href="services.html" class="nav-link text-white">Services</a>
-                    <a href="pricing.html" class="nav-link text-white">Pricing</a>
+                    <a href="index.html" class="nav-link text-white hover:text-gold transition-colors">Home</a>
+                    <a href="portfolio.html" class="nav-link text-white hover:text-gold transition-colors">Portfolio</a>
+                    <a href="process.html" class="nav-link text-white hover:text-gold transition-colors">Process</a>
+                    <a href="services.html" class="nav-link text-white hover:text-gold transition-colors">Services & Pricing</a>
+                    <a href="Packages.html" class="nav-link text-white hover:text-gold transition-colors">Packages</a>
                 </div>
 
                 <div class="hidden md:block">
                     <a href="contact.html" 
-                       class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-[#EAB308] hover:bg-yellow-500 active:bg-yellow-600 transition-all text-[#0A0A0A] font-semibold text-sm tracking-wider">
+                       class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-gold hover:bg-yellow-500 active:bg-yellow-600 transition-all text-dark-bg font-semibold text-sm tracking-wider">
                         HIRE ME
                     </a>
                 </div>
 
+                <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="md:hidden p-2 text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
         </div>
 
+        <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-[#0A0A0A]">
             <div class="px-6 py-8 flex flex-col gap-4 text-lg">
-                <a href="index.html" class="py-2 nav-link">Home</a>
-                <a href="portfolio.html" class="py-2 nav-link">Portfolio</a>
-                <a href="process.html" class="py-2 nav-link">Process</a>
-                <a href="services.html" class="py-2 nav-link">Services</a>
-                <a href="pricing.html" class="py-2 nav-link">Pricing</a>
+                <a href="index.html" class="py-2 nav-link hover:text-gold transition-colors">Home</a>
+                <a href="portfolio.html" class="py-2 nav-link hover:text-gold transition-colors">Portfolio</a>
+                <a href="process.html" class="py-2 nav-link hover:text-gold transition-colors">Process</a>
+                <a href="services.html" class="py-2 nav-link hover:text-gold transition-colors">Services & Pricing</a>
+                <a href="Packages.html" class="py-2 nav-link hover:text-gold transition-colors">Packages</a>
                 <a href="contact.html" 
-                   class="mt-4 inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-[#EAB308] text-[#0A0A0A] font-semibold">HIRE ME</a>
+                   class="mt-4 inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-gold text-dark-bg font-semibold">HIRE ME</a>
             </div>
         </div>
     </nav>
 
+    <!-- Header / Hero Section -->
     <header class="max-w-7xl mx-auto px-6 pt-10 pb-12 md:pt-16 md:pb-20">
-        <div class="grid md:grid-cols-12 gap-x-8 items-center">
-            <div class="md:col-span-7">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8 items-center">
+            <div class="md:col-span-7 order-2 md:order-1">
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 mb-6">
                     <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
                     <span class="text-sm font-medium text-emerald-400">Available for select projects in 2026</span>
@@ -72,9 +96,9 @@
 
                 <div class="flex flex-wrap items-center gap-4">
                     <a href="portfolio.html" 
-                       class="group inline-flex items-center justify-center gap-3 px-9 py-4 rounded-2xl bg-[#EAB308] hover:bg-yellow-400 active:bg-yellow-500 transition-all text-[#0A0A0A] font-semibold text-lg">
+                       class="group inline-flex items-center justify-center gap-3 px-9 py-4 rounded-2xl bg-gold hover:bg-yellow-400 active:bg-yellow-500 transition-all text-dark-bg font-semibold text-lg">
                         View My Work
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-0.5 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
                     </a>
@@ -98,21 +122,20 @@
                 </div>
             </div>
 
-            <div class="md:col-span-5 mt-12 md:mt-0 flex justify-center md:justify-end">
+            <!-- Profile Image Container المعدل والمحمي من التمدد -->
+            <div class="md:col-span-5 order-1 md:order-2 flex justify-center md:justify-end">
                 <div class="relative">
-                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-[#EAB308] via-yellow-600 to-amber-700 p-1.5 shadow-2xl">
-                        <div class="w-full h-full rounded-full bg-[#0A0A0A] flex items-center justify-center overflow-hidden">
-                            <div class="relative w-56 h-56 md:w-64 md:h-64">
-                                <img 
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-gold via-yellow-600 to-amber-700 p-1.5 shadow-2xl">
+                        <div class="w-full h-full rounded-full bg-dark-bg overflow-hidden">
+                            <img 
                                 src="assets/images/mypic.png" 
                                 alt="Hicham Eddarhmoumi"
-                                class="object-cover rounded-full shadow-2xl transition-transform duration-300"
-                                />
-                            </div>
+                                class="w-full h-full object-cover rounded-full transition-transform duration-300 hover:scale-105"
+                            />
                         </div>
                     </div>
-                    <div class="absolute -bottom-3 -right-3 bg-[#111111] border border-zinc-700 px-5 py-1.5 rounded-2xl text-sm font-semibold flex items-center gap-2">
-                        <span class="text-[#EAB308]">hicham.edd</span>
+                    <div class="absolute -bottom-3 -right-3 bg-card-bg border border-zinc-700 px-5 py-1.5 rounded-2xl text-sm font-semibold flex items-center gap-2">
+                        <span class="text-gold">hicham.edd</span>
                     </div>
                 </div>
             </div>
@@ -122,11 +145,11 @@
     <!-- About Me -->
     <section class="max-w-7xl mx-auto px-6 pb-20">
         <div class="mb-10">
-            <span class="uppercase tracking-[3px] text-xs font-semibold text-[#EAB308]">CHAPTER 01</span>
+            <span class="uppercase tracking-[3px] text-xs font-semibold text-gold">CHAPTER 01</span>
             <h2 class="text-6xl font-bold tracking-tighter mt-1">About Me</h2>
         </div>
 
-        <div class="grid md:grid-cols-12 gap-x-8 gap-y-10">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-10 md:gap-x-8">
             <!-- Bio -->
             <div class="md:col-span-7">
                 <p class="text-2xl leading-tight text-zinc-300">
@@ -142,10 +165,10 @@
                 <div class="mt-10">
                     <h4 class="font-semibold mb-4 flex items-center gap-2 text-sm uppercase tracking-widest text-zinc-500">What I Do</h4>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div class="flex items-center gap-3 text-sm"><span class="text-[#EAB308]">✦</span> Logo Design &amp; Brand Identity</div>
-                        <div class="flex items-center gap-3 text-sm"><span class="text-[#EAB308]">✦</span> Social Media Campaigns</div>
-                        <div class="flex items-center gap-3 text-sm"><span class="text-[#EAB308]">✦</span> Cinematic Video Editing</div>
-                        <div class="flex items-center gap-3 text-sm"><span class="text-[#EAB308]">✦</span> Website &amp; UI Design</div>
+                        <div class="flex items-center gap-3 text-sm"><span class="text-gold">✦</span> Logo Design &amp; Brand Identity</div>
+                        <div class="flex items-center gap-3 text-sm"><span class="text-gold">✦</span> Social Media Campaigns</div>
+                        <div class="flex items-center gap-3 text-sm"><span class="text-gold">✦</span> Cinematic Video Editing</div>
+                        <div class="flex items-center gap-3 text-sm"><span class="text-gold">✦</span> Website &amp; UI Design</div>
                     </div>
                 </div>
 
@@ -153,34 +176,34 @@
                 <div class="mt-8">
                     <h4 class="font-semibold mb-3 text-sm uppercase tracking-widest text-zinc-500">Find me on</h4>
                     <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-                        <a href="#" class="flex items-center gap-2 text-[#EAB308] hover:underline">Instagram</a>
-                        <a href="#" class="flex items-center gap-2 text-[#EAB308] hover:underline">LinkedIn</a>
-                        <a href="#" class="flex items-center gap-2 text-[#EAB308] hover:underline">Behance</a>
+                        <a href="#" class="flex items-center gap-2 text-gold hover:underline">Instagram</a>
+                        <a href="#" class="flex items-center gap-2 text-gold hover:underline">LinkedIn</a>
+                        <a href="#" class="flex items-center gap-2 text-gold hover:underline">Behance</a>
                     </div>
                 </div>
             </div>
 
             <!-- Quick Facts + Tools -->
             <div class="md:col-span-5 space-y-6">
-                <div class="premium-card rounded-3xl p-7">
-                    <h4 class="font-semibold mb-5 text-sm tracking-widest text-[#EAB308]">QUICK FACTS</h4>
+                <div class="premium-card rounded-3xl p-7 bg-card-bg border border-zinc-800">
+                    <h4 class="font-semibold mb-5 text-sm tracking-widest text-gold">QUICK FACTS</h4>
                     <div class="space-y-4 text-sm">
-                        <div class="flex justify-between"><span class="text-zinc-400">Experience</span> <span class="font-medium">3+ Years</span></div>
-                        <div class="flex justify-between"><span class="text-zinc-400">Current Role</span> <span class="font-medium">Graphic Designer @ SehaLink</span></div>
-                        <div class="flex justify-between"><span class="text-zinc-400">Based in</span> <span class="font-medium">Casablanca, Morocco</span></div>
-                        <div class="flex justify-between"><span class="text-zinc-400">Languages</span> <span class="font-medium">English • French • Arabic</span></div>
+                        <div class="flex justify-between border-b border-zinc-800 pb-2"><span class="text-zinc-400">Experience</span> <span class="font-medium">3+ Years</span></div>
+                        <div class="flex justify-between border-b border-zinc-800 pb-2"><span class="text-zinc-400">Current Role</span> <span class="font-medium">Graphic Designer @ SehaLink</span></div>
+                        <div class="flex justify-between border-b border-zinc-800 pb-2"><span class="text-zinc-400">Based in</span> <span class="font-medium">Casablanca, Morocco</span></div>
+                        <div class="flex justify-between pb-1"><span class="text-zinc-400">Languages</span> <span class="font-medium">English • French • Arabic</span></div>
                     </div>
                 </div>
 
-                <div class="premium-card rounded-3xl p-7">
-                    <h4 class="font-semibold mb-4 text-sm tracking-widest text-[#EAB308]">TOOLS I MASTER</h4>
+                <div class="premium-card rounded-3xl p-7 bg-card-bg border border-zinc-800">
+                    <h4 class="font-semibold mb-4 text-sm tracking-widest text-gold">TOOLS I MASTER</h4>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-4 py-1.5 text-xs rounded-full bg-zinc-900 border border-zinc-700">Photoshop</span>
-                        <span class="px-4 py-1.5 text-xs rounded-full bg-zinc-900 border border-zinc-700">Illustrator</span>
-                        <span class="px-4 py-1.5 text-xs rounded-full bg-zinc-900 border border-zinc-700">Premiere Pro</span>
-                        <span class="px-4 py-1.5 text-xs rounded-full bg-zinc-900 border border-zinc-700">After Effects</span>
-                        <span class="px-4 py-1.5 text-xs rounded-full bg-zinc-900 border border-zinc-700">DaVinci Resolve</span>
-                        <span class="px-4 py-1.5 text-xs rounded-full bg-zinc-900 border border-zinc-700">Figma</span>
+                        <span class="px-4 py-1.5 text-xs rounded-full bg-zinc-950 border border-zinc-800 hover:border-gold transition-colors">Photoshop</span>
+                        <span class="px-4 py-1.5 text-xs rounded-full bg-zinc-950 border border-zinc-800 hover:border-gold transition-colors">Illustrator</span>
+                        <span class="px-4 py-1.5 text-xs rounded-full bg-zinc-950 border border-zinc-800 hover:border-gold transition-colors">Premiere Pro</span>
+                        <span class="px-4 py-1.5 text-xs rounded-full bg-zinc-955 border border-zinc-800 hover:border-gold transition-colors">After Effects</span>
+                        <span class="px-4 py-1.5 text-xs rounded-full bg-zinc-950 border border-zinc-800 hover:border-gold transition-colors">DaVinci Resolve</span>
+                        <span class="px-4 py-1.5 text-xs rounded-full bg-zinc-950 border border-zinc-800 hover:border-gold transition-colors">Figma</span>
                     </div>
                 </div>
             </div>
@@ -188,36 +211,38 @@
     </section>
 
     <!-- My Journey -->
-    <section class="bg-zinc-900/50 py-16">
+    <section class="bg-zinc-900/50 py-16 border-t border-b border-zinc-800/60">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-10">
-                <span class="uppercase tracking-[3px] text-xs font-semibold text-[#EAB308]">CHAPTER 02</span>
+                <span class="uppercase tracking-[3px] text-xs font-semibold text-gold">CHAPTER 02</span>
                 <h2 class="text-5xl font-bold tracking-tighter mt-1">My Journey</h2>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Timeline Item 1 -->
-                <div class="timeline-item premium-card rounded-3xl p-7">
+                <div class="timeline-item premium-card rounded-3xl p-7 bg-card-bg border border-zinc-800">
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs px-3 py-1 bg-emerald-900/30 text-emerald-400 rounded-full font-medium">2025 — Present</span>
                     </div>
                     <h3 class="font-semibold text-2xl">SehaLink</h3>
-                    <p class="text-sm text-emerald-400 mb-1">Graphic Designer &amp; Video Editor</p>
+                    <p class="text-sm text-emerald-400 mb-2">Graphic Designer &amp; Video Editor</p>
                     <p class="text-zinc-400 text-sm">Designing digital content, marketing videos, and strengthening brand identity for a health tech platform.</p>
                 </div>
 
-                <div class="timeline-item premium-card rounded-3xl p-7">
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item premium-card rounded-3xl p-7 bg-card-bg border border-zinc-800">
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs px-3 py-1 bg-amber-900/30 text-amber-400 rounded-full font-medium">2023 — 2025</span>
                     </div>
                     <h3 class="font-semibold text-2xl">Ocean Connecting</h3>
-                    <p class="text-sm text-amber-400 mb-1">Graphic Designer &amp; Video Editor</p>
+                    <p class="text-sm text-amber-400 mb-2">Graphic Designer &amp; Video Editor</p>
                     <p class="text-zinc-400 text-sm">Created branding materials, social media designs, and promotional videos for international clients.</p>
                 </div>
 
-                <div class="timeline-item premium-card rounded-3xl p-7">
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item premium-card rounded-3xl p-7 bg-card-bg border border-zinc-800">
                     <div class="flex items-center justify-between mb-4">
-                        <span class="text-xs px-3 py-1 bg-zinc-700 text-zinc-400 rounded-full font-medium">2021 — 2022</span>
+                        <span class="text-xs px-3 py-1 bg-zinc-800 text-zinc-400 rounded-full font-medium">2021 — 2022</span>
                     </div>
                     <h3 class="font-semibold text-2xl">Opti-Sent</h3>
                     <p class="text-sm text-zinc-400 mb-3">Email Marketing Designer</p>
@@ -230,24 +255,21 @@
     <!-- Testimonials -->
     <section class="max-w-7xl mx-auto px-6 py-20">
         <div class="text-center mb-12">
-            <span class="uppercase tracking-[3px] text-xs font-semibold text-[#EAB308]">CHAPTER 03</span>
+            <span class="uppercase tracking-[3px] text-xs font-semibold text-gold">CHAPTER 03</span>
             <h2 class="text-5xl font-bold tracking-tighter mt-1">What Clients Say</h2>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            <div class="testimonial-card premium-card rounded-3xl p-8">
-                <div class="flex gap-1 text-[#EAB308] mb-6">★★★★★</div>
-                <p class="italic text-lg">"Thank you, Hisham, for your quick delivery. He worked with us on social media design, and the process was incredibly smooth."</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card premium-card rounded-3xl p-8 bg-card-bg border border-zinc-800">
+                <div class="flex gap-1 text-gold mb-6">★★★★★</div>
+                <p class="italic text-lg text-zinc-300">"Thank you, Hisham, for your quick delivery. He worked with us on social media design, and the process was incredibly smooth."</p>
                 <div class="mt-8 flex items-center gap-4">
-                    <div class="w-10 h-10 rounded-full bg-emerald-600 flex-shrink-0">
-
-                        <img 
+                    <img 
                         src="assets/images/logo-nihao.png" 
-                        alt="Profile" 
-                        class="w-10 h-10 rounded-full object-cover flex-shrink-0"
-                        />
-
-                    </div>
+                        alt="Amina Profile" 
+                        class="w-11 h-11 rounded-full object-cover border border-zinc-700"
+                    />
                     <div>
                         <div class="font-semibold">Amina</div>
                         <div class="text-xs text-zinc-500">Marketing Manager, Nihao</div>
@@ -255,19 +277,16 @@
                 </div>
             </div>
 
-            <div class="testimonial-card premium-card rounded-3xl p-8">
-                <div class="flex gap-1 text-[#EAB308] mb-6">★★★★★</div>
-                <p class="italic text-lg">"I always contact Hisham when I need a design or video, and as always, he impresses me with his creativity. Well done, and keep up the great work!"</p>
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card premium-card rounded-3xl p-8 bg-card-bg border border-zinc-800">
+                <div class="flex gap-1 text-gold mb-6">★★★★★</div>
+                <p class="italic text-lg text-zinc-300">"I always contact Hisham when I need a design or video, and as always, he impresses me with his creativity. Well done, and keep up the great work!"</p>
                 <div class="mt-8 flex items-center gap-4">
-                    <div class="w-10 h-10 rounded-full bg-orange-500 flex-shrink-0">
-
-                                                <img 
+                    <img 
                         src="assets/images/logo-ocean-connecting.png" 
-                        alt="Profile" 
-                        class="w-10 h-10 rounded-full object-cover flex-shrink-0"
-                        />
-
-                    </div>
+                        alt="Mahraz Profile" 
+                        class="w-11 h-11 rounded-full object-cover border border-zinc-700"
+                    />
                     <div>
                         <div class="font-semibold">Mahraz</div>
                         <div class="text-xs text-zinc-500">Founder, Ocean Connecting</div>

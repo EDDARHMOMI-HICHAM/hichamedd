@@ -4,100 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get in touch • Hicham Eddarhmoumi</title>
+    
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- إعدادات الألوان ديال Tailwind (خاصها تكون ديما هنا باش ميوقعش ثقل في الـ Load) -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'gold': '#EAB308',
+              'gold-dark': '#CA8A04',
+              'emerald-custom': '#00C4A0',
+              'dark-bg': '#0A0A0A',
+              'card-bg': '#111111'
+            }
+          }
+        }
+      };
+    </script>
+    
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-[#0A0A0A] text-white">
+<body class="bg-dark-bg text-white">
     <!-- Navbar -->
     <nav class="sticky top-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-lg border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex items-center justify-between h-20">
                 <a href="index.html" class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#EAB308] to-yellow-600 flex items-center justify-center">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center">
                         <span class="font-bold text-[#0A0A0A] text-xl tracking-tighter">HE</span>
                     </div>
-                    <span class="font-semibold text-2xl tracking-tighter">Hicham Eddarhmoumi</span>
+                    <span class="font-semibold text-xl md:text-2xl tracking-tighter hidden sm:block">Hicham Eddarhmoumi</span>
                 </a>
 
                 <div class="hidden md:flex items-center gap-9 text-sm font-medium">
-                    <a href="index.html" class="nav-link text-white">Home</a>
-                    <a href="portfolio.html" class="nav-link text-white">Portfolio</a>
-                    <a href="process.html" class="nav-link text-white">Process</a>
-                    <a href="services.html" class="nav-link text-white">Services</a>
-                    <a href="pricing.html" class="nav-link text-white">Pricing</a>
+                    <a href="index.html" class="nav-link text-white hover:text-gold transition-colors">Home</a>
+                    <a href="portfolio.html" class="nav-link text-white hover:text-gold transition-colors">Portfolio</a>
+                    <a href="process.html" class="nav-link text-white hover:text-gold transition-colors">Process</a>
+                    <a href="services.html" class="nav-link text-white hover:text-gold transition-colors">Services & Pricing</a>
+                    <a href="Packages.html" class="nav-link text-white hover:text-gold transition-colors">Packages</a>
                 </div>
 
                 <div class="hidden md:block">
                     <a href="contact.html" 
-                       class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-[#EAB308] hover:bg-yellow-500 active:bg-yellow-600 transition-all text-[#0A0A0A] font-semibold text-sm tracking-wider">
+                       class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-gold hover:bg-yellow-500 active:bg-yellow-600 transition-all text-[#0A0A0A] font-semibold text-sm tracking-wider">
                         HIRE ME
                     </a>
                 </div>
 
+                <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="md:hidden p-2 text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
         </div>
 
+        <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-[#0A0A0A]">
             <div class="px-6 py-8 flex flex-col gap-4 text-lg">
-                <a href="index.html" class="py-2 nav-link">Home</a>
-                <a href="portfolio.html" class="py-2 nav-link">Portfolio</a>
-                <a href="process.html" class="py-2 nav-link">Process</a>
-                <a href="services.html" class="py-2 nav-link">Services</a>
-                <a href="pricing.html" class="py-2 nav-link">Pricing</a>
+                <a href="index.html" class="py-2 nav-link hover:text-gold transition-colors">Home</a>
+                <a href="portfolio.html" class="py-2 nav-link hover:text-gold transition-colors">Portfolio</a>
+                <a href="process.html" class="py-2 nav-link hover:text-gold transition-colors">Process</a>
+                <a href="services.html" class="py-2 nav-link hover:text-gold transition-colors">Services & Pricing</a>
+                <a href="Packages.html" class="py-2 nav-link hover:text-gold transition-colors">Packages</a>
                 <a href="contact.html" 
-                   class="mt-4 inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-[#EAB308] text-[#0A0A0A] font-semibold">HIRE ME</a>
+                   class="mt-4 inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-gold text-[#0A0A0A] font-semibold">HIRE ME</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero -->
-    <div class="max-w-5xl mx-auto px-6 pt-14 pb-10">
+    <div class="max-w-5xl mx-auto px-6 pt-10 md:pt-14 pb-10">
         <div class="text-center">
-            <span class="text-[#EAB308] tracking-[4px] text-xs font-semibold">LET'S CREATE TOGETHER</span>
-            <h1 class="text-7xl font-bold tracking-tighter mt-3">Get in touch</h1>
+            <span class="text-gold tracking-[4px] text-xs font-semibold">LET'S CREATE TOGETHER</span>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mt-3">Get in touch</h1>
         </div>
     </div>
 
     <div class="max-w-6xl mx-auto px-6 pb-20">
-        <div class="grid lg:grid-cols-5 gap-x-16 gap-y-14">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-x-16 gap-y-14">
             
             <!-- Contact Info -->
             <div class="lg:col-span-2">
                 <div class="space-y-9">
                     <!-- Email -->
-                    <div class="flex gap-5">
+                    <div class="flex gap-4 md:gap-5">
                         <div class="w-11 h-11 rounded-2xl bg-yellow-500/10 flex-shrink-0 flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#EAB308]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2.009 2.009 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2.009 2.009 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                         </div>
-                        <div>
-                            <div class="text-xs tracking-widest text-zinc-500">EMAIL</div>
-                            <a href="mailto:hixgraphix.pro@gmail.com" class="text-xl font-medium hover:text-[#EAB308] transition">hixgraphix.pro@gmail.com</a>
+                        <div class="flex-1 min-w-0">
+                            <div class="text-xs tracking-widest text-zinc-500 mb-1">EMAIL</div>
+                            <div class="flex flex-wrap items-center gap-2 md:gap-3">
+                                <a href="mailto:hixgraphix.pro@gmail.com" class="text-lg md:text-xl font-medium hover:text-gold transition break-all">hixgraphix.pro@gmail.com</a>
+                                <button onclick="copyToClipboard('hixgraphix.pro@gmail.com', this)" class="text-xs font-medium bg-zinc-800 hover:bg-zinc-700 text-zinc-300 px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap">Copy Email</button>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Phone -->
-                    <div class="flex gap-5">
+                    <div class="flex gap-4 md:gap-5">
                         <div class="w-11 h-11 rounded-2xl bg-yellow-500/10 flex-shrink-0 flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#EAB308]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2 3 3 0 013 3v1m6 0a3 3 0 01-3-3m6 0a3 3 0 01-3 3m2 9a2 2 0 01-2 2 15 15 0 01-6 0 2 2 0 01-2-2m6 0v3m-6-3v3"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2 3 3 0 013 3v1m6 0a3 3 0 01-3-3m6 0a3 3 0 01-3 3m2 9a2 2 0 01-2 2 15 15 0 01-6 0 2 2 0 01-2-2m6 0v3m-6-3v3"/></svg>
                         </div>
-                        <div>
-                            <div class="text-xs tracking-widest text-zinc-500">PHONE / WHATSAPP</div>
-                            <a href="tel:+212653342503" class="text-xl font-medium hover:text-[#EAB308] transition">+212 6 53 34 25 03</a>
+                        <div class="flex-1 min-w-0">
+                            <div class="text-xs tracking-widest text-zinc-500 mb-1">PHONE / WHATSAPP</div>
+                            <div class="flex flex-wrap items-center gap-2 md:gap-3">
+                                <a href="tel:+212653342503" class="text-lg md:text-xl font-medium hover:text-gold transition">+212 6 53 34 25 03</a>
+                                <button onclick="copyToClipboard('+212653342503', this)" class="text-xs font-medium bg-zinc-800 hover:bg-zinc-700 text-zinc-300 px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap">Copy Phone</button>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Socials -->
                     <div>
                         <div class="text-xs tracking-widest text-zinc-500 mb-4">FIND ME ON</div>
-                        <div class="space-y-3 text-lg">
-                            <a href="#" class="flex items-center gap-3 group"><span class="text-[#EAB308] group-hover:underline">Instagram</span> <span class="text-sm text-zinc-500">@Hicham.edd</span></a>
-                            <a href="#" class="flex items-center gap-3 group"><span class="text-[#EAB308] group-hover:underline">Behance</span> <span class="text-sm text-zinc-500">Hicham Eddarhmoumi</span></a>
-                            <a href="#" class="flex items-center gap-3 group"><span class="text-[#EAB308] group-hover:underline">LinkedIn</span> <span class="text-sm text-zinc-500">Hicham Eddarhmoumi</span></a>
+                        <div class="space-y-3 text-base md:text-lg">
+                            <a href="#" class="flex items-center gap-3 group"><span class="text-gold group-hover:underline">Instagram</span> <span class="text-sm text-zinc-500">@Hicham.edd</span></a>
+                            <a href="#" class="flex items-center gap-3 group"><span class="text-gold group-hover:underline">Behance</span> <span class="text-sm text-zinc-500">Hicham Eddarhmoumi</span></a>
+                            <a href="#" class="flex items-center gap-3 group"><span class="text-gold group-hover:underline">LinkedIn</span> <span class="text-sm text-zinc-500">Hicham Eddarhmoumi</span></a>
                         </div>
                     </div>
                 </div>
@@ -105,43 +133,43 @@
 
             <!-- Form -->
             <div class="lg:col-span-3">
-                <form id="contact-form" class="space-y-5">
+                <form id="contact-form" class="space-y-4 md:space-y-5">
                     <div>
                         <label class="text-xs tracking-widest text-zinc-400 block mb-1.5">Full name</label>
-                        <input type="text" name="name" required class="form-input w-full px-5 py-3.5 rounded-2xl text-lg placeholder:text-zinc-600" placeholder="Your full name">
+                        <input type="text" name="name" required class="form-input w-full px-4 md:px-5 py-3.5 rounded-2xl text-base md:text-lg bg-[#111111] border border-zinc-800 focus:border-gold outline-none transition-colors placeholder:text-zinc-600" placeholder="Your full name">
                     </div>
                     
                     <div>
                         <label class="text-xs tracking-widest text-zinc-400 block mb-1.5">Email Address</label>
-                        <input type="email" name="email" required class="form-input w-full px-5 py-3.5 rounded-2xl text-lg placeholder:text-zinc-600" placeholder="you@company.com">
+                        <input type="email" name="email" required class="form-input w-full px-4 md:px-5 py-3.5 rounded-2xl text-base md:text-lg bg-[#111111] border border-zinc-800 focus:border-gold outline-none transition-colors placeholder:text-zinc-600" placeholder="you@company.com">
                     </div>
 
                     <div>
                         <label class="text-xs tracking-widest text-zinc-400 block mb-1.5">Phone Number <span class="text-zinc-500">(optional)</span></label>
-                        <input type="tel" name="phone" class="form-input w-full px-5 py-3.5 rounded-2xl text-lg placeholder:text-zinc-600" placeholder="+212 6XX XXX XXX">
+                        <input type="tel" name="phone" class="form-input w-full px-4 md:px-5 py-3.5 rounded-2xl text-base md:text-lg bg-[#111111] border border-zinc-800 focus:border-gold outline-none transition-colors placeholder:text-zinc-600" placeholder="+212 6XX XXX XXX">
                     </div>
 
                     <div>
                         <label class="text-xs tracking-widest text-zinc-400 block mb-1.5">Service type</label>
-                        <select name="service" class="form-input w-full px-5 py-3.5 rounded-2xl text-lg bg-[#111111]">
+                        <select id="service-select" name="service" class="form-input w-full px-4 md:px-5 py-3.5 rounded-2xl text-base md:text-lg bg-[#111111] border border-zinc-800 focus:border-gold outline-none transition-colors">
                             <option value="">Select a service...</option>
-                            <option>Logo Design</option>
-                            <option>Brand Identity</option>
-                            <option>Social Media Posts</option>
-                            <option>Video Editing</option>
-                            <option>Website Design</option>
-                            <option>Starter Package</option>
-                            <option>Professional Package</option>
-                            <option>Premium Package</option>
-                            <option>Full Brand Package</option>
-                            <option>Custom Project</option>
-                            <option>Just contacting</option>
+                            <option value="Logo Design">Logo Design</option>
+                            <option value="Brand Identity">Brand Identity</option>
+                            <option value="Social Media Posts">Social Media Posts</option>
+                            <option value="Video Editing">Video Editing</option>
+                            <option value="Website Design">Website Design</option>
+                            <option value="Starter Package">Starter Package</option>
+                            <option value="Professional Package">Professional Package</option>
+                            <option value="Premium Package">Premium Package</option>
+                            <option value="Full Brand Package">Full Brand Package</option>
+                            <option value="Custom Project">Custom Project</option>
+                            <option value="Just contacting">Just contacting</option>
                         </select>
                     </div>
 
                     <div>
                         <label class="text-xs tracking-widest text-zinc-400 block mb-1.5">Message</label>
-                        <textarea name="message" rows="6" required class="form-input w-full px-5 py-4 rounded-3xl text-lg placeholder:text-zinc-600 resize-y" placeholder="Tell me about your project, goals, and timeline..."></textarea>
+                        <textarea id="message-textarea" name="message" rows="7" required class="form-input w-full px-4 md:px-5 py-4 rounded-3xl text-base md:text-lg bg-[#111111] border border-zinc-800 focus:border-gold outline-none transition-colors placeholder:text-zinc-600 resize-y" placeholder="Tell me about your project, goals, and timeline..."></textarea>
                     </div>
 
                     <!-- File Upload -->
@@ -150,12 +178,12 @@
                             Attach a file <span class="text-zinc-500">(optional)</span>
                         </label>
                         
-                        <div class="border border-dashed border-zinc-700 hover:border-[#EAB308] transition-colors rounded-2xl p-6">
+                        <div class="border border-dashed border-zinc-700 hover:border-gold transition-colors rounded-2xl p-6 bg-[#111111]">
                             <input type="file" id="file-upload" name="attachment" class="hidden" 
                                    accept="image/*,.pdf,.mp4,.mov,.avi">
                             
                             <label for="file-upload" class="cursor-pointer flex flex-col items-center text-center">
-                                <div class="w-11 h-11 rounded-2xl bg-zinc-800 flex items-center justify-center mb-3">
+                                <div class="w-11 h-11 rounded-2xl bg-zinc-800 flex items-center justify-center mb-3 group-hover:bg-zinc-700 transition-colors">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 0115 8v.5M12 12v9m-4-4l4 4 4-4" />
                                     </svg>
@@ -166,19 +194,19 @@
                             
                             <!-- Selected file info -->
                             <div id="file-info" class="mt-4 hidden">
-                                <div class="flex items-center justify-between bg-zinc-900 rounded-xl px-4 py-2 text-sm">
-                                    <div class="flex items-center gap-2">
-                                        <span id="file-name" class="text-emerald-400 font-medium"></span>
+                                <div class="flex items-center justify-between bg-zinc-900 rounded-xl px-4 py-2 text-sm border border-zinc-800">
+                                    <div class="flex items-center gap-2 overflow-hidden">
+                                        <span id="file-name" class="text-emerald-custom font-medium truncate"></span>
                                     </div>
                                     <button type="button" id="remove-file" 
-                                            class="text-zinc-500 hover:text-red-400 transition-colors">×</button>
+                                            class="text-zinc-500 hover:text-red-400 transition-colors ml-3 text-lg">&times;</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <button type="submit" 
-                            class="w-full py-4 text-lg font-semibold rounded-2xl bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-900 transition flex items-center justify-center gap-2 text-white">
+                            class="w-full py-4 text-lg font-semibold rounded-2xl bg-zinc-800 hover:bg-gold hover:text-dark-bg active:bg-yellow-500 transition-all flex items-center justify-center gap-2 text-white mt-2">
                         Send message 
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </button>
@@ -195,7 +223,7 @@
 
     <script src="js/main.js"></script>
     <script>
-        // File Upload Handler
+        // File Upload Handler (UI Update)
         const fileInput = document.getElementById('file-upload');
         const fileInfo = document.getElementById('file-info');
         const fileNameDisplay = document.getElementById('file-name');
@@ -207,7 +235,6 @@
                     const file = this.files[0];
                     const maxSize = 5 * 1024 * 1024; // 5MB
 
-                    // Validate file size
                     if (file.size > maxSize) {
                         alert('File is too large! Maximum size allowed is 5MB.');
                         this.value = '';
@@ -215,20 +242,179 @@
                         return;
                     }
 
-                    // Show file info
                     fileNameDisplay.textContent = `${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)`;
                     fileInfo.classList.remove('hidden');
                 }
             });
         }
 
-        // Remove selected file
         if (removeFileBtn) {
             removeFileBtn.addEventListener('click', function() {
                 fileInput.value = '';
                 fileInfo.classList.add('hidden');
             });
         }
+
+        // --- Automatic Brief Generation Logic ---
+        const serviceSelect = document.getElementById('service-select');
+        const messageTextarea = document.getElementById('message-textarea');
+
+        const briefs = {
+            "Logo Design": 
+`Project Brief: Logo Design
+
+1. Brand/Company Name: 
+2. Industry & Target Audience: 
+3. Brand Values & Vibe (e.g., Luxury, Minimalist, Tech, Modern): 
+4. Preferred Color Palette (if any): 
+5. Competitors or Visual References you like: 
+
+
+you can send a file as well if needed.`,
+
+            "Brand Identity": 
+`Project Brief: Complete Brand Identity
+
+1. Company Background & Mission: 
+2. Core Target Audience: 
+3. Visual Deliverables Needed (e.g., Logo variants, Typography, Color systems, Business cards, Brand guidelines book): 
+4. Key Brand Personality Traits (e.g., Elegant vs Bold, Friendly vs Formal): 
+5. Project Timeline or Deadlines: 
+
+
+you can send a file as well if needed.`,
+
+            "Social Media Posts": 
+`Project Brief: Social Media Graphic Design
+
+1. Platforms (e.g., Instagram, LinkedIn, Facebook): 
+2. Types of Content Needed (e.g., Static posts, Carousel sliders, Story designs): 
+3. Industry/Niche: 
+4. Do you have an established brand guide/logo? (Yes/No): 
+5. Approximate monthly volume or package target: 
+
+
+you can send a file as well if needed.`,
+
+            "Video Editing": 
+`Project Brief: Professional Video Editing
+
+1. Video Type (e.g., YouTube video, Instagram Reel/Short, Corporate Promo, Cinematic Film): 
+2. Estimated Raw Footage Length & Resolution: 
+3. Target Output Length (e.g., 60 seconds, 10 minutes): 
+4. Editing Style & References (Pacing, Sound effects, Text animations): 
+5. Deliverables Needed (e.g., Dynamic Cuts, Subtitles/Captions, Color Grading, Audio enhancement): 
+
+
+you can send a file as well if needed.`,
+
+            "Website Design": 
+`Project Brief: UI / UX Website Design
+
+1. Website Purpose (e.g., Creative Portfolio, E-commerce, Landing page, Corporate): 
+2. Total Number of Pages/Sections needed: 
+3. Competitor or Layout References you admire: 
+4. Do you have the branding assets and copy/text ready?: 
+5. Key features required (e.g., Contact form, Portfolio layout): 
+
+
+you can send a file as well if needed.`,
+
+            "Starter Package": 
+`Package Selected: Starter Package Onboarding
+
+1. Business Name & Core Activity: 
+2. Why did you choose the Starter Package? (Main goal): 
+3. Current visual status (Do you have a current logo/theme?): 
+4. Estimated timeline to begin: 
+
+
+you can send a file as well if needed.`,
+
+            "Professional Package": 
+`Package Selected: Professional Package Onboarding
+
+1. Company Name & Target Market: 
+2. Key Goals for this expansion/refresh: 
+3. Deliverables you are most focused on: 
+4. Any specific custom design parameters or technical constraints: 
+
+
+you can send a file as well if needed.`,
+
+            "Premium Package": 
+`Package Selected: Premium Package Onboarding
+
+1. Brand/Company Ecosystem Details: 
+2. High-priority creative demands (Logo, Social Kits, Motion, Video): 
+3. Desired style direction, aesthetic tier, or production reference links: 
+4. Scale of the target market or platform distribution: 
+
+
+you can send a file as well if needed.`,
+
+            "Full Brand Package": 
+`Package Selected: Ultimate Full Brand Package Onboarding
+
+1. Complete corporate structure/Business Overview: 
+2. Comprehensive visual requirements (Branding guidelines, Social kit architecture, Collaterals, UI layouts): 
+3. Competitors to beat & target audience analysis notes: 
+4. Preferred production workflow milestones: 
+
+
+you can send a file as well if needed.`,
+
+            "Custom Project": 
+`Custom Project Scope Inquiry
+
+1. General Overview of your Project idea: 
+2. Specific deliverables or components required: 
+3. Estimated timeline & preferred completion dates: 
+4. Intended budget or scope parameters: 
+
+
+you can send a file as well if needed.`,
+
+            "Just contacting": 
+`Hi Hicham,
+
+I am getting in touch regarding: 
+
+[Type your general inquiry or query here...]`
+        };
+
+        if (serviceSelect && messageTextarea) {
+            serviceSelect.addEventListener('change', function() {
+                const selectedValue = this.value;
+                if (briefs[selectedValue]) {
+                    messageTextarea.value = briefs[selectedValue];
+                    // Adjust height slightly to comfortably display the multiline brief template
+                    messageTextarea.rows = 8;
+                } else {
+                    messageTextarea.value = "";
+                    messageTextarea.placeholder = "Tell me about your project, goals, and timeline...";
+                    messageTextarea.rows = 7;
+                }
+            });
+        }
+
+        // Add this right inside the existing <script> tags at the bottom of contact.html
+
+window.addEventListener('DOMContentLoaded', () => {
+    const serviceSelect = document.getElementById('service-select');
+    
+    // Check if there is a 'service' parameter in the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceParam = urlParams.get('service');
+
+    if (serviceParam && serviceSelect) {
+        // Find the option matching the URL parameter and select it
+        serviceSelect.value = serviceParam;
+        
+        // Manually trigger the 'change' event so the form auto-fills the matching project brief
+        serviceSelect.dispatchEvent(new Event('change'));
+    }
+});
     </script>
 </body>
 </html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBloom • Premium Showcase</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'gold': '#EAB308',
+              'gold-dark': '#CA8A04',
+              'dark-bg': '#0A0A0A',
+              'card-bg': '#111111'
+            }
+          }
+        }
+      };
+    </script>
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-dark-bg text-white antialiased">
+
+    <nav class="sticky top-0 z-50 bg-dark-bg/95 backdrop-blur-lg border-b border-zinc-800/80">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <a href="../index.html" class="flex items-center gap-3 group">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center transition-transform group-hover:scale-105">
+                        <span class="font-bold text-dark-bg text-xl tracking-tighter">HE</span>
+                    </div>
+                    <span class="font-semibold text-xl sm:text-2xl tracking-tighter truncate max-w-[180px] sm:max-w-none">Hicham Eddarhmoumi</span>
+                </a>
+
+                <div class="hidden md:flex items-center gap-9 text-sm font-medium">
+                    <a href="../index.html" class="nav-link text-zinc-400 hover:text-white transition-colors">Home</a>
+                    <a href="../portfolio.html" class="nav-link text-white font-semibold">Portfolio</a>
+                    <a href="../process.html" class="nav-link text-zinc-400 hover:text-white transition-colors">Process</a>
+                    <a href="../services.html" class="nav-link text-zinc-400 hover:text-white transition-colors">Services & Pricing</a>
+                    <a href="../Packages.html" class="nav-link text-zinc-400 hover:text-white transition-colors">Packages</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="../contact.html" 
+                       class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-gold hover:bg-yellow-500 active:bg-yellow-600 transition-all text-dark-bg font-semibold text-sm tracking-wider shadow-lg shadow-gold/10">
+                        HIRE ME
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-white focus:outline-none" aria-label="Toggle Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-dark-bg">
+            <div class="px-6 py-8 flex flex-col gap-4 text-lg">
+                <a href="../index.html" class="nav-link py-2 text-zinc-300">Home</a>
+                <a href="../portfolio.html" class="nav-link py-2 text-white font-semibold">Portfolio</a>
+                <a href="../process.html" class="nav-link py-2 text-zinc-300">Process</a>
+                <a href="../services.html" class="nav-link py-2 text-zinc-300">Services & Pricing</a>
+                <a href="../Packages.html" class="nav-link py-2 text-zinc-300">Packages</a>
+                <a href="../contact.html" class="mt-4 inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-gold text-dark-bg font-semibold text-center">HIRE ME</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="max-w-7xl mx-auto px-6 pt-16 pb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+            
+            <div class="lg:col-span-7 w-full aspect-[4/3] sm:aspect-[16/10] bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl">
+                <div class="w-full h-full bg-gradient-to-br from-emerald-950 via-zinc-900 to-stone-900 flex items-center justify-center p-8 group">
+                    <div class="text-center transition-transform duration-500 group-hover:scale-105">
+                        <div class="mx-auto w-20 h-20 bg-gradient-to-br from-emerald-400 to-teal-600 rounded-2xl flex items-center justify-center mb-5 shadow-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-dark-bg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <p class="text-xl sm:text-2xl text-emerald-300 font-semibold tracking-tight">EcoBloom — Reels Campaign</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
+                <div class="flex items-center gap-3">
+                    <span class="px-4 py-1 text-xs font-bold rounded-full bg-yellow-900/30 border border-yellow-600/20 text-gold tracking-wider uppercase">SOCIAL MEDIA REELS</span>
+                    <span class="text-sm text-zinc-500 font-medium">2026</span>
+                </div>
+                
+                <div>
+                    <h1 class="text-5xl sm:text-6xl font-bold tracking-tighter text-white">EcoBloom</h1>
+                    <p class="text-lg sm:text-xl text-zinc-400 font-medium mt-1">Short-Form Video Campaign Content</p>
+                </div>
+
+                <hr class="border-zinc-800/80">
+
+                <div class="space-y-3">
+                    <h2 class="text-xs uppercase tracking-widest text-zinc-500 font-bold">Project Overview</h2>
+                    <p class="text-zinc-300 leading-relaxed text-base sm:text-lg font-normal">
+                        A dynamic collection of high-converting social media reels produced for EcoBloom's product launch. Every asset features custom pacing, hyper-engaging visual hooks, clean transitions, and native mobile framing to optimize dynamic cross-platform delivery on Instagram and TikTok.
+                    </p>
+                </div>
+
+                <div class="pt-4">
+                    <a href="../contact.html?service=Social%20Media%20Posts" 
+                       class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-gold hover:bg-yellow-500 active:bg-yellow-600 text-dark-bg font-bold text-sm tracking-wide transition-all shadow-lg shadow-gold/5">
+                        Start Similar Project →
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="max-w-4xl mx-auto px-6 relative group/carousel mb-24">
+        
+        <button id="prev-btn" class="absolute -left-4 sm:-left-12 top-1/2 -translate-y-1/2 z-30 w-14 h-14 rounded-full bg-zinc-900/90 backdrop-blur-xl border border-zinc-800 text-white flex items-center justify-center shadow-2xl transition-all duration-300 hover:bg-gold hover:text-dark-bg hover:border-gold" aria-label="Scroll Left">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+
+        <button id="next-btn" class="absolute -right-4 sm:-right-12 top-1/2 -translate-y-1/2 z-30 w-14 h-14 rounded-full bg-zinc-900/90 backdrop-blur-xl border border-zinc-800 text-white flex items-center justify-center shadow-2xl transition-all duration-300 hover:bg-gold hover:text-dark-bg hover:border-gold" aria-label="Scroll Right">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+
+        <div id="reels-container" class="w-full flex overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth">
+            
+            <div class="w-full shrink-0 snap-center flex justify-center px-2">
+                <div class="w-full max-w-[420px] aspect-[9/16] bg-zinc-950 rounded-[32px] overflow-hidden border border-zinc-800/80 shadow-2xl relative group">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/10 to-zinc-950 flex flex-col justify-between p-8">
+                        <span class="text-xs font-bold tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800/30 px-4 py-1.5 rounded-full w-max">01 . VISUAL HOOK</span>
+                        <button class="mx-auto w-16 h-16 rounded-full bg-gold text-dark-bg flex items-center justify-center shadow-2xl transform transition-transform group-hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                        <p class="text-base font-semibold text-zinc-200 tracking-wide text-center">Product Intro Visual Hook</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full shrink-0 snap-center flex justify-center px-2">
+                <div class="w-full max-w-[420px] aspect-[9/16] bg-zinc-950 rounded-[32px] overflow-hidden border border-zinc-800/80 shadow-2xl relative group">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/10 to-zinc-950 flex flex-col justify-between p-8">
+                        <span class="text-xs font-bold tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800/30 px-4 py-1.5 rounded-full w-max">02 . FEATURES</span>
+                        <button class="mx-auto w-16 h-16 rounded-full bg-gold text-dark-bg flex items-center justify-center shadow-2xl transform transition-transform group-hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                        <p class="text-base font-semibold text-zinc-200 tracking-wide text-center">Organic Ingredients Spotlight</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full shrink-0 snap-center flex justify-center px-2">
+                <div class="w-full max-w-[420px] aspect-[9/16] bg-zinc-950 rounded-[32px] overflow-hidden border border-zinc-800/80 shadow-2xl relative group">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/10 to-zinc-950 flex flex-col justify-between p-8">
+                        <span class="text-xs font-bold tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800/30 px-4 py-1.5 rounded-full w-max">03 . TEXTURE</span>
+                        <button class="mx-auto w-16 h-16 rounded-full bg-gold text-dark-bg flex items-center justify-center shadow-2xl transform transition-transform group-hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                        <p class="text-base font-semibold text-zinc-200 tracking-wide text-center">Macro Color Grading Shot</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full shrink-0 snap-center flex justify-center px-2">
+                <div class="w-full max-w-[420px] aspect-[9/16] bg-zinc-950 rounded-[32px] overflow-hidden border border-zinc-800/80 shadow-2xl relative group">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/10 to-zinc-950 flex flex-col justify-between p-8">
+                        <span class="text-xs font-bold tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800/30 px-4 py-1.5 rounded-full w-max">04 . AESTHETIC</span>
+                        <button class="mx-auto w-16 h-16 rounded-full bg-gold text-dark-bg flex items-center justify-center shadow-2xl transform transition-transform group-hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                        <p class="text-base font-semibold text-zinc-200 tracking-wide text-center">Minimalist Lifestyle Routine</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full shrink-0 snap-center flex justify-center px-2">
+                <div class="w-full max-w-[420px] aspect-[9/16] bg-zinc-950 rounded-[32px] overflow-hidden border border-zinc-800/80 shadow-2xl relative group">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/10 to-zinc-950 flex flex-col justify-between p-8">
+                        <span class="text-xs font-bold tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800/30 px-4 py-1.5 rounded-full w-max">05 . BENEFITS</span>
+                        <button class="mx-auto w-16 h-16 rounded-full bg-gold text-dark-bg flex items-center justify-center shadow-2xl transform transition-transform group-hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                        <p class="text-base font-semibold text-zinc-200 tracking-wide text-center">Dynamic Typography Motion</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full shrink-0 snap-center flex justify-center px-2">
+                <div class="w-full max-w-[420px] aspect-[9/16] bg-zinc-950 rounded-[32px] overflow-hidden border border-zinc-800/80 shadow-2xl relative group">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/10 to-zinc-950 flex flex-col justify-between p-8">
+                        <span class="text-xs font-bold tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800/30 px-4 py-1.5 rounded-full w-max">06 . CALL TO ACTION</span>
+                        <button class="mx-auto w-16 h-16 rounded-full bg-gold text-dark-bg flex items-center justify-center shadow-2xl transform transition-transform group-hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                        <p class="text-base font-semibold text-zinc-200 tracking-wide text-center">End Screen Promo Offer</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="pt-8 border-t border-zinc-800/60">
+            <a href="../portfolio.html" class="inline-flex items-center gap-2 text-sm font-semibold text-zinc-400 hover:text-gold transition-colors group">
+                <span class="transition-transform group-hover:-translate-x-1">←</span> Back to Portfolio
+            </a>
+        </div>
+    </div>
+
+    <footer class="border-t border-zinc-900 py-12 mt-20 bg-dark-bg">
+        <div class="max-w-7xl mx-auto px-6 text-center text-sm text-zinc-600">
+            © Copyright — Hicham Eddarhmoumi. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        const container = document.getElementById('reels-container');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        if (container && prevBtn && nextBtn) {
+            // دالة لحساب مسافة التمرير وعرض الحاوية بالكامل للانتقال بدقة فيديو واحد في كل مرة
+            const getScrollAmount = () => container.offsetWidth;
+
+            nextBtn.addEventListener('click', () => {
+                container.scrollBy({
+                    left: getScrollAmount(),
+                    behavior: 'smooth'
+                });
+            });
+
+            prevBtn.addEventListener('click', () => {
+                container.scrollBy({
+                    left: -getScrollAmount(),
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // التحكم بالقائمة المتجاوبة
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if (menuBtn && menu) {
+            menuBtn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
