@@ -6,10 +6,8 @@
     <title>Our Process • Hicham Eddarhmoumi</title>
     <meta name="description" content="Transparent, collaborative design and video editing workflows tailored to your project goals.">
     
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Tailwind Configuration matching your custom variables -->
     <script>
       tailwind.config = {
         theme: {
@@ -25,28 +23,25 @@
       };
     </script>
     
-    <!-- Global CSS Stylesheet containing your custom design tokens -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3EH%3C/text%3E%3C/svg%3E">
 </head>
 <body class="bg-dark-bg text-white antialiased">
 
-    <!-- Navbar -->
-    <nav class="sticky top-0 z-50 bg-dark-bg/95 backdrop-blur-lg border-b border-zinc-800/80">
+    <nav class="sticky top-0 z-50 bg-dark-bg/95 backdrop-blur-lg border-b border-zinc-800/80" aria-label="Primary">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="flex items-center gap-3 group">
-                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center transition-transform group-hover:scale-105">
+                <a href="index.html" class="flex items-center gap-3 group" aria-label="Hicham Eddarhmoumi Home">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center transition-transform group-hover:scale-105" aria-hidden="true">
                         <span class="font-bold text-dark-bg text-xl tracking-tighter">HE</span>
                     </div>
                     <span class="font-semibold text-xl sm:text-2xl tracking-tighter truncate max-w-[180px] sm:max-w-none">Hicham Eddarhmoumi</span>
                 </a>
 
-                <!-- Desktops Navigation -->
                 <div class="hidden md:flex items-center gap-9 text-sm font-medium">
                     <a href="index.html" class="nav-link text-zinc-400">Home</a>
                     <a href="portfolio.html" class="nav-link text-zinc-400">Portfolio</a>
-                    <a href="process.html" class="nav-link text-zinc-400">Process</a>
+                    <a href="process.html" class="nav-link text-zinc-400" aria-current="page">Process</a>
                     <a href="services.html" class="nav-link text-zinc-400">Services & Pricing</a>
                     <a href="Packages.html" class="nav-link text-zinc-400">Packages</a>
                 </div>
@@ -57,21 +52,19 @@
                     </a>
                 </div>
 
-                <!-- Mobile Menu Button Hooks -->
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-white focus:outline-none" aria-label="Toggle Menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-white focus:outline-none" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-dark-bg">
             <div class="px-6 py-8 flex flex-col gap-4 text-lg">
                 <a href="index.html" class="nav-link py-2 text-zinc-300">Home</a>
                 <a href="portfolio.html" class="nav-link py-2 text-zinc-300">Portfolio</a>
-                <a href="process.html" class="nav-link py-2 text-zinc-300">Process</a>
+                <a href="process.html" class="nav-link py-2 text-zinc-300" aria-current="page">Process</a>
                 <a href="services.html" class="nav-link py-2 text-zinc-300">Services & Pricing</a>
                 <a href="Packages.html" class="nav-link py-2 text-zinc-300">Packages</a>
                 <a href="contact.html" class="mt-4 inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-gold text-dark-bg font-semibold text-center">HIRE ME</a>
@@ -79,7 +72,6 @@
         </div>
     </nav>
 
-    <!-- Premium Clean Centered Header Component -->
     <header class="max-w-4xl mx-auto px-6 pt-24 pb-16 text-center flex flex-col items-center">
         <span class="text-gold text-xs sm:text-sm tracking-[0.25em] font-bold uppercase mb-3 block">HOW WE WORK</span>
         <h1 class="section-title text-5xl sm:text-6xl md:text-7xl font-bold tracking-tighter text-white pb-3">Our Process</h1>
@@ -88,26 +80,24 @@
         </p>
     </header>
 
-    <!-- Process Accordions Container (Perfected Linear Flow for Phone & Desktop Grid) -->
     <main class="max-w-6xl mx-auto px-6 pb-32 space-y-6">
         
-        <!-- Logo Design Process Module -->
-        <div class="premium-card rounded-3xl overflow-hidden">
-            <div class="process-header px-8 py-6 flex items-center justify-between select-none">
+        <section class="premium-card rounded-3xl overflow-hidden" aria-labelledby="heading-logo-process">
+            <button id="btn-logo-process" class="process-header w-full text-left px-8 py-6 flex items-center justify-between select-none focus:outline-none focus:ring-2 focus:ring-gold/50 rounded-t-3xl" aria-expanded="true" aria-controls="content-logo-process">
                 <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center flex-shrink-0">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center flex-shrink-0" aria-hidden="true">
                         <span class="text-dark-bg text-lg font-bold">✎</span>
                     </div>
                     <div class="flex items-center flex-wrap gap-y-1">
-                        <h3 class="font-semibold text-xl sm:text-2xl tracking-tight">Logo Design Process</h3>
+                        <h2 id="heading-logo-process" class="font-semibold text-xl sm:text-2xl tracking-tight text-white">Logo Design Process</h2>
                         <span class="ml-3 text-xs px-2.5 py-0.5 rounded-full bg-yellow-950/60 text-gold border border-yellow-900/40 font-medium">12 Steps</span>
                     </div>
                 </div>
-                <div class="process-arrow text-xl text-zinc-500 transition-transform duration-300">
+                <div class="process-arrow text-xl text-zinc-500 transition-transform duration-300" aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </div>
-            </div>
-            <div class="process-content px-8 border-t border-zinc-900/60">
+            </button>
+            <div id="content-logo-process" class="process-content px-8 border-t border-zinc-900/60" role="region" aria-labelledby="btn-logo-process">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 py-4">
                     <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">01</div><div><span class="font-semibold text-zinc-200">Initial Consultation</span><div class="text-xs text-zinc-500 mt-1">Strategic alignment session to map your brand narrative and core criteria.</div></div></div>
                     <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">02</div><div><span class="font-semibold text-zinc-200">Project Brief &amp; Discovery</span><div class="text-xs text-zinc-500 mt-1">Deconstruct target user parameters and refine project directives.</div></div></div>
@@ -123,25 +113,24 @@
                     <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">12</div><div><span class="font-semibold text-zinc-200">Refinement &amp; Master Handover</span><div class="text-xs text-zinc-500 mt-1">Iterating on preferences and delivering complete source vectors and formats.</div></div></div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Social Media Posts Process Module -->
-        <div class="premium-card rounded-3xl overflow-hidden">
-            <div class="process-header px-8 py-6 flex items-center justify-between select-none">
+        <section class="premium-card rounded-3xl overflow-hidden" aria-labelledby="heading-social-process">
+            <button id="btn-social-process" class="process-header w-full text-left px-8 py-6 flex items-center justify-between select-none focus:outline-none focus:ring-2 focus:ring-gold/50 rounded-t-3xl" aria-expanded="false" aria-controls="content-social-process">
                 <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center flex-shrink-0">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center flex-shrink-0" aria-hidden="true">
                         <span class="text-dark-bg text-lg font-bold">📱</span>
                     </div>
                     <div class="flex items-center flex-wrap gap-y-1">
-                        <h3 class="font-semibold text-xl sm:text-2xl tracking-tight">Social Media Posts Process</h3>
+                        <h2 id="heading-social-process" class="font-semibold text-xl sm:text-2xl tracking-tight text-white">Social Media Posts Process</h2>
                         <span class="ml-3 text-xs px-2.5 py-0.5 rounded-full bg-yellow-950/60 text-gold border border-yellow-900/40 font-medium">10 Steps</span>
                     </div>
                 </div>
-                <div class="process-arrow text-xl text-zinc-500 transition-transform duration-300">
+                <div class="process-arrow text-xl text-zinc-500 transition-transform duration-300" aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </div>
-            </div>
-            <div class="process-content px-8 border-t border-zinc-900/60">
+            </button>
+            <div id="content-social-process" class="process-content px-8 border-t border-zinc-900/60" role="region" aria-labelledby="btn-social-process">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 py-4">
                     <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">01</div><div><span class="font-semibold text-zinc-200">Goal Mapping</span><div class="text-xs text-zinc-500 mt-1">Isolating micro-metrics (engagement multipliers, link paths, awareness targets).</div></div></div>
                     <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">02</div><div><span class="font-semibold text-zinc-200">Feed Research</span><div class="text-xs text-zinc-500 mt-1">Investigating current audience consumption layouts to design thumb-stopping graphics.</div></div></div>
@@ -155,25 +144,24 @@
                     <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">10</div><div><span class="font-semibold text-zinc-200">Performance Optimization</span><div class="text-xs text-zinc-500 mt-1">Providing tactical context frameworks on posting weights and delivery style metrics.</div></div></div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Brand Identity Process Module -->
-        <div class="premium-card rounded-3xl overflow-hidden">
-            <div class="process-header px-8 py-6 flex items-center justify-between select-none">
+        <section class="premium-card rounded-3xl overflow-hidden" aria-labelledby="heading-brand-process">
+            <button id="btn-brand-process" class="process-header w-full text-left px-8 py-6 flex items-center justify-between select-none focus:outline-none focus:ring-2 focus:ring-gold/50 rounded-t-3xl" aria-expanded="false" aria-controls="content-brand-process">
                 <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center flex-shrink-0">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center flex-shrink-0" aria-hidden="true">
                         <span class="text-dark-bg text-lg font-bold">◆</span>
                     </div>
                     <div class="flex items-center flex-wrap gap-y-1">
-                        <h3 class="font-semibold text-xl sm:text-2xl tracking-tight">Brand Identity Process</h3>
+                        <h2 id="heading-brand-process" class="font-semibold text-xl sm:text-2xl tracking-tight text-white">Brand Identity Process</h2>
                         <span class="ml-3 text-xs px-2.5 py-0.5 rounded-full bg-yellow-950/60 text-gold border border-yellow-900/40 font-medium">12 Steps</span>
                     </div>
                 </div>
-                <div class="process-arrow text-xl text-zinc-500 transition-transform duration-300">
+                <div class="process-arrow text-xl text-zinc-500 transition-transform duration-300" aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </div>
-            </div>
-            <div class="process-content px-8 border-t border-zinc-900/60">
+            </button>
+            <div id="content-brand-process" class="process-content px-8 border-t border-zinc-900/60" role="region" aria-labelledby="btn-brand-process">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 py-4">
                     <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">01</div><div><span class="font-semibold text-zinc-200">Discovery Workshop</span><div class="text-xs text-zinc-500 mt-1">Deep structural immersion to evaluate market paths, values, and vision profiles.</div></div></div>
                     <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">02</div><div><span class="font-semibold text-zinc-200">Landscape Auditing</span><div class="text-xs text-zinc-500 mt-1">Uncovering competitor visual blind spots to ensure design distinctiveness.</div></div></div>
@@ -189,25 +177,24 @@
                     <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">12</div><div><span class="font-semibold text-zinc-200">System Integration &amp; Deployment</span><div class="text-xs text-zinc-500 mt-1">Deploying asset packages alongside custom guidance for application onboarding.</div></div></div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Video Editing Process Module -->
-        <div class="premium-card rounded-3xl overflow-hidden">
-            <div class="process-header px-8 py-6 flex items-center justify-between select-none">
+        <section class="premium-card rounded-3xl overflow-hidden" aria-labelledby="heading-video-process">
+            <button id="btn-video-process" class="process-header w-full text-left px-8 py-6 flex items-center justify-between select-none focus:outline-none focus:ring-2 focus:ring-gold/50 rounded-t-3xl" aria-expanded="false" aria-controls="content-video-process">
                 <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center flex-shrink-0">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center flex-shrink-0" aria-hidden="true">
                         <span class="text-dark-bg text-lg font-bold">▶</span>
                     </div>
                     <div class="flex items-center flex-wrap gap-y-1">
-                        <h3 class="font-semibold text-xl sm:text-2xl tracking-tight">Video Editing Process</h3>
+                        <h2 id="heading-video-process" class="font-semibold text-xl sm:text-2xl tracking-tight text-white">Video Editing Process</h2>
                         <span class="ml-3 text-xs px-2.5 py-0.5 rounded-full bg-yellow-950/60 text-gold border border-yellow-900/40 font-medium">11 Steps</span>
                     </div>
                 </div>
-                <div class="process-arrow text-xl text-zinc-500 transition-transform duration-300">
+                <div class="process-arrow text-xl text-zinc-500 transition-transform duration-300" aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </div>
-            </div>
-            <div class="process-content px-8 border-t border-zinc-900/60">
+            </button>
+            <div id="content-video-process" class="process-content px-8 border-t border-zinc-900/60" role="region" aria-labelledby="btn-video-process">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 py-4">
                     <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">01</div><div><span class="font-semibold text-zinc-200">Narrative Briefing</span><div class="text-xs text-zinc-500 mt-1">Deconstructing pacing metrics, audience triggers, and structural tone specs.</div></div></div>
                     <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">02</div><div><span class="font-semibold text-zinc-200">Footage Logging &amp; Inspection</span><div class="text-xs text-zinc-500 mt-1">Auditing multi-cam takes and grading raw captured data properties.</div></div></div>
@@ -222,25 +209,24 @@
                     <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">11</div><div><span class="font-semibold text-zinc-200">Master Export Generation</span><div class="text-xs text-zinc-500 mt-1">Encoding pristine ProRes/H.264 formats custom-fit for final viewing engines.</div></div></div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Website Design Process Module -->
-        <div class="premium-card rounded-3xl overflow-hidden">
-            <div class="process-header px-8 py-6 flex items-center justify-between select-none">
+        <section class="premium-card rounded-3xl overflow-hidden" aria-labelledby="heading-web-process">
+            <button id="btn-web-process" class="process-header w-full text-left px-8 py-6 flex items-center justify-between select-none focus:outline-none focus:ring-2 focus:ring-gold/50 rounded-t-3xl" aria-expanded="false" aria-controls="content-web-process">
                 <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center flex-shrink-0">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-yellow-600 flex items-center justify-center flex-shrink-0" aria-hidden="true">
                         <span class="text-dark-bg text-lg font-bold">💻</span>
                     </div>
                     <div class="flex items-center flex-wrap gap-y-1">
-                        <h3 class="font-semibold text-xl sm:text-2xl tracking-tight">Website Design Process</h3>
+                        <h2 id="heading-web-process" class="font-semibold text-xl sm:text-2xl tracking-tight text-white">Website Design Process</h2>
                         <span class="ml-3 text-xs px-2.5 py-0.5 rounded-full bg-yellow-950/60 text-gold border border-yellow-900/40 font-medium">12 Steps</span>
                     </div>
                 </div>
-                <div class="process-arrow text-xl text-zinc-500 transition-transform duration-300">
+                <div class="process-arrow text-xl text-zinc-500 transition-transform duration-300" aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </div>
-            </div>
-            <div class="process-content px-8 border-t border-zinc-900/60">
+            </button>
+            <div id="content-web-process" class="process-content px-8 border-t border-zinc-900/60" role="region" aria-labelledby="btn-web-process">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 py-4">
                     <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">01</div><div><span class="font-semibold text-zinc-200">Requirements Architecture</span><div class="text-xs text-zinc-500 mt-1">Defining conversion mechanics, app data requirements, and user action targets.</div></div></div>
                     <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">02</div><div><span class="font-semibold text-zinc-200">Structural Competitor Tracking</span><div class="text-xs text-zinc-500 mt-1">Reviewing market platforms to build enhanced, faster operational alternatives.</div></div></div>
@@ -252,21 +238,29 @@
                     <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">08</div><div><span class="font-semibold text-zinc-200">Revision Cycles</span><div class="text-xs text-zinc-500 mt-1">Iterating on composition variables to establish structural balance across designs.</div></div></div>
                     <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">09</div><div><span class="font-semibold text-zinc-200">Front-End Production Block</span><div class="text-xs text-zinc-500 mt-1">Translating mockups into semantic code modules and crisp interaction nodes.</div></div></div>
                     <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">10</div><div><span class="font-semibold text-zinc-200">Responsive Breakpoint Testing</span><div class="text-xs text-zinc-500 mt-1">Ensuring performance across mobile viewports, tablet configurations, and ultra-wides.</div></div></div>
-                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">11</div><div><span class="font-semibold text-zinc-200">Core Performance Optimization</span><div class="text-xs text-zinc-500 mt-1">Compressing dynamic assets, implementing clean SEO parameters, and auditing code speed.</div></div></div>
-                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">12</div><div><span class="font-semibold text-zinc-200">Engine Deployment &amp; Onboarding</span><div class="text-xs text-zinc-500 mt-1">Going live alongside personalized documentation to manage updating pipelines.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">11</div><div><span class="font-semibold text-zinc-200">Accessibility Assessment</span><div class="text-xs text-zinc-500 mt-1">Testing semantic hierarchies, colors, contrast points, and keyboard flows.</div></div></div>
+                    <div class="process-step flex gap-4 p-4 rounded-xl"><div class="font-mono text-gold font-bold w-6 flex-shrink-0">12</div><div><span class="font-semibold text-zinc-200">Deployment Optimization</span><div class="text-xs text-zinc-500 mt-1">Production build delivery, asset optimization caching setup, and direct handover.</div></div></div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark-bg py-12">
+    <section class="bg-zinc-900/40 border-t border-zinc-900 py-20" aria-labelledby="cta-heading">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 id="cta-heading" class="text-4xl sm:text-5xl font-bold tracking-tight">Ready to elevate your brand?</h2>
+            <p class="mt-4 text-zinc-400 text-lg">Let's create something remarkable together.</p>
+            <a href="contact.html" class="mt-8 inline-flex px-10 py-4 rounded-2xl bg-gold hover:bg-yellow-500 transition-colors text-dark-bg font-semibold text-lg shadow-lg shadow-gold/5">
+                Start a Project
+            </a>
+        </div>
+    </section>
+
+    <footer class="border-t border-zinc-900 py-12 bg-dark-bg">
         <div class="max-w-7xl mx-auto px-6 text-center text-sm text-zinc-600">
-            © Copyright — Hicham Eddarhmoumi. All rights reserved.
+            &copy; Copyright &mdash; Hicham Eddarhmoumi. All rights reserved.
         </div>
     </footer>
 
-    <!-- Core Interactive Application Script -->
     <script src="js/main.js"></script>
 </body>
 </html>
