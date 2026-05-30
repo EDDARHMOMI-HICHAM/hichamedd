@@ -95,30 +95,33 @@
     </nav>
 
     <!-- Top Section: Split Layout -->
-    <!-- Top Section: Split Layout (Image Left / Content Right) -->
     <header class="max-w-7xl mx-auto px-6 pt-16 pb-20">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
             
+            <!-- Top Left: Hero Showcase Image -->
+            <div class="lg:col-span-7 w-full aspect-[1440/1125] bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl">
                 <div class="lg:col-span-7 w-full aspect-[4/3] sm:aspect-[16/10] bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl group relative">
                     <img 
-                        src="../assets/portfolio-images/nohao-project/logo.webp" 
+                        src="../assets/portfolio-images/My-portfolio/1.webp" 
                         alt="nihao logo"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     >
                     <!-- Optional subtle overlay -->
                     <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
                 </div>
-            <!-- Top Right: Metadata & Project Description (Sticky on desktop) -->
+            </div>
+
+            <!-- Top Right: Metadata & Project Description -->
             <div class="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
                 <div class="flex items-center gap-3">
-                    <span class="px-4 py-1 text-xs font-bold rounded-full bg-yellow-900/30 border border-yellow-600/20 text-gold tracking-wider uppercase">Social Media Posts
-                    </span>
-                    <span class="text-sm text-zinc-500 font-medium">2026</span>
+
+                    <span class="px-4 py-1 text-xs font-bold rounded-full bg-blue-900/40 text-blue-400 tracking-wider uppercase">Portfolio</span>
+                    <span class="text-sm text-zinc-500 font-medium">2025</span>
                 </div>
                 
                 <div>
-                    <h1 class="text-5xl sm:text-6xl font-bold tracking-tighter text-white">Nihao</h1>
-                    <p class="text-lg sm:text-xl text-zinc-400 font-medium mt-1">Centre de formation et d'études en Chine</p>
+                    <h1 class="text-5xl sm:text-6xl font-bold tracking-tighter text-white">My Graphic Design Portfolio</Portal></h1>
+                    <p class="text-lg sm:text-xl text-zinc-400 font-medium mt-1">show casse my portfolio of graphic design</p>
                 </div>
 
                 <hr class="border-zinc-800/80">
@@ -126,14 +129,16 @@
                 <div class="space-y-3">
                     <h2 class="text-xs uppercase tracking-widest text-zinc-500 font-bold">Project Overview</h2>
                     <p class="text-zinc-300 leading-relaxed text-base sm:text-lg font-normal">
-                        Designed a series of Instagram carousel posts for Nihao, a Moroccan center helping students study in China. The posts promote various university programs with clean visuals and clear information about admissions, tuition, and deadlines.
+                        Welcome to my graphic design portfolio. Here you’ll find selected projects that highlight 
+                        my approach to branding and visual identity. I focus on creating clean, meaningful design 
+                        solutions that help brands stand out while staying true to their essence.
                     </p>
                 </div>
 
                 <div class="pt-4">
-                    <a href="../contact.html?service=Social%20Media%20Posts" 
+                    <a href="../services.html" 
                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-gold hover:bg-yellow-500 active:bg-yellow-600 text-dark-bg font-bold text-sm tracking-wide transition-all shadow-lg shadow-gold/5">
-                        Start Similar Project →
+                        Take a Look In My Services →
                     </a>
                 </div>
             </div>
@@ -166,7 +171,7 @@
         
         <!-- Image Counter indicator -->
         <div class="absolute bottom-4 right-4 md:bottom-6 md:right-10 z-10 bg-dark-bg/80 backdrop-blur px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium text-white shadow-lg">
-            <span id="currentIndex">1</span> / 10
+            <span id="currentIndex">1</span> / 24
         </div>
     </section>
 
@@ -177,7 +182,7 @@
         <div class="absolute top-0 left-0 right-0 p-4 md:p-6 flex justify-between items-center z-50 pointer-events-none">
             <!-- Counter -->
             <div class="bg-black/60 backdrop-blur px-4 py-2 rounded-full text-sm font-medium text-white shadow-lg pointer-events-auto">
-                <span id="lbCurrentIndex">1</span> / 10
+                <span id="lbCurrentIndex">1</span> / 24
             </div>
             <!-- Close Button -->
             <button id="closeLightboxBtn" class="bg-black/60 hover:bg-red-500 text-white w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full backdrop-blur transition-colors shadow-xl pointer-events-auto" aria-label="Close Lightbox">
@@ -252,15 +257,15 @@
             const lbNextBtn = document.getElementById('lbNextBtn');
             const lbCurrentIndexLabel = document.getElementById('lbCurrentIndex');
 
-            const totalImages = 10;
-            const basePath = '../assets/portfolio-images/nohao-project/';
+            const totalImages = 24;
+            const basePath = '../assets/portfolio-images/My-portfolio/';
 
             // Generate images dynamically
             for (let i = 1; i <= totalImages; i++) {
                 
                 // --- A. Main Page Carousel Slide ---
                 const slide = document.createElement('div');
-                slide.className = 'flex-none w-full aspect-video snap-center relative flex items-center justify-center cursor-zoom-in group';
+                slide.className = 'flex-none w-full aspect-[1440/1125] snap-center relative flex items-center justify-center cursor-zoom-in group';
                 
                 const img = document.createElement('img');
                 img.src = `${basePath}${i}.webp`;
@@ -290,7 +295,7 @@
                 lbImg.src = `${basePath}${i}.webp`;
                 lbImg.alt = `Fullscreen Image ${i}`;
                 // Default fit to screen classes
-                lbImg.className = 'w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.01]';
+                lbImg.className = 'max-w-full max-h-full object-contain cursor-zoom-in zoom-transition shadow-2xl';
                 lbImg.loading = 'lazy';
 
                 // Zoom Toggle Logic
