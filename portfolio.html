@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio • Hicham Eddarhmoumi</title>
     
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- إعدادات الألوان الموحدة للموقع كاملو -->
     <script>
       tailwind.config = {
         theme: {
@@ -28,7 +26,6 @@
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3EH%3C/text%3E%3C/svg%3E">
 </head>
 <body class="bg-dark-bg text-white">
-    <!-- Navbar -->
     <nav class="sticky top-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-lg border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex items-center justify-between h-20">
@@ -48,13 +45,9 @@
                 </div>
 
                 <div class="hidden md:block">
-                    <a href="contact.html" 
-                       class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-gold hover:bg-yellow-500 active:bg-yellow-600 transition-all text-dark-bg font-semibold text-sm tracking-wider">
-                        HIRE ME
-                    </a>
+                    <a href="contact.html" class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-gold hover:bg-yellow-500 active:bg-yellow-600 transition-all text-dark-bg font-semibold text-sm tracking-wider">HIRE ME</a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="md:hidden p-2 text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -62,192 +55,113 @@
                 </button>
             </div>
         </div>
-
-        <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-[#0A0A0A]">
-            <div class="px-6 py-8 flex flex-col gap-4 text-lg">
-                <a href="index.html" class="py-2 nav-link hover:text-gold transition-colors">Home</a>
-                <a href="portfolio.html" class="py-2 nav-link hover:text-gold transition-colors">Portfolio</a>
-                <a href="process.html" class="py-2 nav-link hover:text-gold transition-colors">Process</a>
-                <a href="services.html" class="py-2 nav-link hover:text-gold transition-colors">Services & Pricing</a>
-                <a href="Packages.html" class="py-2 nav-link hover:text-gold transition-colors">Packages</a>
-                <a href="contact.html" 
-                   class="mt-4 inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-gold text-dark-bg font-semibold">HIRE ME</a>
-            </div>
-        </div>
     </nav>
 
-    <!-- Hero -->
     <div class="max-w-5xl mx-auto px-6 pt-16 pb-10 text-center">
         <span class="text-gold tracking-[3px] text-xs font-semibold">SELECTED WORK</span>
         <h1 class="text-7xl font-bold tracking-tighter mt-2">Portfolio</h1>
         <p class="text-xl text-zinc-400 mt-3">Real projects. Real impact.<br>Selected works in branding, design &amp; digital storytelling.</p>
     </div>
 
-    <!-- Filters Section (FIXED HOVER STATES) -->
     <div class="max-w-7xl mx-auto px-6 mb-8">
-        <div class="flex flex-wrap justify-center md:justify-start gap-2">
-            <!-- 
-               Each button below now shares identical dynamic classes.
-               If a button has the class "active", it automatically turns gold with dark text.
-               If it's hovered WHILE active, it smoothly transitions to a slightly darker gold without turning black.
-            -->
-            <button data-filter="all" class="filter-btn active px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 text-white transition-all hover:bg-zinc-900 [&.active]:bg-gold [&.active]:text-dark-bg [&.active]:border-gold hover:[&.active]:bg-yellow-500">All Projects</button>
-            <button data-filter="logo" class="filter-btn px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 text-white transition-all hover:bg-zinc-900 [&.active]:bg-gold [&.active]:text-dark-bg [&.active]:border-gold hover:[&.active]:bg-yellow-500">Logo & Brand</button>
-            <button data-filter="social" class="filter-btn px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 text-white transition-all hover:bg-zinc-900 [&.active]:bg-gold [&.active]:text-dark-bg [&.active]:border-gold hover:[&.active]:bg-yellow-500">Social Media</button>
-            <button data-filter="video" class="filter-btn px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 text-white transition-all hover:bg-zinc-900 [&.active]:bg-gold [&.active]:text-dark-bg [&.active]:border-gold hover:[&.active]:bg-yellow-500">Video Editing</button>
-            <button data-filter="website" class="filter-btn px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 text-white transition-all hover:bg-zinc-900 [&.active]:bg-gold [&.active]:text-dark-bg [&.active]:border-gold hover:[&.active]:bg-yellow-500">UI / UX Design</button>
+        <div class="flex flex-wrap justify-center md:justify-center gap-2">
+            <button data-filter="all" class="filter-btn active px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 text-white transition-all hover:bg-zinc-900 [&.active]:bg-gold [&.active]:text-dark-bg [&.active]:border-gold">All Projects</button>
+            <button data-filter="logo" class="filter-btn px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 text-white transition-all hover:bg-zinc-900 [&.active]:bg-gold [&.active]:text-dark-bg [&.active]:border-gold">Logo & Brand</button>
+            <button data-filter="social" class="filter-btn px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 text-white transition-all hover:bg-zinc-900 [&.active]:bg-gold [&.active]:text-dark-bg [&.active]:border-gold">Social Media</button>
+            <button data-filter="video" class="filter-btn px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 text-white transition-all hover:bg-zinc-900 [&.active]:bg-gold [&.active]:text-dark-bg [&.active]:border-gold">Video Editing</button>
+            <button data-filter="website" class="filter-btn px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 text-white transition-all hover:bg-zinc-900 [&.active]:bg-gold [&.active]:text-dark-bg [&.active]:border-gold">UI / UX Design</button>
+            <button data-filter="more" class="filter-btn px-6 py-2.5 text-sm font-medium rounded-2xl border border-zinc-700 text-white transition-all hover:bg-zinc-900 [&.active]:bg-gold [&.active]:text-dark-bg [&.active]:border-gold">MORE</button>
         </div>
     </div>
 
-    <!-- Projects Grid -->
     <div class="max-w-7xl mx-auto px-6 pb-20">
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-
-
-
-
-            <!-- My portfolio -->
-            <div class="project-card premium-card rounded-3xl overflow-hidden bg-card-bg border border-zinc-800" data-category="logo">
-                <div class="h-64 bg-white flex items-center justify-center relative project-image rounded-2xl overflow-hidden">
-                    <img 
-                        src="assets/portfolio-images/My-portfolio/1.webp" 
-                        alt="my portfolio"
-                        class="max-w-[100%] max-h-[100%] object-contain"
-                    >
-                    
-                    <!-- Year badge -->
+            <div class="project-card rounded-3xl overflow-hidden bg-card-bg border border-zinc-800" data-category="more">
+                <div class="h-64 bg-white flex items-center justify-center relative overflow-hidden">
+                    <img src="assets/portfolio-images/My-portfolio/1.webp" alt="portfolio" class="max-w-[100%] max-h-[100%] object-contain">
                     <div class="absolute top-5 right-5 px-3 py-1 text-xs rounded-full bg-black/60 backdrop-blur text-white">2025</div>
                 </div>
                 <div class="p-6">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="font-semibold text-2xl">My Graphic Design Portfolio</h3>
-                            <span class="text-xs px-3 py-px rounded bg-blue-900/40 text-blue-400">Portfolio</span>
-                        </div>
-                    </div>
-                    <p class="text-sm text-zinc-400 mt-3 line-clamp-2">Welcome to my graphic design portfolio. Here you’ll find selected projects that highlight my approach to branding and visual identity. I focus on creating clean, meaningful design solutions that help brands stand out while staying true to their essence.</p>
-                    <a href="portfolio-pages/my-portfolio.html" class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 hover:text-gold flex items-center justify-center gap-2 group transition-all">View Project <span class="group-hover:translate-x-0.5 transition">→</span></a>
+                    <h3 class="font-semibold text-2xl">My Graphic Design Portfolio</h3>
+                    <span class="inline-block mt-2 px-3 py-1 text-[10px] font-bold rounded-full bg-orange-900/40 text-orange-400 tracking-wider">MORE</span>
+                    <p class="text-sm text-zinc-400 mt-3 line-clamp-2">Welcome to my graphic design portfolio. Here you’ll find selected projects that highlight my approach to branding and visual identity.</p>
+                    <a href="portfolio-pages/my-portfolio.html" class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 hover:text-gold flex items-center justify-center gap-2 transition-all">View Project →</a>
                 </div>
             </div>
 
-            <!-- Nihao Project -->
-            <div class="project-card premium-card rounded-3xl overflow-hidden bg-card-bg border border-zinc-800" data-category="logo">
-                <div class="h-64 bg-white flex items-center justify-center relative project-image rounded-2xl overflow-hidden">
-                    <img 
-                        src="assets/portfolio-images/nohao-project/logo.webp" 
-                        alt="Nihao Logo"
-                        class="max-w-[100%] max-h-[100%] object-contain"
-                    >
-                    
-                    <!-- Year badge -->
+            <div class="project-card rounded-3xl overflow-hidden bg-card-bg border border-zinc-800" data-category="social">
+                <div class="h-64 bg-white flex items-center justify-center relative overflow-hidden">
+                    <img src="assets/portfolio-images/nohao-project/logo.webp" alt="Nihao" class="max-w-[100%] max-h-[100%] object-contain">
                     <div class="absolute top-5 right-5 px-3 py-1 text-xs rounded-full bg-black/60 backdrop-blur text-white">2026</div>
                 </div>
                 <div class="p-6">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="font-semibold text-2xl">Nihao</h3>
-                            <span class="px-4 py-1 text-xs font-bold rounded-full bg-yellow-900/30 border border-yellow-600/20 text-gold tracking-wider ">Social Media Posts</span>
-                        </div>
-                    </div>
-                    <p class="text-sm text-zinc-400 mt-3 line-clamp-2">Designed Instagram carousel posts for Nihao to promote study programs in top Chinese universities with clean visuals and clear information.</p>
-                    <a href="portfolio-pages/Nihao-project.html" class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 hover:text-gold flex items-center justify-center gap-2 group transition-all">View Project <span class="group-hover:translate-x-0.5 transition">→</span></a>
+                    <h3 class="font-semibold text-2xl">Nihao</h3>
+                    <span class="inline-block mt-2 px-3 py-1 text-[10px] font-bold rounded-full bg-yellow-900/30 text-gold tracking-wider">SOCIAL MEDIA</span>
+                    <p class="text-sm text-zinc-400 mt-3 line-clamp-2">Designed Instagram carousel posts for Nihao to promote study programs in top Chinese universities.</p>
+                    <a href="portfolio-pages/Nihao-project.html" class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 hover:text-gold flex items-center justify-center gap-2 transition-all">View Project →</a>
                 </div>
             </div>
 
-
-
-            <!-- project 3 to be created -->
-            <div class="project-card premium-card rounded-3xl overflow-hidden bg-card-bg border border-zinc-800" data-category="video">
-                <div class="h-64 bg-gradient-to-br from-orange-900 via-amber-950 to-red-950 flex items-center justify-center relative project-image">
-                    <div class="text-center">
-                        <div class="mx-auto w-20 h-20 bg-gradient-to-br from-amber-400 to-orange-600 rounded-2xl flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                        </div>
-                    </div>
-                    <div class="absolute top-5 right-5 px-3 py-1 text-xs rounded-full bg-black/60">2025</div>
+            <div class="project-card rounded-3xl overflow-hidden bg-card-bg border border-zinc-800" data-category="logo">
+                <div class="h-64 bg-white flex items-center justify-center relative overflow-hidden">
+                    <img src="assets/portfolio-images/logistocean-project/1.webp" alt="Logistocean" class="max-w-[100%] max-h-[100%] object-contain">
+                    <div class="absolute top-5 right-5 px-3 py-1 text-xs rounded-full bg-black/60 backdrop-blur text-white">2025</div>
                 </div>
                 <div class="p-6">
-                    <div>
-                        <h3 class="font-semibold text-2xl">project 3 to be created</h3>
-                        <span class="text-xs px-3 py-px rounded bg-orange-900/40 text-orange-400">VIDEO EDITING</span>
-                    </div>
-                    <p class="text-sm text-zinc-400 mt-3">Technical promotional video highlighting plaster projection machines with dynamic texture close-ups and precise zooms.</p>
-                    <a href="portfolio-pages/Nihao-project.html" class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 hover:text-gold flex items-center justify-center gap-2 group transition-all">View Project <span class="group-hover:translate-x-0.5 transition">→</span></a>
+                    <h3 class="font-semibold text-2xl">Visual identity Logistocean</h3>
+                    <span class="inline-block mt-2 px-3 py-1 text-[10px] font-bold rounded-full bg-emerald-900/40 text-emerald-400 tracking-wider">LOGO & BRAND</span>
+                    <p class="text-sm text-zinc-400 mt-3 line-clamp-2">LOGISTOCEAN delivers integrated air, sea, and land logistics solutions worldwide.</p>
+                    <a href="portfolio-pages/Logistocean-project.html" class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 hover:text-gold flex items-center justify-center gap-2 transition-all">View Project →</a>
                 </div>
             </div>
 
-            <!-- project 4 to be created -->
-            <div class="project-card premium-card rounded-3xl overflow-hidden bg-card-bg border border-zinc-800" data-category="website">
-                <div class="h-64 bg-gradient-to-br from-teal-900 to-emerald-950 flex items-center justify-center relative project-image">
-                    <div class="text-center">
-                        <div class="mx-auto w-20 h-20 bg-gradient-to-br from-emerald-400 to-teal-600 rounded-2xl flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-                        </div>
-                    </div>
-                    <div class="absolute top-5 right-5 px-3 py-1 text-xs rounded-full bg-black/60">2026</div>
+            <div class="project-card rounded-3xl overflow-hidden bg-card-bg border border-zinc-800" data-category="more">
+                <div class="h-64 bg-white flex items-center justify-center relative overflow-hidden">
+                    <img src="assets/portfolio-images/prez-what-i-do-project/1.webp" alt="Prezentation" class="max-w-[100%] max-h-[100%] object-contain">
+                    <div class="absolute top-5 right-5 px-3 py-1 text-xs rounded-full bg-black/60 backdrop-blur text-white">2025</div>
                 </div>
                 <div class="p-6">
-                    <div>
-                        <h3 class="font-semibold text-2xl">project 4 to be created</h3>
-                        <span class="text-xs px-3 py-px rounded bg-emerald-900/40 text-emerald-400">UI / UX DESIGN</span>
-                    </div>
-                    <p class="text-sm text-zinc-400 mt-3">Comprehensive mobile app ecosystem featuring a Patient Profile Hub and detailed post-consultation summaries.</p>
-                    <a href="portfolio-pages/Nihao-project.html" class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 hover:text-gold flex items-center justify-center gap-2 group transition-all">View Project <span class="group-hover:translate-x-0.5 transition">→</span></a>
+                    <h3 class="font-semibold text-2xl">Prezentation</h3>
+                    <span class="inline-block mt-2 px-3 py-1 text-[10px] font-bold rounded-full bg-orange-900/40 text-orange-400 tracking-wider">MORE</span>
+                    <p class="text-sm text-zinc-400 mt-3 line-clamp-2">Selected projects that highlight my approach to branding and visual identity.</p>
+                    <a href="portfolio-pages/prez-what-i-do-project.html" class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 hover:text-gold flex items-center justify-center gap-2 transition-all">View Project →</a>
                 </div>
             </div>
 
-            <!-- project 5 to be created -->
-            <div class="project-card premium-card rounded-3xl overflow-hidden bg-card-bg border border-zinc-800" data-category="logo">
-                <div class="h-64 bg-gradient-to-br from-purple-900 via-violet-950 to-fuchsia-950 flex items-center justify-center relative project-image">
-                    <div class="text-center">
-                        <div class="mx-auto w-20 h-20 bg-gradient-to-br from-fuchsia-400 to-purple-600 rounded-2xl flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
-                        </div>
-                    </div>
-                    <div class="absolute top-5 right-5 px-3 py-1 text-xs rounded-full bg-black/60">2024</div>
+            <div class="project-card rounded-3xl overflow-hidden bg-card-bg border border-zinc-800" data-category="logo">
+                <div class="h-64 bg-white flex items-center justify-center relative overflow-hidden">
+                    <img src="assets/portfolio-images/mixed-logos/1.webp" alt="Logos" class="max-w-[100%] max-h-[100%] object-contain">
+                    <div class="absolute top-5 right-5 px-3 py-1 text-xs rounded-full bg-black/60 backdrop-blur text-white">2024</div>
                 </div>
                 <div class="p-6">
-                    <div>
-                        <h3 class="font-semibold text-2xl">project 5 to be created</h3>
-                        <span class="text-xs px-3 py-px rounded bg-purple-900/40 text-purple-400">BRAND IDENTITY</span>
-                    </div>
-                    <p class="text-sm text-zinc-400 mt-3">Complete brand identity for a luxury candle &amp; home fragrance studio with modern typography.</p>
-                    <a href="portfolio-pages/Nihao-project.html" class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 hover:text-gold flex items-center justify-center gap-2 group transition-all">View Project <span class="group-hover:translate-x-0.5 transition">→</span></a>
+                    <h3 class="font-semibold text-2xl">Logos</h3>
+                    <span class="inline-block mt-2 px-3 py-1 text-[10px] font-bold rounded-full bg-purple-900/40 text-purple-400 tracking-wider">LOGO & BRAND</span>
+                    <p class="text-sm text-zinc-400 mt-3 line-clamp-2">Complete brand identity for a luxury candle & home fragrance studio.</p>
+                    <a href="portfolio-pages/mixed-logos.html" class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 hover:text-gold flex items-center justify-center gap-2 transition-all">View Project →</a>
                 </div>
             </div>
-
-            <!-- project 6 to be created -->
-            <div class="project-card premium-card rounded-3xl overflow-hidden bg-card-bg border border-zinc-800" data-category="video">
-                <div class="h-64 bg-gradient-to-br from-red-950 to-zinc-950 flex items-center justify-center relative project-image">
-                    <div class="text-center">
-                        <div class="mx-auto w-20 h-20 bg-gradient-to-br from-red-400 to-rose-600 rounded-2xl flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
-                        </div>
-                    </div>
-                    <div class="absolute top-5 right-5 px-3 py-1 text-xs rounded-full bg-black/60">2024</div>
-                </div>
-                <div class="p-6">
-                    <div>
-                        <h3 class="font-semibold text-2xl">project 6 to be created</h3>
-                        <span class="text-xs px-3 py-px rounded bg-red-900/40 text-red-400">VIDEO EDITING</span>
-                    </div>
-                    <p class="text-sm text-zinc-400 mt-3">Cinematic brand film for a luxury riad in Marrakech (2:30 min).</p>
-                    <a href="portfolio-pages/Nihao-project.html" class="mt-5 w-full py-3 text-sm rounded-2xl border border-zinc-700 hover:bg-zinc-900 hover:text-gold flex items-center justify-center gap-2 group transition-all">View Project <span class="group-hover:translate-x-0.5 transition">→</span></a>
-                </div>
-            </div>
-            
         </div>
     </div>
 
-    <!-- Project Modal -->
-    <div id="project-modal" class="hidden fixed inset-0 z-[100] items-center justify-center bg-black/90 p-4">
-        <div id="modal-content" class="max-w-5xl w-full bg-dark-bg border border-zinc-800 rounded-3xl overflow-hidden shadow-2xl"></div>
-    </div>
+    <script>
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelector('.filter-btn.active').classList.remove('active');
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                document.querySelectorAll('.project-card').forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 
     <footer class="border-t border-zinc-800 py-8 text-center text-sm text-zinc-500">© Hicham Eddarhmoumi. All rights reserved.</footer>
-
-    <script src="js/main.js"></script>
 </body>
 </html>
