@@ -105,10 +105,6 @@
             -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */
         }
-        /* Smooth zoom transition */
-        .zoom-transition {
-            transition: width 0.3s ease-in-out, max-width 0.3s ease-in-out;
-        }
     </style>
 
 </head>
@@ -187,12 +183,12 @@
             <div class="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
                 <div class="flex items-center gap-3">
 
-                    <span class="px-4 py-1 text-xs font-bold rounded-full bg-blue-900/40 text-blue-400 tracking-wider uppercase">Portfolio</span>
+                    <span class="px-4 py-1 text-xs font-bold rounded-full bg-orange-950 text-orange-400 tracking-wider uppercase">MORE SHOWCASE</span>
                     <span class="text-sm text-zinc-500 font-medium">2025</span>
                 </div>
                 
                 <div>
-                    <h1 class="text-5xl sm:text-6xl font-bold tracking-tighter text-white">My Graphic Design Portfolio</Portal></h1>
+                    <h1 class="text-5xl sm:text-6xl font-bold tracking-tighter text-white">My Graphic Design Portfolio</h1>
                     <p class="text-lg sm:text-xl text-zinc-400 font-medium mt-1">show casse my portfolio of graphic design</p>
                 </div>
 
@@ -281,11 +277,6 @@
         <div id="lightboxTrack" class="flex-1 w-full h-full flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar relative z-40">
             <!-- JavaScript will inject the lightbox images here -->
         </div>
-        
-        <!-- Zoom Instruction -->
-        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-50 hidden md:block">
-            <p class="bg-black/60 px-4 py-1 rounded-full text-xs text-white">Click image to zoom in/out</p>
-        </div>
     </div>
 
     <!-- Project Footer Utilities -->
@@ -337,7 +328,7 @@
                 
                 // --- A. Main Page Carousel Slide ---
                 const slide = document.createElement('div');
-                slide.className = 'flex-none w-full aspect-[1440/1125] snap-center relative flex items-center justify-center cursor-zoom-in group';
+                slide.className = 'flex-none w-full aspect-[1440/1125] snap-center relative flex items-center justify-center cursor-pointer group';
                 
                 const img = document.createElement('img');
                 img.src = `${basePath}${i}.webp`;
@@ -367,21 +358,8 @@
                 lbImg.src = `${basePath}${i}.webp`;
                 lbImg.alt = `Fullscreen Image ${i}`;
                 // Default fit to screen classes
-                lbImg.className = 'max-w-full max-h-full object-contain cursor-zoom-in zoom-transition shadow-2xl';
+                lbImg.className = 'max-w-full max-h-full object-contain shadow-2xl';
                 lbImg.loading = 'lazy';
-
-                // Zoom Toggle Logic
-                lbImg.addEventListener('click', function() {
-                    if (this.classList.contains('cursor-zoom-in')) {
-                        // Zoom In: Remove max-size constraints and apply huge width
-                        this.classList.remove('max-w-full', 'max-h-full', 'object-contain', 'cursor-zoom-in');
-                        this.classList.add('w-[200vw]', 'md:w-[150vw]', 'max-w-none', 'cursor-zoom-out');
-                    } else {
-                        // Zoom Out: Return to fit screen
-                        this.classList.add('max-w-full', 'max-h-full', 'object-contain', 'cursor-zoom-in');
-                        this.classList.remove('w-[200vw]', 'md:w-[150vw]', 'max-w-none', 'cursor-zoom-out');
-                    }
-                });
 
                 lbSlide.appendChild(lbImg);
                 lightboxTrack.appendChild(lbSlide);
@@ -444,13 +422,6 @@
                 setTimeout(() => {
                     lightboxModal.classList.add('hidden');
                     lightboxModal.classList.remove('flex');
-                    
-                    // Reset all zoomed images back to normal
-                    const allLbImages = lightboxTrack.querySelectorAll('img');
-                    allLbImages.forEach(img => {
-                        img.classList.add('max-w-full', 'max-h-full', 'object-contain', 'cursor-zoom-in');
-                        img.classList.remove('w-[200vw]', 'md:w-[150vw]', 'max-w-none', 'cursor-zoom-out');
-                    });
                 }, 300); // Matches the duration-300 transition
             }
 

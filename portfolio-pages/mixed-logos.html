@@ -191,13 +191,13 @@
             <div class="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
                 <div class="flex items-center gap-3">
 
-                    <span class="px-4 py-1 text-xs font-bold rounded-full bg-blue-900/40 text-blue-400 tracking-wider uppercase">Portfolio</span>
+                    <span class="px-4 py-1 text-xs font-bold rounded-full bg-emerald-950 text-emerald-400 tracking-wider uppercase">LOGO & BRAND</span>
                     <span class="text-sm text-zinc-500 font-medium">2025</span>
                 </div>
                 
                 <div>
-                    <h1 class="text-5xl sm:text-6xl font-bold tracking-tighter text-white">Mixed Logos</Portal></h1>
-                    <p class="text-lg sm:text-xl text-zinc-400 font-medium mt-1">show casse my portfolio of graphic design</p>
+                    <h1 class="text-5xl sm:text-6xl font-bold tracking-tighter text-white">Mixed Logos</h1>
+                    <p class="text-lg sm:text-xl text-zinc-400 font-medium mt-1">show casse some mixed logos</p>
                 </div>
 
                 <hr class="border-zinc-800/80">
@@ -205,9 +205,10 @@
                 <div class="space-y-3">
                     <h2 class="text-xs uppercase tracking-widest text-zinc-500 font-bold">Project Overview</h2>
                     <p class="text-zinc-300 leading-relaxed text-base sm:text-lg font-normal">
-                        Welcome to my graphic design portfolio. Here you’ll find selected projects that highlight 
-                        my approach to branding and visual identity. I focus on creating clean, meaningful design 
-                        solutions that help brands stand out while staying true to their essence.
+                        This curated logofolio showcases versatile visual identities, from minimalist architectural 
+                        symbols to dynamic, industry-specific branding. By blending structured geometry with balanced 
+                        negative space, I create unique, scalable foundations that strip away the unnecessary to reveal 
+                        the core essence of a brand. Each mark is crafted to be both functional and aesthetically refined.
                     </p>
                 </div>
 
@@ -286,10 +287,6 @@
             <!-- JavaScript will inject the lightbox images here -->
         </div>
         
-        <!-- Zoom Instruction -->
-        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-50 hidden md:block">
-            <p class="bg-black/60 px-4 py-1 rounded-full text-xs text-white">Click image to zoom in/out</p>
-        </div>
     </div>
 
     <!-- Project Footer Utilities -->
@@ -341,7 +338,7 @@
                 
                 // --- A. Main Page Carousel Slide ---
                 const slide = document.createElement('div');
-                slide.className = 'flex-none w-full aspect-[1440/1125] snap-center relative flex items-center justify-center cursor-zoom-in group';
+                slide.className = 'flex-none w-full aspect-[1440/820] snap-center relative flex items-center justify-center cursor-pointer group';
                 
                 const img = document.createElement('img');
                 img.src = `${basePath}${i}.webp`;
@@ -364,28 +361,14 @@
 
                 // --- B. Lightbox Slide ---
                 const lbSlide = document.createElement('div');
-                // The parent must allow scrolling (overflow-auto) when the child image scales up
                 lbSlide.className = 'flex-none w-screen h-screen snap-center flex items-center justify-center overflow-auto p-2 md:p-8 relative';
                 
                 const lbImg = document.createElement('img');
                 lbImg.src = `${basePath}${i}.webp`;
                 lbImg.alt = `Fullscreen Image ${i}`;
-                // Default fit to screen classes
-                lbImg.className = 'max-w-full max-h-full object-contain cursor-zoom-in zoom-transition shadow-2xl';
+                // Default fit to screen classes - Removed cursor-zoom-in and zoom-transition
+                lbImg.className = 'max-w-full max-h-full object-contain shadow-2xl';
                 lbImg.loading = 'lazy';
-
-                // Zoom Toggle Logic
-                lbImg.addEventListener('click', function() {
-                    if (this.classList.contains('cursor-zoom-in')) {
-                        // Zoom In: Remove max-size constraints and apply huge width
-                        this.classList.remove('max-w-full', 'max-h-full', 'object-contain', 'cursor-zoom-in');
-                        this.classList.add('w-[200vw]', 'md:w-[150vw]', 'max-w-none', 'cursor-zoom-out');
-                    } else {
-                        // Zoom Out: Return to fit screen
-                        this.classList.add('max-w-full', 'max-h-full', 'object-contain', 'cursor-zoom-in');
-                        this.classList.remove('w-[200vw]', 'md:w-[150vw]', 'max-w-none', 'cursor-zoom-out');
-                    }
-                });
 
                 lbSlide.appendChild(lbImg);
                 lightboxTrack.appendChild(lbSlide);
@@ -448,13 +431,6 @@
                 setTimeout(() => {
                     lightboxModal.classList.add('hidden');
                     lightboxModal.classList.remove('flex');
-                    
-                    // Reset all zoomed images back to normal
-                    const allLbImages = lightboxTrack.querySelectorAll('img');
-                    allLbImages.forEach(img => {
-                        img.classList.add('max-w-full', 'max-h-full', 'object-contain', 'cursor-zoom-in');
-                        img.classList.remove('w-[200vw]', 'md:w-[150vw]', 'max-w-none', 'cursor-zoom-out');
-                    });
                 }, 300); // Matches the duration-300 transition
             }
 
