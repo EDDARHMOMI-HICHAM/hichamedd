@@ -205,7 +205,7 @@ function closeProjectModal() {
     }
 }
 
-// Contact Form Handler
+// Contact Form Handler - Updated to support File Uploads
 function initializeContactForm() {
     const form = document.getElementById('contact-form');
     if (!form) return;
@@ -221,12 +221,44 @@ function initializeContactForm() {
         submitBtn.innerHTML = `<span>Sending...</span>`;
 
         const formData = new FormData(form);
+        
+        // Find the file input element inside your form
+        const fileInput = form.querySelector('input[type="file"]');
+        let fileData = null;
+        let fileName = null;
+        let mimeType = null;
+
+        // If a file exists, read it as Base64
+        if (fileInput && fileInput.files.length > 0) {
+            const file = fileInput.files[0];
+            fileName = file.name;
+            mimeType = file.type;
+
+            try {
+                const base64String = await new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.onloadend = () => resolve(reader.result);
+                    reader.onerror = reject;
+                    reader.readAsDataURL(file);
+                });
+                
+                // Extract just the raw base64 data string, removing "data:*/*;base64,"
+                fileData = base64String.split(',')[1];
+            } catch (fileError) {
+                console.error("Failed to process file upload:", fileError);
+            }
+        }
+
+        // Construct the full payload containing form text and file components
         const dataPayload = {
-            name: formData.get("name"),
+            name: formData.get("name") || "N/A",
             email: formData.get("email"),
             phone: formData.get("phone") || "N/A",
             service: formData.get("service"),
-            message: formData.get("message")
+            message: formData.get("message"),
+            fileData: fileData,
+            fileName: fileName,
+            mimeType: mimeType
         };
 
         try {
@@ -257,6 +289,9 @@ function initializeContactForm() {
         btn.disabled = false;
     }
 }
+
+
+
 
 function showToastNotification() {
     const toast = document.createElement('div');
@@ -350,3 +385,38 @@ window.copyToClipboard = function(text, element) {
         setTimeout(() => { element.innerText = originalText; }, 1800);
     });
 }
+
+
+// =========================================
+// NEW: Page Transition Logic
+// =========================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. Trigger entrance animation when page loads
+    document.body.classList.add('page-transition-enter');
+
+    // 2. Intercept link clicks for smooth exit animations
+    const links = document.querySelectorAll('a');
+    
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const targetUrl = this.getAttribute('href');
+            
+            // Exclude external links, empty links, email/phone links, and anchor jumps
+            const isExternal = this.target === '_blank' || targetUrl.startsWith('http') || targetUrl.startsWith('mailto:') || targetUrl.startsWith('tel:');
+            const isAnchor = targetUrl.startsWith('#');
+            
+            if (!isExternal && !isAnchor && targetUrl !== '') {
+                e.preventDefault(); // Stop instant navigation
+                
+                // Add the exit animation class
+                document.body.classList.add('page-transition-exit');
+                
+                // Wait for the animation to finish (400ms matches the CSS transition), then navigate
+                setTimeout(() => {
+                    window.location.href = targetUrl;
+                }, 400); 
+            }
+        });
+    });
+});

@@ -1,4 +1,8 @@
 /* Premium Portfolio Styles for Hicham Eddarhmoumi */
+
+/* Import Poppins font for a premium, modern geometric look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 :root {
   --bg-dark: #0A0A0A;
   --bg-card: #111111;
@@ -12,7 +16,17 @@
 }
 
 body {
-  font-family: 'Inter', system_ui, sans-serif;
+  /* Changed font to Poppins */
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+}
+
+/* --- NEW: Increased Paragraph Text Size --- */
+p {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.7;
+  color: var(--text-secondary);
 }
 
 /* Custom scrollbar for premium feel */
@@ -35,6 +49,10 @@ body {
 .nav-link {
   position: relative;
   transition: color 0.2s ease;
+  /* --- NEW: Increased Nav Text Size and Weight --- */
+  font-size: 1.1rem; 
+  font-weight: 500;
+  text-decoration: none;
 }
 .nav-link:hover {
   color: #EAB308;
@@ -45,7 +63,7 @@ body {
 .nav-link.active::after {
   content: '';
   position: absolute;
-  bottom: -2px;
+  bottom: -4px;
   left: 0;
   width: 100%;
   height: 2px;
@@ -124,6 +142,7 @@ body {
   border: 1px solid #27272A;
   color: white;
   transition: all 0.2s ease;
+  font-family: inherit; /* Ensures inputs use Poppins */
 }
 .form-input:focus {
   border-color: #EAB308;
@@ -140,6 +159,7 @@ body {
   color: #0A0A0A;
   font-weight: 600;
   transition: all 0.3s ease;
+  font-family: inherit;
 }
 .btn-primary:hover {
   background-color: #FACC15;
@@ -151,6 +171,7 @@ body {
   border: 1px solid #3F3F46;
   color: white;
   transition: all 0.3s ease;
+  font-family: inherit;
 }
 .btn-secondary:hover {
   background-color: #1A1A1A;
@@ -176,6 +197,7 @@ body {
 /* Filter Buttons */
 .filter-btn {
   transition: all 0.2s ease;
+  font-family: inherit;
 }
 .filter-btn.active {
   background-color: #EAB308;
@@ -220,6 +242,8 @@ footer {
 .section-title {
   position: relative;
   display: inline-block;
+  /* Ensure titles pop nicely with the new font */
+  font-weight: 700; 
 }
 .section-title::after {
   content: '';
@@ -259,7 +283,7 @@ footer {
   padding-bottom: 0;
 }
 .process-content.open {
-  max-height: 1200px; /* Enough for all steps */
+  max-height: 1200px;
   padding-top: 1.5rem;
   padding-bottom: 2rem;
 }
