@@ -98,7 +98,7 @@
 </head>
 <body class="bg-dark-bg text-white">
     <!-- Navbar -->
-    <nav class="sticky top-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-lg border-b border-zinc-800">
+        <nav class="sticky top-0 z-50 bg-dark-bg/95 backdrop-blur-lg border-b border-zinc-800/80" aria-label="Primary">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex items-center justify-between h-20">
                 <a href="index.html" class="flex items-center gap-3">
@@ -111,41 +111,36 @@
                     </div>
                 </a>
 
-
                 <div class="hidden md:flex items-center gap-9 text-sm font-medium">
-                    <a href="index.html" class="nav-link text-white hover:text-gold transition-colors">Home</a>
-                    <a href="portfolio.html" class="nav-link text-white hover:text-gold transition-colors">Portfolio</a>
-                    <a href="process.html" class="nav-link text-white hover:text-gold transition-colors">Process</a>
-                    <a href="services.html" class="nav-link text-white hover:text-gold transition-colors">Services & Pricing</a>
-                    <a href="Packages.html" class="nav-link text-white hover:text-gold transition-colors">Packages</a>
+                    <a href="index.html" class="nav-link text-zinc-400">Home</a>
+                    <a href="portfolio.html" class="nav-link text-zinc-400">Portfolio</a>
+                    <a href="process.html" class="nav-link text-zinc-400">Process</a>
+                    <a href="services.html" class="nav-link text-zinc-400 aria-current-page" aria-current="page">Pricing</a>
+                    <a href="Packages.html" class="nav-link text-zinc-400">Packages</a>
                 </div>
 
                 <div class="hidden md:block">
-                    <a href="contact.html" 
-                       class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-gold hover:bg-yellow-500 active:bg-yellow-600 transition-all text-[#0A0A0A] font-semibold text-sm tracking-wider">
+                    <a href="contact.html" class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-gold hover:bg-yellow-500 active:bg-yellow-600 transition-all text-dark-bg font-semibold text-sm tracking-wider shadow-lg shadow-gold/10 hover:shadow-gold/20">
                         HIRE ME
                     </a>
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-white focus:outline-none" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-[#0A0A0A]">
+        <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-dark-bg">
             <div class="px-6 py-8 flex flex-col gap-4 text-lg">
-                <a href="index.html" class="py-2 nav-link hover:text-gold transition-colors">Home</a>
-                <a href="portfolio.html" class="py-2 nav-link hover:text-gold transition-colors">Portfolio</a>
-                <a href="process.html" class="py-2 nav-link hover:text-gold transition-colors">Process</a>
-                <a href="services.html" class="py-2 nav-link hover:text-gold transition-colors">Services & Pricing</a>
-                <a href="Packages.html" class="py-2 nav-link hover:text-gold transition-colors">Packages</a>
-                <a href="contact.html" 
-                   class="mt-4 inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-gold text-[#0A0A0A] font-semibold">HIRE ME</a>
+                <a href="index.html" class="nav-link py-2 text-zinc-300">Home</a>
+                <a href="portfolio.html" class="nav-link py-2 text-zinc-300">Portfolio</a>
+                <a href="process.html" class="nav-link py-2 text-zinc-300">Process</a>
+                <a href="services.html"  class="nav-link py-2 text-zinc-300">Pricing</a>
+                <a href="Packages.html" class="nav-link py-2 text-zinc-300">Packages</a>
+                <a href="contact.html" class="mt-4 inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-gold text-dark-bg font-semibold text-center">HIRE ME</a>
             </div>
         </div>
     </nav>
@@ -312,7 +307,7 @@
                         <li><a href="index.html" class="text-zinc-400 hover:text-gold transition-colors">Home</a></li>
                         <li><a href="portfolio.html" class="text-zinc-400 hover:text-gold transition-colors">Portfolio</a></li>
                         <li><a href="process.html" class="text-zinc-400 hover:text-gold transition-colors">Our Process</a></li>
-                        <li><a href="services.html" class="text-zinc-400 hover:text-gold transition-colors">Services & Pricing</a></li>
+                        <li><a href="services.html" class="text-zinc-400 hover:text-gold transition-colors">Pricing</a></li>
                         <li><a href="Packages.html" class="text-zinc-400 hover:text-gold transition-colors">Packages</a></li>
                     </ul>
                 </div>
