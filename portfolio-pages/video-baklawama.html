@@ -103,34 +103,30 @@
     </nav>
 
     <!-- Top Section: Split Layout (Video Thumbnail Left / Content Right) -->
+
     <header class="max-w-7xl mx-auto px-6 pt-16 pb-20">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
             
-            <!-- Top Left: Project Visual Cover / Video Poster Backdrop -->
-            <div class="lg:col-span-7 w-full aspect-[4/3] sm:aspect-[16/10] bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl relative group">
-                <div class="w-full h-full bg-gradient-to-tr from-purple-950 via-slate-900 to-zinc-950 flex items-center justify-center p-8">
-                    <div class="text-center transition-transform duration-500 group-hover:scale-105">
-                        <!-- Project Icon/Logo Placeholder -->
-                        <div class="mx-auto w-20 h-20 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-5 shadow-xl">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                            </svg>
-                        </div>
-                        <p class="text-xl sm:text-2xl text-purple-300 font-semibold tracking-tight">Aetheris Cinematic Concept</p>
-                    </div>
+                <div class="lg:col-span-7 w-full aspect-[4/3] sm:aspect-[16/10] bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl group relative">
+                    <img 
+                        src="../assets/portfolio-images/other/Logo-ba9lawa.webp" 
+                        alt="nihao logo"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    >
+                    <!-- Optional subtle overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
                 </div>
-            </div>
-
-            <!-- Top Right: Video Metadata & Description -->
+            <!-- Top Right: Metadata & Project Description (Sticky on desktop) -->
             <div class="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
                 <div class="flex items-center gap-3">
-                    <span class="px-4 py-1 text-xs font-bold rounded-full bg-yellow-900/30 border border-yellow-600/20 text-gold tracking-wider uppercase">VIDEO EDITING</span>
+                    <span class="px-4 py-1 text-xs font-bold rounded-full  bg-sky-950 text-sky-400 tracking-wider uppercase">Video editing
+                    </span>
                     <span class="text-sm text-zinc-500 font-medium">2026</span>
                 </div>
                 
                 <div>
-                    <h1 class="text-5xl sm:text-6xl font-bold tracking-tighter text-white">Aetheris</h1>
-                    <p class="text-lg sm:text-xl text-zinc-400 font-medium mt-1">Cinematic Sci-Fi Teaser & Post-Production</p>
+                    <h1 class="text-5xl sm:text-6xl font-bold tracking-tighter text-white">baklawa.ma presentation</h1>
+                    <p class="text-lg sm:text-xl text-zinc-400 font-medium mt-1">Video present the B2B Baklawa service</p>
                 </div>
 
                 <hr class="border-zinc-800/80">
@@ -138,13 +134,11 @@
                 <div class="space-y-3">
                     <h2 class="text-xs uppercase tracking-widest text-zinc-500 font-bold">Project Overview</h2>
                     <p class="text-zinc-300 leading-relaxed text-base sm:text-lg font-normal">
-                        A cinematic video editing and color grading project designed to capture a dark, atmospheric sci-fi theme. This piece showcases advanced sound design, seamless pacing, and precise visual cutting engineered using industry-standard production pipelines to maximize audience engagement.
-                    </p>
+This project involved creating a B2B promotional video for Baklawa.ma to highlight their streamlined wholesale services. By utilizing a friendly, illustrative animation style alongside the official Baklawa.ma brand identity, the video effectively communicates a simple, efficient restocking workflow to potential business partners.                    </p>
                 </div>
 
                 <div class="pt-4">
-                    <a href="../contact.html?service=Video%20Editing" 
-                       class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-gold hover:bg-yellow-500 active:bg-yellow-600 text-dark-bg font-bold text-sm tracking-wide transition-all shadow-lg shadow-gold/5">
+                    <a href="../contact.html?service=Video%20Editing" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-gold hover:bg-yellow-500 active:bg-yellow-600 text-dark-bg font-bold text-sm tracking-wide transition-all shadow-lg shadow-gold/5">
                         Start Similar Project →
                     </a>
                 </div>
@@ -153,32 +147,17 @@
         </div>
     </header>
 
-    <!-- Full-Width Video Showcase Section (One Video Player) -->
+    <!-- Full-Width Video Showcase Section -->
     <section class="max-w-7xl mx-auto px-6 lg:px-0">
-        <div class="w-full aspect-video bg-zinc-950 lg:rounded-3xl overflow-hidden shadow-2xl relative border border-zinc-900 group">
-            
-            <!-- Option A: Embedded Video (YouTube/Vimeo/Self-Hosted MP4) -->
-            <!-- 
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-            -->
-
-            <!-- Option B: Elegant Interactive Video Placeholder UI -->
-            <div class="absolute inset-0 w-full h-full bg-neutral-900 flex items-center justify-center cursor-pointer">
-                <!-- Background Image Layer simulation -->
-                <div class="absolute inset-0 bg-cover bg-center opacity-40 filter blur-sm bg-[url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4')]"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent"></div>
-
-                <!-- Center Play Controls Overlay -->
-                <div class="relative z-10 flex flex-col items-center gap-4">
-                    <button class="w-20 h-20 rounded-full bg-gold hover:bg-yellow-500 active:bg-yellow-600 text-dark-bg flex items-center justify-center shadow-2xl shadow-gold/20 transform transition-all duration-300 hover:scale-110" aria-label="Play Video">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z" />
-                        </svg>
-                    </button>
-                    <span class="text-sm font-semibold tracking-widest uppercase text-zinc-400 group-hover:text-white transition-colors">Click to Watch Full Video Showcase</span>
-                </div>
-            </div>
-
+        <div class="w-full aspect-video bg-zinc-950 lg:rounded-3xl overflow-hidden shadow-2xl relative border border-zinc-900">
+            <!-- Embedded Vimeo Player -->
+            <iframe 
+                src="https://player.vimeo.com/video/1199020804?autoplay=1&autopause=0&muted=1&controls=1&loop=1&title=0&byline=0&portrait=0" 
+                class="w-full h-full" 
+                frameborder="0" 
+                allow="autoplay; fullscreen; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
         </div>
     </section>
 
@@ -201,7 +180,7 @@
                 <div class="md:col-span-5 space-y-4">
                     <a href="index.html" class="inline-block">
                         <div class="h-9 flex items-center">
-                            <img src="assets/logo-the-web-site/logo.png" alt="Hicham Edd Logo" class="h-full object-contain">
+                            <img src="../assets/logo-the-web-site/logo.png" alt="Hicham Edd Logo" class="h-full object-contain">
                         </div>
                     </a>
                     <p class="text-zinc-400 text-sm max-w-sm leading-relaxed">
