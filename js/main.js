@@ -298,8 +298,8 @@ function showToastNotification() {
     toast.className = `fixed bottom-6 right-6 z-[999] toast bg-zinc-900 border border-emerald-custom/30 text-white px-6 py-4 rounded-2xl shadow-2xl flex items-start gap-4 max-w-sm`;
     toast.innerHTML = `
         <div>
-            <p class="font-semibold text-white">Thank you, Hicham.edd received your message!</p>
-            <p class="text-sm text-zinc-400 mt-0.5">He'll get back to you within 24 hours.</p>
+            <p class="font-semibold text-white">Awesome, your message sent successfully!</p>
+            <p class="text-sm text-zinc-400 mt-0.5">Expect a reply from me within 24 hours.</p>
         </div>
     `;
     document.body.appendChild(toast);
