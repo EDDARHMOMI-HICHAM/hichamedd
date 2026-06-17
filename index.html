@@ -102,50 +102,60 @@
 </head>
 <body class="bg-dark-bg text-white min-h-screen flex flex-col justify-between">
 
-        <nav class="sticky top-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-lg border-b border-zinc-800">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="flex items-center gap-3">
-                    <div class="h-9 flex items-center justify-center transition-transform ">
-                         <img 
-                        src="assets/logo-the-web-site/logo.png" 
-                        alt="nihao logo"
-                        class="w-full h-full object-cover transition-transform duration-700 "
-                    >
-                    </div>
+<nav class="sticky top-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-lg border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between h-20">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="h-9 flex items-center justify-center transition-transform ">
+                     <img 
+                    src="assets/logo-the-web-site/logo.png" 
+                    alt="nihao logo"
+                    class="w-full h-full object-cover transition-transform duration-700 "
+                >
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center gap-9 text-sm font-medium">
+                <a href="index.html"  class="nav-link text-gold transition-colors">Home</a>
+                <a href="portfolio.html" class="nav-link text-white hover:text-gold transition-colors">Portfolio</a>
+                <a href="process.html" class="nav-link text-white hover:text-gold transition-colors">Process</a>
+                <a href="services.html" class="nav-link text-white hover:text-gold transition-colors">Pricing</a>
+                <a href="Packages.html" class="nav-link text-white hover:text-gold transition-colors">Packages</a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="assets/HICHAM-EDDARHMOUMI-GRAPHIC-DESIGN-VIDEO-EDITING-CV.pdf" download class="inline-flex items-center justify-center px-6 py-3 rounded-2xl border border-zinc-700 text-white hover:bg-zinc-800 hover:border-zinc-500 transition-all font-semibold text-sm tracking-wider">
+                    DOWNLOAD CV
                 </a>
+                <a href="contact.html" class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-gold hover:bg-yellow-500 active:bg-yellow-600 transition-all text-dark-bg font-semibold text-sm tracking-wider">
+                    HIRE ME
+                </a>
+            </div>
 
-                <div class="hidden md:flex items-center gap-9 text-sm font-medium">
-                    <a href="index.html"  class="nav-link text-gold transition-colors">Home</a>
-                    <a href="portfolio.html" class="nav-link text-white hover:text-gold transition-colors">Portfolio</a>
-                    <a href="process.html" class="nav-link text-white hover:text-gold transition-colors">Process</a>
-                    <a href="services.html" class="nav-link text-white hover:text-gold transition-colors">Pricing</a>
-                    <a href="Packages.html" class="nav-link text-white hover:text-gold transition-colors">Packages</a>
-                </div>
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </div>
 
-                <div class="hidden md:block">
-                    <a href="contact.html" class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-gold hover:bg-yellow-500 active:bg-yellow-600 transition-all text-dark-bg font-semibold text-sm tracking-wider">
-                        HIRE ME
-                    </a>
-                </div>
-
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-white focus:outline-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-[#0A0A0A] px-6 py-6 space-y-4">
+        <a href="index.html" class="block text-base font-medium text-white hover:text-gold transition-colors">Home</a>
+        <a href="portfolio.html" class="block text-base font-medium text-white hover:text-gold transition-colors">Portfolio</a>
+        <a href="process.html" class="block text-base font-medium text-white hover:text-gold transition-colors">Process</a>
+        <a href="services.html" class="block text-base font-medium text-white hover:text-gold transition-colors">Pricing</a>
+        <a href="Packages.html" class="block text-base font-medium text-white hover:text-gold transition-colors">Packages</a>
+        
+        <div class="pt-2 space-y-3">
+            <a href="assets/HICHAM-EDDARHMOUMI-GRAPHIC-DESIGN-VIDEO-EDITING-CV.pdf" download class="block text-center w-full py-3.5 rounded-xl border border-zinc-700 text-white hover:bg-zinc-800 font-semibold text-sm tracking-wider">DOWNLOAD CV</a>
+            <div class="pt-2 space-y-3">
+                <a href="assets/HICHAM-EDDARHMOUMI-GRAPHIC-DESIGN-VIDEO-EDITING-CV.pdf" download class="block text-center w-full py-3.5 rounded-xl border border-zinc-700 text-white hover:bg-zinc-800 font-semibold text-sm tracking-wider">DOWNLOAD CV</a>
+                <a href="contact.html" class="block text-center w-full py-3.5 rounded-xl bg-gold text-dark-bg font-semibold text-sm tracking-wider">HIRE ME</a>
             </div>
         </div>
-
-        <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-[#0A0A0A] px-6 py-6 space-y-4">
-            <a href="index.html" class="block text-base font-medium text-white hover:text-gold transition-colors">Home</a>
-            <a href="portfolio.html" class="block text-base font-medium text-white hover:text-gold transition-colors">Portfolio</a>
-            <a href="process.html" class="block text-base font-medium text-white hover:text-gold transition-colors">Process</a>
-            <a href="services.html" class="block text-base font-medium text-white hover:text-gold transition-colors">Pricing</a>
-            <a href="Packages.html" class="block text-base font-medium text-white hover:text-gold transition-colors">Packages</a>
-            <a href="contact.html" class="block text-center w-full py-3.5 rounded-xl bg-gold text-dark-bg font-semibold text-sm tracking-wider">HIRE ME</a>
-        </div>
-    </nav>
+    </div>
+</nav>
 
 
     <main class="flex-grow">
