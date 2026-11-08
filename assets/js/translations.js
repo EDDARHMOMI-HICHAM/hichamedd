@@ -266,8 +266,8 @@ const translations = {
       title: "Hicham Eddarhmoumi (Hicham Edd)",
       subtitle: "Designer Graphique & Monteur Vidéo basé à Agadir, au service des entreprises et agences ambitieuses partout au Maroc.",
       intro: "Passionné par l'intersection entre le design visuel percutant et la rentabilité commerciale, j'accompagne depuis plus de 3 ans des startups, des e-commerçants et des agences de communication dans la création d'images de marque mémorables et de vidéos générées par IA et montées par logiciels professionnels.",
-      current_role_title: "Rôle Actuel : Lead Designer chez SehaLink",
-      current_role_desc: "J'occupe actuellement le poste de Designer Graphique principal chez SehaLink, plateforme marocaine innovante spécialisée dans les technologies de santé. J'y conçois l'ensemble des interfaces produit, des chartes de communication médicale et des campagnes publicitaires multicanales.",
+      current_role_title: "Focus Actuel : Partenaire Créatif pour Lancement de Marques & Startups",
+      current_role_desc: "Je me consacre actuellement à l'accompagnement des créateurs d'entreprises, startups et PME au Maroc, en concevant leurs identités visuelles complètes, leurs supports publicitaires et leurs vidéos promotionnelles pour garantir un lancement de produit percutant et rentable.",
       experience_title: "Expériences en Agence & Projets Sous Contrat Confidentiel (NDA)",
       experience_desc: "Au fil de mon parcours, j'ai collaboré en marque blanche avec des agences renommées (notamment Ocean Connecting et Opti-Sent) ainsi que de nombreuses PME marocaines. En raison d'accords stricts de non-divulgation (NDA), plusieurs de ces projets d'envergure restent confidentiels mais témoignent d'une rigueur absolue et du respect des plus hauts standards de l'industrie.",
       
@@ -626,8 +626,8 @@ const translations = {
       title: "هشام الدغمومي",
       subtitle: "مصمم جرافيك ومونتير فيديو محترف مقيم بأكادير، كنخدم مع الشركات والمقاولات والوكالات فجميع مدن المغرب.",
       intro: "شغوف بالجمع بين التصميم الإبداعي الجذاب والنتائج التسويقية الملموسة، مع توليد الفيديوهات بالذكاء الاصطناعي والمونتاج ببرامج المونتاج. مع أكثر من 3 سنوات من الخبرة فالمجال، ساعدت مقاولات ناشئة، براندات تجارة إلكترونية، ووكالات تواصل باش يبنيو هويات بصرية قوية.",
-      current_role_title: "المنصب الحالي : Lead Designer لدى منصة SehaLink",
-      current_role_desc: "كنشغل حالياً منصب مصمم جرافيك رئيسي لدى SehaLink، المنصة المغربية الرائدة فالتكنولوجيا الصحية. فهاد المنصب كنسيّر الهوية البصرية الرقمية، تصاميم واجهات التطبيقات، وتصاميم الحملات الترويجية والطبية.",
+      current_role_title: " التركيز الحالي : شريك إبداعي لإطلاق ومواكبة المشاريع الناشئة",
+      current_role_desc: "كنشغل حالياً منصب مصمم جرافيك رئيسي كنركّز حالياً على مرافقة أصحاب المشاريع والشركات الناشئة (Startups) ورواد الأعمال فالمغرب، من خلال بناء الهويات البصرية المتكاملة، وتجهيز المواد الإعلانية، ومونتاج الفيديوهات التسويقية لضمان إطلاق منتجاتهم وحملاتهم بأعلى جودة وسرعة.",
       experience_title: "تجارب سابقة فالوكالات وأعمال سرية بنظام (NDA)",
       experience_desc: "خلال مساري المهني، اشتغلت بنظام الماركة البيضاء (White-Label) مع وكالات تسويق معروفة بحال Ocean Connecting و Opti-Sent، بالإضافة لعشرات الشركات والمتاجر المغربية. وبسبب اتفاقيات الحفاظ على السرية (NDA)، كاينين بزاف د المشاريع الكبيرة اللي ما نقدرش نذكر أسماء أصحابها علناً، ولكنها كتبين التزامي الكامل بالدقة وأعلى معايير الجودة.",
       
