@@ -267,22 +267,24 @@ const translations = {
       subtitle: "Designer Graphique & Monteur Vidéo basé à Agadir, au service des entreprises et agences ambitieuses partout au Maroc.",
       intro: "Passionné par l'intersection entre le design visuel percutant et la rentabilité commerciale, j'accompagne depuis plus de 3 ans des startups, des e-commerçants et des agences de communication dans la création d'images de marque mémorables et de vidéos générées par IA et montées par logiciels professionnels.",
       current_role_title: "Focus Actuel : Partenaire Créatif pour Lancement de Marques & Startups",
-      current_role_desc: "Je me consacre actuellement à l'accompagnement des créateurs d'entreprises, startups et PME au Maroc, en concevant leurs identités visuelles complètes, leurs supports publicitaires et leurs vidéos promotionnelles pour garantir un lancement de produit percutant et rentable.",
-      experience_title: "Expériences en Agence & Projets Sous Contrat Confidentiel (NDA)",
-      experience_desc: "Au fil de mon parcours, j'ai collaboré en marque blanche avec des agences renommées (notamment Ocean Connecting et Opti-Sent) ainsi que de nombreuses PME marocaines. En raison d'accords stricts de non-divulgation (NDA), plusieurs de ces projets d'envergure restent confidentiels mais témoignent d'une rigueur absolue et du respect des plus hauts standards de l'industrie.",
+      current_role_desc: "J'occupe actuellement le poste de Designer Graphique principal chez SehaLink, plateforme marocaine innovante spécialisée dans les technologies de santé. J'y conçois l'ensemble des interfaces produit, des chartes de communication médicale et des campagnes publicitaires multicanales.",
+      experience_title: "Expériences Clés, Collaboration Flexible & Projets Sous NDA",
+      experience_desc: "Au fil de mon parcours, j'ai collaboré sur des projets d'envergure auprès d'acteurs reconnus tels que la plateforme santé SehaLink et l'agence Ocean Connecting, tout en accompagnant diverses entreprises en tant que partenaire créatif indépendant (en toute agilité, hors des contraintes des contrats de salariat traditionnels). Soumis à de stricts accords de confidentialité (NDA) et intervenant régulièrement en marque blanche (White-Label), ces projets reflètent une rigueur absolue et une capacité d'adaptation rapide.",
       
-      timeline_heading: "Chronologie & Jalons Clés :",
-      t1_year: "2022 - 2023",
-      t1_title: "Freelance Agences & Motion Design",
-      t1_desc: "Réalisation de campagnes de branding et de vidéos motion design pour des clients du secteur logistique, tech et restauration.",
+timeline_heading: "Chronologie & Jalons Clés :",
       
-      t2_year: "2024 - 2025",
-      t2_title: "Création Visuelle E-Commerce & Intégration SehaLink",
-      t2_desc: "Direction artistique pour des marques e-commerce émergentes et prise en charge du pôle créatif chez SehaLink.",
+      t1_year: "2023 - 2025",
+      t1_title: "Graphisme Print & Production Vidéo Intégrale chez Ocean Connecting",
+      t1_desc: "Conception de l'ensemble des supports imprimés et marketing, prise en charge de la production vidéo (cadrage, tournage sur site et montage) et pilotage des réseaux sociaux.",
+      
+      t2_year: "2025 - 2027",
+      t2_title: "Refonte UI/UX & Direction Créative chez SehaLink & Digital And Creativity",
+      t2_desc: "Rebranding complet de l'écosystème web et mobile from scratch, production de vidéos publicitaires et animations motion design, et élaboration des pitch decks d'entreprise.",
       
       t3_year: "2026",
       t3_title: "Lancement du Modèle « Designer Per Day »",
-      t3_desc: "Mise en place d'une offre moderne par journées d'immersion avec devis et facturation légale, plébiscitée par les startups et agences à travers le Maroc.",
+      t3_desc: "Suite à une analyse approfondie des besoins réels du marché marocain et pour offrir une alternative agile au salariat rigide, j'ai décidé de lancer cette offre de sprints créatifs dédiés par jour avec facture légale.",
+
 
       values_heading: "Mes Principes de Travail :",
       v1_title: "Vitesse d'Exécution & Respect des Délais",
@@ -628,22 +630,25 @@ const translations = {
       intro: "شغوف بالجمع بين التصميم الإبداعي الجذاب والنتائج التسويقية الملموسة، مع توليد الفيديوهات بالذكاء الاصطناعي والمونتاج ببرامج المونتاج. مع أكثر من 3 سنوات من الخبرة فالمجال، ساعدت مقاولات ناشئة، براندات تجارة إلكترونية، ووكالات تواصل باش يبنيو هويات بصرية قوية.",
       current_role_title: " التركيز الحالي : شريك إبداعي لإطلاق ومواكبة المشاريع الناشئة",
       current_role_desc: "كنشغل حالياً منصب مصمم جرافيك رئيسي كنركّز حالياً على مرافقة أصحاب المشاريع والشركات الناشئة (Startups) ورواد الأعمال فالمغرب، من خلال بناء الهويات البصرية المتكاملة، وتجهيز المواد الإعلانية، ومونتاج الفيديوهات التسويقية لضمان إطلاق منتجاتهم وحملاتهم بأعلى جودة وسرعة.",
-      experience_title: "تجارب سابقة فالوكالات وأعمال سرية بنظام (NDA)",
-      experience_desc: "خلال مساري المهني، اشتغلت بنظام الماركة البيضاء (White-Label) مع وكالات تسويق معروفة بحال Ocean Connecting و Opti-Sent، بالإضافة لعشرات الشركات والمتاجر المغربية. وبسبب اتفاقيات الحفاظ على السرية (NDA)، كاينين بزاف د المشاريع الكبيرة اللي ما نقدرش نذكر أسماء أصحابها علناً، ولكنها كتبين التزامي الكامل بالدقة وأعلى معايير الجودة.",
+      experience_title: " تجارب مع منصات رائدة، وكالات، وتعاون حر (NDA)",
+      experience_desc: " خلال مساري المهني، اشتغلت على مشاريع إبداعية مع علامات بارزة بحال منصة SehaLink الصحية ووكالة التسويق Ocean Connecting، إلى جانب تعاوني المستمر مع مقاولات وشركات أخرى بنظام العمل الحر والمرن على حسب الطلب (خارج قيود عقود التوظيف التقليدية). وبحكم التزامي باتفاقيات الحفاظ على السرية (NDA) والعمل بنظام الماركة البيضاء (White-Label)، العديد من هاد المشاريع الكبرى كتدوز في سرية تامة وكتبين دقة وجودة التنفيذ.",
       
-      timeline_heading: "محطات ومراحل المسار المهني :",
-      t1_year: "2022 - 2023",
-      t1_title: "فريلانس مع الوكالات وموشن جرافيك",
-      t1_desc: "إنجاز حملات هوية بصرية، موكابات، وتصاميم موشن جرافيك لشركات اللوجستيك والتكنولوجيا والمطاعم.",
+      timeline_heading: "أبرز محطات وإنجازات المسار المهني :",
       
-      t2_year: "2024 - 2025",
-      t2_title: "صناعة تصاميم الإيكوميرس والالتحاق بـ SehaLink",
-      t2_desc: "إدارة الهويات البصرية لبراندات إيكوميرس صاعدة وتولي قيادة التصميم الجرافيكي فمنصة SehaLink الصحية.",
+      t1_year: "2023 - 2025",
+      t1_title: "تصميم المطبوعات والإنتاج المرئي الشامل مع Ocean Connecting",
+      t1_desc: "تولي تصميم الهوية والمطبوعات الإشهارية (Brochures & Collateral)، مع قيادة الإنتاج المرئي من التصوير الميداني بالكاميرا إلى المونتاج الاحترافي وإدارة قنوات السوشيال ميديا.",
+      
+      t2_year: "2025 - 2027",
+      t2_title: "إعادة بناء الهوية والـ UI/UX مع SehaLink & Digital And Creativity",
+      t2_desc: "قيادة الـ Rebranding الكامل للواجهات وتطبيقات الهاتف من الصفر، وتصميم الفيديوهات والموشن جرافيك الإعلاني، وإعداد عروض الـ Pitch Decks للشركاء والمستثمرين.",
       
       t3_year: "2026",
       t3_title: "إطلاق نموذج «ديزاينر بالنهار» (Designer Per Day)",
-      t3_desc: "إطلاق خدمة الأيام المركزة مع Devis و Facture قانونية، واللي لاقات إقبال كبير من الشركات الناشئة والوكالات فالمغرب.",
+      t3_desc: "بناءً على دراسة متطلبات السوق والحاجة الميدانية لحلول إبداعية فورية بدون تعقيدات التوظيف، قررت إطلاق خدمة السبرينت اليومي الشامل لمواكبة الشركات والوكالات بفاتورة قانونية.",
 
+
+    
       values_heading: "مبادئ وقيم الخدمة ديالي :",
       v1_title: "السرعة فالتنفيذ واحترام المواعيد",
       v1_desc: "الـ Deadline كنز ما كنفرطش فيه. التسليم كيكون فالموعد المضبوط بلا أعذار ولا تعطال.",
