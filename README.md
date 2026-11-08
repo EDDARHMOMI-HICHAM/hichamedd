@@ -1,71 +1,73 @@
-# Hicham Eddarhmoumi — Premium Portfolio Website
+# 🚀 Hicham Edd — Modern Creative Portfolio (Multi-Page Architecture)
 
-A beautiful, fully functional multi-page portfolio website built with Tailwind CSS, custom premium styling, smooth animations, and interactive features.
-
-## ✨ What's Included
-
-- **Home (index.html)** — Hero, About Me, Journey timeline, Testimonials
-- **Services** — 5 service cards with starting prices + custom inquiry
-- **Portfolio** — Filterable project grid + detailed project modals
-- **Process** — 5 fully detailed collapsible process sections (Logo, Social, Brand, Video, Website)
-- **Pricing** — 3 clear packages (Starter / Professional / Premium) + custom quote CTA
-- **Contact** — Working contact form with beautiful success toast
-
-## 🚀 Features
-
-- Premium dark luxurious design (#0A0A0A + Gold #EAB308 accents)
-- Fully responsive (mobile-first)
-- Smooth scroll animations & hover effects
-- Working portfolio filters
-- Interactive project detail modals (rich content)
-- Collapsible process accordions
-- Fully functional contact form (simulated + toast notification)
-- Mobile hamburger menu
-- Active navigation states
-- Clean, well-commented, easy-to-edit code
-
-## 📁 File Structure
-
-```
-hicham-portfolio/
-├── index.html
-├── services.html
-├── portfolio.html
-├── process.html
-├── pricing.html
-├── contact.html
-├── css/
-│   └── style.css
-├── js/
-│   └── main.js
-└── README.md
-```
-
-## 🛠 How to Use / Edit
-
-1. Open any `.html` file in your browser (double-click)
-2. To edit: Use any code editor (VS Code recommended)
-3. Replace placeholder content, images, or links as needed
-4. For the contact form: Currently shows a success toast. You can easily connect it to Formspree, EmailJS, or your own backend later.
-
-## 🎨 Customization Tips
-
-- Main colors are defined in `css/style.css` (variables at the top)
-- All interactions live in `js/main.js`
-- Project data for modals is inside the JS file (easy to expand)
-- Add real project images by replacing the gradient/icon sections in portfolio cards
-
-## 📦 Want to Deploy?
-
-This site works perfectly on:
-- Vercel / Netlify (drag & drop or Git)
-- GitHub Pages
-- Any static hosting
+الموقع الرسمي للمصمم الجرافيكي ومونتير الفيديو **هشام الدغمومي (Hicham Eddarhmoumi)** — مبني بنظام **الصفحات المتعددة والمجلدات المنظمة (Multi-Page HTML5 / CSS3 / JavaScript)** لتسهيل التعديل وإضافة مقالات جديدة في المستقبل بكل حرية.
 
 ---
 
-**Made for Hicham Eddarhmoumi** — Premium portfolio to attract high-quality clients.
+## 📁 بنية المجلدات والصفحات (Multi-Page Structure):
 
-Feel free to reach out if you need any modifications or additional pages (blog, project detail pages, etc.).
+```
+hichamedd-website/
+│
+├── index.html                                # الصفحة الرئيسية (Accueil)
+├── services.html                             # صفحة الباقات والآلة الحاسبة (Services & Packs)
+├── portfolio.html                            # صفحة الأعمال مع النوافذ الثلاث (Portfolio)
+├── blog.html                                 # صفحة دليل المقالات (Blog Index)
+├── about.html                                # صفحة من أنا الموسعة (À propos)
+├── contact.html                              # صفحة اتصل بي مع شارات الأبناك (Contact)
+├── privacy.html                              # صفحة سياسة الخصوصية (Politique de Confidentialité)
+├── terms.html                                # صفحة شروط الاستخدام (Conditions d'Utilisation)
+├── favicon.ico                               # أيقونة الموقع لتبويب المتصفح
+├── README.md                                 # دليل الاستخدام والتعديل
+│
+├── blog/                                     # مجلد المقالات المستقلة
+│   ├── designer-per-day-morocco-startups.html  # مقال كامل مستقل رقم 1
+│   └── video-reels-ecommerce-morocco.html     # مقال كامل مستقل رقم 2
+│
+└── assets/
+    ├── css/
+    │   └── style.css                         # التنسيقات والأنيميشن وشارات الأبناك
+    ├── js/
+    │   ├── translations.js                   # القاموس الكامل بالفرنسية والدارجة المغربية
+    │   └── main.js                           # الآلة الحاسبة، والسلايدرات، وتغيير اللغة
+    └── images/
+        ├── logo.png                          # الشعار الرسمي بدقة عالية
+        ├── avatar.jpg                        # الصورة الشخصية
+        ├── reels.jpg                         # صورة غلاف أعمال المونتاج
+        ├── branding.jpg                      # صورة غلاف أعمال الهوية البصرية
+        └── studio.jpg                        # صورة غلاف المقالات واستوديو العمل
+```
 
-Enjoy! ✨
+---
+
+## 🌟 مميزات بنية الصفحات المتعددة:
+* **صفحات ومجلدات مستقلة**: كل قسم أصبح صفحة HTML خاصة به (`services.html`, `portfolio.html`, `blog.html`, `about.html`, `contact.html`).
+* **مجلد مخصص للمقالات (`blog/`)**: يمكنك إضافة أي مقال جديد مستقبلاً بمجرد نسخ ملف HTML داخل مجلد `blog/` وتعديل نصه وصوره دون التأثير على بقية الموقع!
+* **حفظ اللغة المختارة عبر جميع الصفحات**: عند التبديل بين الفرنسية والدارجة المغربية في أي صفحة، يتم حفظ اختيارك في `localStorage` ويبقى مفعلاً تلقائياً عبر كل الصفحات ومقالات المدونة.
+* **الآلة الحاسبة التفاعلية الدقيقة**:
+  - خياران فقط: Graphic Design (300 DH بدل 430) و Video Editing (350 DH بدل 500).
+  - الأيام من 1 إلى 5 أيام مع ضرب الثمن مباشرة لكل يوم وإبراز نسبة التخفيض 30% والسعر الأصلي المشطوب عليه بالأحمر.
+* **توليد الفيديوهات بالذكاء الاصطناعي والمونتاج**:
+  - تم تضمين جملة « توليد الفيديوهات بالذكاء الاصطناعي والمونتاج ببرامج المونتاج » في جميع الأقسام.
+* **أزرار سلايدر خفيفة وغير مشتتة**:
+  - أزرار الأسهم في سلايدرات المعرض خفيفة بنسبة شفافية `opacity-35` وتبرز بسلاسة عند تمرير الماوس.
+* **ترجمة كاملة وشاملة 100%**:
+  - الأسئلة الشائعة (FAQ)، وسياسة الخصوصية، وشروط الاستخدام تترجم بالكامل إلى الدارجة أو الفرنسية.
+* **شارة أونلاين الخضراء**:
+  - موضوعة بشكل أنيق في واجهة الصفحة الرئيسية (Hero) مع نقطة خضراء تنبض.
+* **عناوين القائمة العلوية**:
+  - كل العناوين في سطر واحد ثابت (`whitespace-nowrap`) دون أي رجوع للسطر.
+
+---
+
+## 💻 طريقة تشغيل الموقع:
+1. فك الضغط عن ملف **`hichamedd-website.zip`**.
+2. اضغط مرتين (Double-click) على ملف **`index.html`** وسيفتح في متصفحك مباشرة بدون أي برامج مساعدة أو اتصال بالإنترنت.
+3. يمكنك التنقل بين الصفحات عبر القائمة العلوية أو الروابط بكل سلاسة وسرعة.
+
+---
+
+## ✏️ كيفاش تزيد مقال جديد فـ مجلد `blog/`:
+1. انسخ ملف `blog/designer-per-day-morocco-startups.html` وغير اسمه مثلاً إلى `blog/mon-nouvel-article.html`.
+2. افتحه في أي محرر (مثل VS Code) وبدل العنوان، التاريخ، والنص اللي بغيتي.
+3. في ملف `blog.html`، أضف رابطاً يشير إلى مقالك الجديد: `<a href="blog/mon-nouvel-article.html">`.

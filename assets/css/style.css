@@ -1,0 +1,377 @@
+/* ==========================================================================
+   HICHAM EDD — PORTFOLIO DESIGN SYSTEM & GLOBAL STYLES
+   Ultra-High Performance CSS for Standalone Multi-Page Architecture
+   ========================================================================== */
+
+:root {
+  --color-bg: #0D0D0D;
+  --color-surface: #141414;
+  --color-card: #1A1A1A;
+  --color-border: #2A2A2A;
+  --color-gold: #F5B700;
+  --color-gold-hover: #E0A700;
+  --color-gold-light: rgba(245, 183, 0, 0.15);
+  --color-gold-glow: rgba(245, 183, 0, 0.4);
+  --color-text-main: #FFFFFF;
+  --color-text-muted: #9CA3AF;
+  
+  --font-fr: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-ar: 'Cairo', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --transition-smooth: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Base Body: Stays solidly dark without flickering */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: var(--color-bg);
+  font-family: var(--font-fr);
+  line-height: 1.6;
+  opacity: 1;
+}
+
+/* Page Transition Loading Bar (Top Gold Accent) */
+#page-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #F5B700, #FFE082, #F5B700);
+  box-shadow: 0 0 12px rgba(245, 183, 0, 0.7);
+  z-index: 99999;
+  transition: width 0.22s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* Header & Footer Persistence: Locked in hardware-accelerated layer so they never jitter or jump */
+body > header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Ensure article and content headers inside pages are strictly static in flow and never stick on scroll */
+article header,
+.article-header,
+main header {
+  position: static !important;
+  top: auto !important;
+  z-index: 1 !important;
+  transform: none !important;
+  -webkit-transform: none !important;
+}
+
+footer {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Main Content Smooth Transitions */
+main {
+  animation: mainContentFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: opacity, transform;
+}
+
+main.page-transition-out {
+  opacity: 0 !important;
+  transform: translateY(8px) !important;
+  transition: opacity 0.18s cubic-bezier(0.16, 1, 0.3, 1), transform 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+main.page-transition-in {
+  animation: mainContentFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes mainContentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RTL / LTR Typography */
+html[dir="rtl"] body {
+  font-family: var(--font-ar);
+}
+
+html[dir="ltr"] body {
+  font-family: var(--font-fr);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0D0D;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
+
+/* Gold Gradient Utilities */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFFFFF 20%, #F5B700 85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-glow {
+  box-shadow: 0 0 30px rgba(245, 183, 0, 0.2);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 0 35px rgba(245, 183, 0, 0.35);
+  border-color: var(--color-gold);
+}
+
+/* Glassmorphism Surface */
+.glass-panel {
+  background: rgba(20, 20, 20, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+}
+
+/* Interactive Card Hover States */
+.interactive-card {
+  transition: var(--transition-smooth);
+}
+.interactive-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(245, 183, 0, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Floating Action Button (WhatsApp) */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #FFFFFF;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+html[dir="rtl"] .whatsapp-float {
+  right: auto;
+  left: 24px;
+  font-family: var(--font-ar);
+}
+.whatsapp-float:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+  color: #FFFFFF;
+}
+
+/* Pulse animation for CTA */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(245, 183, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(245, 183, 0, 0);
+  }
+}
+
+.pulse-gold {
+  animation: pulseGlow 2.5s infinite;
+}
+
+/* Language Switcher Overlay (1-Second Smooth Feedback) */
+#lang-switch-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 13, 13, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+#lang-switch-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid rgba(245, 183, 0, 0.2);
+  border-top-color: var(--color-gold);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Micro-reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Aspect ratio helpers */
+.aspect-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+/* Slider Controls — Subtle & Discreet as requested */
+.slider-arrow {
+  opacity: 0.35;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.slider-arrow:hover {
+  opacity: 0.95;
+  background: var(--color-gold);
+  color: #000;
+  border-color: var(--color-gold);
+}
+
+/* Form Styles */
+.custom-input {
+  background: #141414;
+  border: 1px solid #2A2A2A;
+  color: #F3F4F6;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  width: 100%;
+  transition: var(--transition-smooth);
+}
+.custom-input:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(245, 183, 0, 0.15);
+  background: #181818;
+}
+
+/* Accordion FAQ */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  opacity: 0;
+}
+.faq-item.active .faq-content {
+  max-height: 400px;
+  opacity: 1;
+}
+.faq-item.active .faq-chevron {
+  transform: rotate(180deg);
+  color: var(--color-gold);
+}
+
+/* ==========================================================================
+   PRICING & DISCOUNT HIGHLIGHTS (RED STRIKETHROUGH & GREEN FINAL PRICE)
+   ========================================================================== */
+.price-old {
+  color: #EF4444 !important; /* Vivid Red */
+  text-decoration: line-through !important;
+  text-decoration-color: #EF4444 !important;
+  text-decoration-thickness: 2.5px !important;
+  font-family: var(--font-mono);
+  font-weight: 700 !important;
+}
+
+.price-new {
+  color: #10B981 !important; /* Emerald Green */
+  font-family: var(--font-mono);
+  font-weight: 900 !important;
+}
+
+.badge-special-offer {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(245, 183, 0, 0.15) !important;
+  color: #F5B700 !important;
+  border: 1px solid rgba(245, 183, 0, 0.4) !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  padding: 3px 10px !important;
+  border-radius: 9999px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-discount {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(16, 185, 129, 0.15) !important;
+  color: #10B981 !important;
+  border: 1px solid rgba(16, 185, 129, 0.35) !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  padding: 3px 10px !important;
+  border-radius: 9999px !important;
+  font-family: var(--font-mono);
+}
+
+/* Certificate Download Button */
+.btn-download-cert {
+  background: linear-gradient(135deg, #F5B700 0%, #D4AF37 100%);
+  color: #000000;
+  font-weight: 800;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(245, 183, 0, 0.3);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-download-cert:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(245, 183, 0, 0.45);
+  background: linear-gradient(135deg, #FFE082 0%, #F5B700 100%);
+}

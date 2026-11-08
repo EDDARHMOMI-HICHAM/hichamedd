@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Défi Créatif : Qui veut gagner des millions ? | Hicham Edd</title>
+  
+  <meta name="description" content="Testez vos connaissances en Graphic Design et Montage Vidéo avec le Défi Créatif de Hicham Edd. 15 questions techniques, jokers et certificat officiel d'excellence !">
+  <meta name="keywords" content="Défi Créatif, Quiz Graphic Design, Quiz Montage Vidéo, Hicham Edd, Graphic Designer Morocco, Agadir, Maroc">
+  <meta name="author" content="Hicham Eddarhmoumi">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://hichamedd.com/challenge.html">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Défi Créatif : Qui veut gagner des millions ? | Hicham Edd">
+  <meta property="og:description" content="15 questions techniques en design et vidéo avec certificat officiel d'excellence pour défier vos amis !">
+  <meta property="og:url" content="https://hichamedd.com/challenge.html">
+  <meta property="og:image" content="assets/images/reels.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#F5B700',
+              goldHover: '#E0A700',
+              dark: '#0D0D0D',
+              surface: '#141414',
+              card: '#1A1A1A',
+              border: '#2A2A2A'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            ar: ['Cairo', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .game-option-btn {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .game-option-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px -5px rgba(245, 183, 0, 0.25);
+    }
+    .lifeline-btn {
+      transition: all 0.2s ease;
+    }
+    .lifeline-btn:hover:not(:disabled) {
+      transform: translateY(-2px) scale(1.04);
+      border-color: #F5B700;
+      box-shadow: 0 6px 20px -3px rgba(245, 183, 0, 0.3);
+    }
+    .lifeline-btn:disabled {
+      opacity: 0.3;
+      filter: grayscale(1);
+      cursor: not-allowed;
+    }
+    .certificate-frame {
+      background: linear-gradient(135deg, #111111 0%, #181818 50%, #0F0F0F 100%);
+      border: 3px solid #F5B700;
+      box-shadow: 0 0 50px rgba(245, 183, 0, 0.25), inset 0 0 35px rgba(0, 0, 0, 0.85);
+      position: relative;
+    }
+    .certificate-inner-border {
+      border: 1px dashed rgba(245, 183, 0, 0.45);
+    }
+  </style>
+</head>
+<body class="bg-brand-dark text-white min-h-screen flex flex-col justify-between selection:bg-brand-gold selection:text-black">
+
+  <!-- 1-SECOND LANGUAGE SWITCH OVERLAY -->
+  <div id="lang-switch-overlay">
+    <div class="spinner mb-4"></div>
+    <span id="lang-switch-text" class="text-sm font-bold text-brand-gold tracking-wide">Traduction en cours...</span>
+  </div>
+
+  <!-- PERSISTENT STICKY HEADER -->
+  <header class="sticky top-0 z-50 bg-[#0D0D0D]/90 backdrop-blur-md border-b border-brand-border/60 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center group focus:outline-none flex-shrink-0">
+        <img src="assets/images/logo.png" alt="Hicham Edd" class="h-9 sm:h-10 w-auto object-contain group-hover:scale-105 transition-transform">
+      </a>
+
+      <nav class="hidden md:flex items-center gap-1 lg:gap-2 bg-brand-surface/80 p-1.5 rounded-full border border-brand-border overflow-x-auto">
+        <a href="index.html" data-page="home" class="nav-link-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all text-gray-300 hover:text-white hover:bg-brand-card/60" data-i18n="nav.home">Accueil</a>
+        <a href="services.html" data-page="services" class="nav-link-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all text-gray-300 hover:text-white hover:bg-brand-card/60" data-i18n="nav.services">Services & Packs</a>
+        <a href="portfolio.html" data-page="portfolio" class="nav-link-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all text-gray-300 hover:text-white hover:bg-brand-card/60" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="blog.html" data-page="blog" class="nav-link-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all text-gray-300 hover:text-white hover:bg-brand-card/60" data-i18n="nav.blog">Articles</a>
+        <a href="about.html" data-page="about" class="nav-link-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all text-gray-300 hover:text-white hover:bg-brand-card/60" data-i18n="nav.about">À propos</a>
+        <a href="contact.html" data-page="contact" class="nav-link-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all text-gray-300 hover:text-white hover:bg-brand-card/60" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3 flex-shrink-0">
+        <!-- Desktop Language Switcher (Hidden on Mobile) -->
+        <button onclick="toggleLanguage()" class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-surface hover:bg-brand-card border border-brand-border text-xs font-bold text-gray-200 transition-all hover:border-brand-gold/50 shadow-sm whitespace-nowrap" title="Changer la langue / تبديل اللغة">
+          <span class="current-lang-flag text-base" id="current-lang-flag">🇲🇦</span>
+          <span class="current-lang-text text-xs" id="current-lang-text">الدارجة</span>
+          <span class="text-[10px] text-brand-gold">⇄</span>
+        </button>
+
+        <!-- Desktop Challenge Button (Hidden on Mobile) -->
+        <a id="nav-challenge-btn" href="challenge.html" class="hidden md:flex bg-brand-gold hover:bg-brand-goldHover text-black font-extrabold text-xs md:text-sm px-4 py-2 rounded-full shadow-lg shadow-brand-gold/15 transition-all items-center gap-1.5 whitespace-nowrap group">
+          <span>🏆</span>
+          <span data-i18n="nav.challenge">تحدي الإبداع</span>
+        </a>
+
+        <!-- Mobile Hamburger Button: ONLY this button appears in the navbar on mobile screen -->
+        <button onclick="toggleMobileMenu()" class="md:hidden flex items-center justify-center p-2.5 rounded-xl bg-brand-surface border border-brand-border text-gray-300 hover:text-white hover:border-brand-gold/50 focus:outline-none transition-colors" aria-label="Menu Mobile">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-brand-surface/98 backdrop-blur-xl border-b border-brand-border px-4 py-4 space-y-4 shadow-2xl">
+      <nav class="space-y-1">
+        <a href="index.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-brand-card hover:text-brand-gold transition-colors" data-i18n="nav.home">Accueil</a>
+        <a href="services.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-brand-card hover:text-brand-gold transition-colors" data-i18n="nav.services">Services & Packs</a>
+        <a href="portfolio.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-brand-card hover:text-brand-gold transition-colors" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="blog.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-brand-card hover:text-brand-gold transition-colors" data-i18n="nav.blog">Articles</a>
+        <a href="about.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-brand-card hover:text-brand-gold transition-colors" data-i18n="nav.about">À propos</a>
+        <a href="contact.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-brand-card hover:text-brand-gold transition-colors" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <!-- Action Buttons inside Mobile Menu Drawer (As Requested) -->
+      <div class="pt-3 border-t border-brand-border/70 flex flex-col gap-2.5">
+        <!-- Language Switcher in Mobile Drawer -->
+        <button onclick="toggleLanguage()" class="w-full flex items-center justify-between px-4 py-2.5 rounded-xl bg-brand-card hover:bg-brand-surface border border-brand-border text-xs font-bold text-gray-200 transition-all hover:border-brand-gold/50">
+          <span class="flex items-center gap-2">
+            <span class="current-lang-flag text-base">🇲🇦</span>
+            <span class="current-lang-text text-xs">الدارجة</span>
+          </span>
+          <span class="text-xs text-brand-gold font-mono">Changer la langue / تبديل ⇄</span>
+        </button>
+
+        <!-- Challenge Button in Mobile Drawer -->
+        <a href="challenge.html" class="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-brand-gold hover:bg-brand-goldHover text-black font-extrabold text-sm shadow-md shadow-brand-gold/20 transition-all text-center">
+          <span>🏆</span>
+          <span data-i18n="nav.challenge">تحدي الإبداع</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- MAIN CHALLENGE VIEW                        -->
+  <!-- ========================================== -->
+  <main class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 flex flex-col justify-center">
+
+    <!-- 1. ENTRY SCREEN -->
+    <div id="cr-intro-view" class="text-center max-w-2xl mx-auto my-auto py-6">
+      
+      <span class="text-xs font-mono uppercase tracking-widest text-brand-gold bg-brand-gold/10 border border-brand-gold/30 px-4 py-1.5 rounded-full inline-block mb-4" id="cr-intro-tag">
+        🏆 مسابقة من سيربح الإبداع؟
+      </span>
+
+      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-4" id="cr-intro-h1">
+        واش أنت <span class="text-brand-gold">مبدع حقيقي</span> ولا غير حافظ الأدوات؟
+      </h1>
+
+      <p class="text-sm sm:text-base text-gray-300 leading-relaxed max-w-xl mx-auto mb-8" id="cr-intro-p">
+        اختبر معلوماتك فـ 15 سؤالاً تقنياً، وربح شهادة رسمية باسمك لمشاركتها وتحدي أصدقائك فالسوشيال ميديا!
+      </p>
+
+      <!-- Player Name Input -->
+      <div class="max-w-md mx-auto mb-6 text-left rtl:text-right bg-brand-card p-5 rounded-2xl border border-brand-border shadow-xl">
+        <label for="cr-player-name" class="block text-xs font-bold text-gray-300 uppercase mb-2 font-mono flex items-center justify-between">
+          <span id="cr-lbl-player">1. كتب سميتك أو لقبك الإبداعي: *</span>
+          <span class="text-[10px] text-brand-gold font-normal" id="cr-lbl-player-note">(باش تطلع فـ الشهادة الرسمية)</span>
+        </label>
+        <div class="relative">
+          <input 
+            type="text" 
+            id="cr-player-name" 
+            placeholder="مثال: يوسف المعطاوي" 
+            maxlength="35" 
+            class="w-full bg-brand-surface border border-brand-border focus:border-brand-gold rounded-xl px-4 py-3 text-sm text-white focus:outline-none transition-colors"
+          >
+          <span class="absolute right-3 rtl:right-auto rtl:left-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm">👤</span>
+        </div>
+        <span id="cr-name-error" class="text-red-400 text-xs mt-2 hidden block font-bold">⚠️ عافاك كتب سميتك باش تقدر تبدا اللعبة وتستلم شهادتك!</span>
+      </div>
+
+      <!-- Specialty Selection -->
+      <div class="max-w-md mx-auto mb-8 text-left rtl:text-right">
+        <label class="block text-xs font-bold text-gray-300 uppercase mb-2 font-mono" id="cr-lbl-spec">
+          2. عزل التخصص اللي باغي تلعب فيه: *
+        </label>
+        
+        <div class="grid grid-cols-2 gap-3">
+          <label id="cr-lbl-design" class="cursor-pointer p-4 rounded-2xl border-2 border-brand-gold bg-brand-card shadow-xl transition-all flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <input type="radio" name="cr_spec" id="cr-rad-design" value="design" checked onchange="toggleCrSpec('design')" class="w-4 h-4 text-brand-gold">
+              <div>
+                <span id="cr-spec-des-title" class="text-xs font-extrabold text-white block">الجرافيك ديزاين</span>
+                <span id="cr-spec-des-sub" class="text-[9px] text-gray-400 font-mono">50 سؤالاً تقنياً</span>
+              </div>
+            </div>
+            <span class="text-xl">🎨</span>
+          </label>
+
+          <label id="cr-lbl-video" class="cursor-pointer p-4 rounded-2xl border-2 border-brand-border bg-brand-surface opacity-80 hover:opacity-100 transition-all flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <input type="radio" name="cr_spec" id="cr-rad-video" value="video" onchange="toggleCrSpec('video')" class="w-4 h-4 text-brand-gold">
+              <div>
+                <span id="cr-spec-vid-title" class="text-xs font-extrabold text-white block">مونتاج الفيديو</span>
+                <span id="cr-spec-des-sub" class="text-[9px] text-gray-400 font-mono">50 سؤالاً تقنياً</span>
+              </div>
+            </div>
+            <span class="text-xl">🎬</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Start Button -->
+      <button onclick="startCreativeGame()" class="px-10 py-4 rounded-2xl bg-gradient-to-r from-brand-gold to-amber-500 hover:from-amber-400 hover:to-brand-gold text-black font-black text-lg shadow-2xl shadow-brand-gold/30 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3 mx-auto">
+        <span id="cr-btn-start">بدء التحدي الآن</span>
+        <span class="text-xl">🚀</span>
+      </button>
+
+    </div>
+
+    <!-- 2. GAMEPLAY ARENA -->
+    <div id="cr-gameplay-view" class="hidden">
+      
+      <!-- Top Lifelines & Status -->
+      <div class="flex flex-wrap items-center justify-between gap-4 mb-6 glass-panel p-4 rounded-2xl border border-brand-border/60">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-gold text-black flex items-center justify-center font-black text-lg" id="cr-avatar">
+            🎨
+          </div>
+          <div>
+            <span class="text-xs font-bold text-white block"><span id="cr-player-prefix">المتسابق:</span> <span id="cr-player-display" class="text-brand-gold">Youssef</span></span>
+            <span class="text-[11px] text-gray-400 font-mono block"><span id="cr-q-prefix">السؤال رقم</span> <span id="cr-q-num" class="text-brand-gold font-bold">1</span> / 15</span>
+          </div>
+        </div>
+
+        <!-- 3 Millionaire Lifelines -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <button onclick="useLifeline5050()" id="cr-ll-5050" class="lifeline-btn px-3 py-2 rounded-xl bg-brand-surface border border-brand-border text-xs font-bold text-amber-400 flex items-center gap-1.5" title="Supprimer deux mauvaises réponses">
+            <span class="font-mono text-sm font-black">50:50</span>
+            <span class="hidden sm:inline">50:50</span>
+          </button>
+          <button onclick="useLifelineAudience()" id="cr-ll-audience" class="lifeline-btn px-3 py-2 rounded-xl bg-brand-surface border border-brand-border text-xs font-bold text-emerald-400 flex items-center gap-1.5" title="Avis du Public">
+            <span class="text-sm">👥</span>
+            <span class="hidden sm:inline" id="lbl-ll-aud">الجمهور</span>
+          </button>
+          <button onclick="useLifelinePhone()" id="cr-ll-phone" class="lifeline-btn px-3 py-2 rounded-xl bg-brand-surface border border-brand-border text-xs font-bold text-blue-400 flex items-center gap-1.5" title="Appel à un ami expert">
+            <span class="text-sm">📞</span>
+            <span class="hidden sm:inline" id="lbl-ll-ph">صديق خبير</span>
+          </button>
+        </div>
+
+        <!-- Current Points -->
+        <div class="flex items-center gap-2 font-mono">
+          <span class="text-xs text-gray-400" id="cr-pts-label">الرصيد:</span>
+          <span id="cr-points-display" class="text-base font-black text-brand-gold">1 000</span>
+        </div>
+      </div>
+
+      <!-- Arena: Question + Ladder -->
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 items-start">
+        
+        <div class="lg:col-span-3 space-y-6">
+          <div class="glass-panel rounded-2xl p-6 sm:p-8 text-center border border-brand-gold/30 shadow-2xl">
+            <div class="text-[11px] font-mono text-brand-gold uppercase tracking-widest mb-2" id="cr-topic-badge">Question technique</div>
+            <h2 id="cr-question-text" class="text-lg sm:text-2xl font-bold text-white leading-relaxed max-w-3xl mx-auto">
+              Chargement de la question...
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="cr-options-container"></div>
+
+          <!-- Audience Poll Box -->
+          <div id="cr-audience-box" class="hidden glass-panel p-5 rounded-2xl border border-emerald-500/40 space-y-3">
+            <div class="flex items-center justify-between text-xs font-bold text-emerald-400">
+              <span id="cr-aud-box-title">📊 Vote du public créatif :</span>
+              <button onclick="closeCrAudience()" class="text-gray-400 hover:text-white">✕ Fermer</button>
+            </div>
+            <div class="grid grid-cols-4 gap-2 text-center text-xs font-mono" id="cr-audience-bars"></div>
+          </div>
+
+          <!-- Phone Friend Box -->
+          <div id="cr-phone-box" class="hidden glass-panel p-5 rounded-2xl border border-blue-500/40 flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl shrink-0">📞</div>
+            <div class="text-xs space-y-1">
+              <span class="font-bold text-blue-400 block" id="cr-phone-name">Votre contact expert :</span>
+              <p class="text-gray-200 leading-relaxed italic" id="cr-phone-msg"></p>
+            </div>
+          </div>
+
+          <!-- Explanation Box -->
+          <div id="cr-exp-box" class="hidden glass-panel p-4 rounded-xl border border-brand-border text-xs leading-relaxed space-y-1">
+            <span class="font-bold text-brand-gold block" id="cr-exp-heading">💡 الشرح التقني:</span>
+            <p id="cr-exp-text" class="text-gray-300"></p>
+          </div>
+        </div>
+
+        <!-- 15-Step Ladder -->
+        <div class="lg:col-span-1 glass-panel rounded-2xl p-4 border border-brand-border shadow-xl">
+          <div class="text-xs font-bold text-white mb-3 text-center pb-2 border-b border-white/10 flex items-center justify-between font-mono">
+            <span id="cr-ladder-heading">سلم المراتب</span>
+            <span class="text-brand-gold text-[10px]">15 سؤال</span>
+          </div>
+          <div class="space-y-1 text-xs font-mono" id="cr-ladder-container"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- 3. CERTIFICATE & VIRAL WHATSAPP SHARING VIEW -->
+    <div id="cr-result-view" class="hidden text-center max-w-2xl mx-auto py-6">
+      
+      <!-- Screenshot prompt -->
+      <div class="bg-brand-card border border-brand-gold/30 px-4 py-2 rounded-xl text-xs text-amber-300 inline-flex items-center gap-2 mb-6 font-mono">
+        <span>📸 Conseil : Faites une capture d'écran de ce certificat pour le partager en Story ou Statut !</span>
+      </div>
+
+      <!-- Official Creative Certificate -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6">
+        <button id="cr-btn-download-cert" onclick="downloadCertificateImage('creative-cert-card', 'certificat-defi-creatif-hichamedd.png')" class="btn-download-cert px-8 py-3.5 flex items-center justify-center gap-2 font-black text-sm shadow-xl">
+          <span>📥</span>
+          <span>احتفظ بالشهادة (تحميل كصورة)</span>
+        </button>
+      </div>
+      <div id="creative-cert-card" class="certificate-frame p-6 sm:p-10 rounded-3xl mb-8 text-center relative overflow-hidden">
+        <div class="certificate-inner-border p-6 sm:p-8 rounded-2xl relative z-10 bg-black/65 backdrop-blur-sm">
+          
+          <div class="flex items-center justify-between border-b border-brand-border pb-4 mb-6">
+            <div class="text-left rtl:text-right">
+              <span class="text-[10px] font-mono text-brand-gold tracking-widest block uppercase">CERTIFICATE OF CREATIVE MASTERY</span>
+              <span class="text-xs font-bold text-gray-300" id="cr-cert-top-title">شهادة إتقان الإبداع الرقمي</span>
+            </div>
+            <img src="assets/images/logo.png" alt="Hicham Edd" class="h-6 sm:h-7 w-auto object-contain">
+          </div>
+
+          <div class="mb-4">
+            <div class="w-16 h-16 rounded-full bg-brand-gold/10 border-2 border-brand-gold flex items-center justify-center text-3xl mx-auto mb-2" id="cr-cert-icon">
+              🏆
+            </div>
+            <span class="text-xs font-mono uppercase text-brand-gold tracking-widest block font-bold" id="cr-cert-badge">شهادة فوز وتفوق</span>
+            <h2 class="text-xl sm:text-2xl font-black text-white mt-1" id="cr-cert-main-title">مسابقة من سيربح الإبداع؟</h2>
+          </div>
+
+          <div class="my-5 py-3 border-y border-white/10">
+            <span class="text-xs text-gray-400 block mb-1" id="cr-cert-awarded-lbl">تُمنح هذه الشهادة رسمياً إلى المبدع(ة):</span>
+            <h3 class="text-2xl sm:text-3xl font-black text-brand-gold tracking-wide" id="cr-cert-player-name">
+              Youssef El Maataoui
+            </h3>
+          </div>
+          <!-- EXACT SCORE & PERCENTAGE GAUGE -->
+          <div class="inline-flex items-center gap-3 px-6 py-2.5 rounded-2xl bg-brand-surface border border-brand-border mb-6">
+            <span class="text-xs text-gray-300" id="cr-cert-score-label">النتيجة والنسبة المحققة :</span>
+            <span class="text-2xl font-black text-brand-gold font-mono" id="cr-cert-pct">0%</span>
+            <span class="text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-mono" id="cr-cert-correct-fraction">0 / 15</span>
+            <span class="text-xs font-bold text-amber-400 font-mono" id="cr-cert-rank">مبتدئ</span>
+            <span class="hidden font-mono" id="cr-cert-pts">0</span>
+            <span class="hidden font-mono" id="cr-cert-spec">الجرافيك ديزاين</span>
+          </div>
+
+
+          <p class="text-xs sm:text-sm text-gray-200 leading-relaxed max-w-lg mx-auto mb-6" id="cr-cert-desc">
+            En reconnaissance de sa réussite remarquable aux 15 épreuves techniques dans la spécialité Graphic Design avec un score parfait de 10 000 000 points.
+          </p>
+
+          <div class="pt-4 border-t border-brand-border flex items-end justify-between text-[11px] font-mono text-gray-400">
+            <div class="text-left rtl:text-right">
+              <span class="text-white font-bold block">Hicham Eddarhmoumi</span>
+              <span>Senior Designer & Video Editor</span>
+            </div>
+            <div class="text-right rtl:text-left">
+              <span class="text-brand-gold font-bold block" id="cr-cert-date">07 Novembre 2026</span>
+              <span class="text-[10px]">Vérifié : hichamedd.com</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Viral WhatsApp Challenge Sharing -->
+      <div class="bg-gradient-to-r from-brand-card via-brand-surface to-brand-card p-6 rounded-2xl border border-brand-gold/30 mb-8 text-center space-y-3">
+        <h4 class="text-base font-extrabold text-white" id="cr-share-title">🔥 بارطاجي النتيجة وتحدى أصحابك فـ WhatsApp!</h4>
+        <p class="text-xs text-gray-300 max-w-md mx-auto" id="cr-share-desc">
+          شارك الشهادة والتحدي على الواتساب مع أصدقائك، وشوف شكون فيكم اللي غادي يربح ويوصل لأعلى نقطة فالتصميم والمونتاج!
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+          <a id="cr-share-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm shadow-xl shadow-emerald-600/20 transition-all flex items-center justify-center gap-2">
+            <span id="cr-share-btn-text">مشاركة الشهادة والتحدي فـ WhatsApp 📲</span>
+          </a>
+          <button onclick="resetGameToStart()" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-brand-surface hover:bg-brand-card border border-brand-border text-brand-gold font-bold text-sm transition-all" id="cr-btn-back-home">
+            🏠 العودة إلى بداية اللعبة
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- PERSISTENT FOOTER -->
+    <!-- FOOTER (EXACTLY 4 LINKS AS REQUESTED) -->
+  <footer class="bg-black border-t border-brand-border py-8 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+        <div class="flex flex-wrap items-center justify-center gap-6">
+          <a href="privacy.html" class="hover:text-brand-gold transition-colors" data-i18n="legal.privacy_title">Politique de Confidentialité & Données</a>
+          <a href="terms.html" class="hover:text-brand-gold transition-colors" data-i18n="legal.terms_title">Conditions d'Utilisation & Service Légal</a>
+          <a href="about.html" class="hover:text-brand-gold transition-colors" data-i18n="nav.about">À propos</a>
+          <a href="contact.html" class="hover:text-brand-gold transition-colors" data-i18n="nav.contact">Contact</a>
+        </div>
+        <div class="text-center md:text-right rtl:md:text-left text-[11px] text-gray-400">
+          <span data-i18n="legal.footer_rights">© 2026 Hicham Edd. Tous droits réservés. Devis & Facture Légale Maroc.</span>
+        </div>
+      </div>
+
+      <!-- Social Media Icon Buttons (Pure Icons, No Text Names) -->
+      <div class="pt-4 border-t border-brand-border/40 flex items-center justify-center flex-wrap gap-3">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-brand-surface hover:bg-brand-gold hover:text-black text-gray-400 border border-brand-border hover:border-brand-gold flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Facebook" title="Facebook">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-brand-surface hover:bg-brand-gold hover:text-black text-gray-400 border border-brand-border hover:border-brand-gold flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="X" title="X">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-brand-surface hover:bg-brand-gold hover:text-black text-gray-400 border border-brand-border hover:border-brand-gold flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="YouTube" title="YouTube">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-brand-surface hover:bg-brand-gold hover:text-black text-gray-400 border border-brand-border hover:border-brand-gold flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Instagram" title="Instagram">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-brand-surface hover:bg-brand-gold hover:text-black text-gray-400 border border-brand-border hover:border-brand-gold flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Behance" title="Behance">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-4.726 3-3.159 0-5.5-2.28-5.5-5.5 0-3.327 2.451-5.5 5.5-5.5 3.325 0 5.251 2.373 5.097 5.75h-8.081c.078 1.498 1.055 2.5 2.484 2.5 1.341 0 2.115-.658 2.441-1.25h2.785zm-7.611-4.25h5.362c-.114-1.332-1.018-2.05-2.262-2.05-1.396 0-2.316.899-2.5 2.05zm-9.115 7.25h-7v-15h7.106c3.084 0 5.144 1.55 5.144 4.223 0 1.635-.916 2.977-2.316 3.65 1.83.693 2.766 2.302 2.766 4.195 0 3.087-2.348 4.932-5.7 4.932zm-4-9h3.454c1.474 0 2.546-.667 2.546-1.928 0-1.196-.995-1.822-2.455-1.822h-3.545v3.75zm0 6.25h3.636c1.688 0 2.864-.789 2.864-2.188 0-1.365-1.127-2.062-2.818-2.062h-3.682v4.25z"/></svg>
+        </a>
+        <a href="https://threads.net" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-brand-surface hover:bg-brand-gold hover:text-black text-gray-400 border border-brand-border hover:border-brand-gold flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Threads" title="Threads">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.186 24C5.467 24 0 18.533 0 11.814 0 5.094 5.467 0 12.186 0c6.643 0 11.968 5.244 12.063 11.867v.466h-3.486c-.092-4.708-3.906-8.522-8.577-8.522-4.747 0-8.6 3.853-8.6 8.6 0 4.748 3.853 8.601 8.6 8.601 3.238 0 6.077-1.792 7.545-4.455l3.056 1.706C18.667 21.91 14.733 24 12.186 24zm2.846-9.845c0 1.848-1.42 3.268-3.268 3.268-1.848 0-3.268-1.42-3.268-3.268 0-1.847 1.42-3.268 3.268-3.268 1.848 0 3.268 1.421 3.268 3.268z"/></svg>
+        </a>
+        <a href="https://wa.me/212653342503" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-brand-surface hover:bg-brand-gold hover:text-black text-gray-400 border border-brand-border hover:border-brand-gold flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="WhatsApp" title="WhatsApp">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.184 1.564 5.939l-1.564 5.889 6.033-1.582c1.707.935 3.666 1.468 5.751 1.468 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="mailto:hixgraphix.pro@gmail.com" class="w-9 h-9 rounded-xl bg-brand-surface hover:bg-brand-gold hover:text-black text-gray-400 border border-brand-border hover:border-brand-gold flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Email" title="Email">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/212653342503" target="_blank" rel="noopener noreferrer" class="whatsapp-float pulse-gold whatsapp-general-link" title="Discuter sur WhatsApp">
+    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.184 1.564 5.939l-1.564 5.889 6.033-1.582c1.707.935 3.666 1.468 5.751 1.468 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>
+    <span class="hidden sm:inline">WhatsApp 06 53 34 25 03</span>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/challenge-data.js"></script>
+  <script src="assets/js/challenge.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
