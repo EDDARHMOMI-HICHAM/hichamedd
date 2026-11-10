@@ -257,7 +257,7 @@ const translations = {
       art2_read_time: "5 min de lecture",
       art2_date: "01 Novembre 2026",
       art2_title: "5 secrets de montage de Reels et TikTok qui multiplient les ventes des boutiques en ligne au Maroc",
-      art2_excerpt: "Le guide pas-à-pas pour générer des vidéos par Intelligence Artificielle et les monter par logiciels professionnels pour captiver dans les 3 premières secondes."
+      art2_excerpt: "Le guide pas-à-pas pour générer des vidéos par Intelligence Artificielle et les monter par logiciels professionnels pour captiver dans les 3 premières secondes.",
 
       search_placeholder: "Rechercher un article...",
       filter_all: "Tous (20)",
@@ -265,6 +265,7 @@ const translations = {
       filter_video: "Montage Vidéo",
       filter_pricing: "Packs & Tarifs",
       filter_ecommerce: "E-commerce",
+
     },
 
     // About Me
@@ -626,15 +627,18 @@ timeline_heading: "Chronologie & Jalons Clés :",
       art2_read_time: "5 دقائق قراءة",
       art2_date: "01 نونبر 2026",
       art2_title: "5 أسرار فمونتاج الريلز والتيك توك كتضاعف مبيعات المتاجر الإلكترونية فالمغرب",
-      art2_excerpt: "كيفاش دير توليد الفيديوهات بالذكاء الاصطناعي والمونتاج ببرامج المونتاج باش توقف الزائر فالـ 3 ثواني الأولى ويقنعو يضغط على الشراء مباشرة."
+      art2_excerpt: "كيفاش دير توليد الفيديوهات بالذكاء الاصطناعي والمونتاج ببرامج المونتاج باش توقف الزائر فالـ 3 ثواني الأولى ويقنعو يضغط على الشراء مباشرة.",
       
       search_placeholder: "قلب على شي مقال...",
       filter_all: "الكل (20)",
       filter_branding: "الهوية البصرية",
       filter_video: "مونتاج الفيديو",
       filter_pricing: "الباقات والأسعار",
-      filter_ecommerce: "التجارة الإلكترونية",
+      filter_ecommerce: "التجارة الإلكترونية"
     },
+
+    // About Me
+    about: {    },
 
     // About Me
     about: {
