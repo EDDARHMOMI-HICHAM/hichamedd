@@ -434,7 +434,7 @@
 function formatNumber(num) {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "\u00A0");
   }
-  
+
   // =========================================================================
   // MODALS & SLIDERS
   // =========================================================================
@@ -930,7 +930,7 @@ function formatNumber(num) {
   // =========================================================================
   // REEL & VIDEO PLAYER MODAL (FOR ALL 3 PORTFOLIO PROJECTS)
   // =========================================================================
-  const reelModalData = {
+const reelModalData = {
     reels: {
       badge: { fr: "REELS & COULISSES MONTAGE IA", darija: "ريلز وكواليس المونتاج بالذكاء الاصطناعي" },
       title: { fr: "Spot Promotionnel & Reels — Baklawa.ma", darija: "سبوت ترويجي وريلز بالذكاء الاصطناعي — Baklawa.ma" },
@@ -939,7 +939,7 @@ function formatNumber(num) {
         darija: "إنتاج ومونتاج فيديو عمودي بمقاس 9:16 مخصص للتجارة الإلكترونية ومدروس لمضاعفة المبيعات فـ تيك توك وإنستغرام."
       },
       poster: "assets/images/reels.jpg",
-      videoSrc: ""
+      videoSrc: "assets/videos/video-rentech.mp4"
     },
     social: {
       badge: { fr: "CAMPAGNE SOCIAL MEDIA & CAROUSELS", darija: "حملة إعلانية وبوستات وكاروسيل" },
