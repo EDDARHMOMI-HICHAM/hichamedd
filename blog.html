@@ -857,21 +857,12 @@
       </div>
 
 
-      <!-- PAGINATION CONTROLS -->
-      <div id="blog-pagination" class="flex flex-wrap items-center justify-center gap-2 mt-12 mb-8">
-        <button id="blog-prev-btn" onclick="changeBlogPage(-1)" class="px-4 py-2 rounded-xl bg-brand-surface border border-brand-border text-xs font-bold text-gray-300 hover:text-white hover:border-brand-gold transition-all disabled:opacity-30 disabled:cursor-not-allowed">
-          ← Précédent
-        </button>
-
-        <div id="blog-page-numbers" class="flex items-center gap-1.5">
-          <!-- Page numbers will be injected automatically by JavaScript -->
+<!-- PAGINATION CONTROLS -->
+      <div id="blog-pagination" dir="ltr" class="flex items-center justify-center gap-2 mt-12 mb-8">
+        <div id="blog-page-numbers" class="flex items-center gap-2">
+          <!-- Page numbers injected by JS -->
         </div>
-
-        <button id="blog-next-btn" onclick="changeBlogPage(1)" class="px-4 py-2 rounded-xl bg-brand-surface border border-brand-border text-xs font-bold text-gray-300 hover:text-white hover:border-brand-gold transition-all disabled:opacity-30 disabled:cursor-not-allowed">
-          Suivant →
-        </button>
       </div>
-
       
       <!-- DIAGNOSTIC BRAND AUDIT CTA BOX -->
       <div class="my-12 p-6 sm:p-10 rounded-2xl bg-gradient-to-r from-brand-surface via-[#1A1810] to-brand-surface border-2 border-brand-gold/40 text-center sm:text-left rtl:sm:text-right flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
@@ -993,36 +984,44 @@
         renderPaginationControls(totalPages);
       }
 
-      function renderPaginationControls(totalPages) {
-        const prevBtn = document.getElementById('blog-prev-btn');
-        const nextBtn = document.getElementById('blog-next-btn');
-        const pageNumbersContainer = document.getElementById('blog-page-numbers');
+function renderPaginationControls(totalPages) {
+      const pageNumbersContainer = document.getElementById('blog-page-numbers');
+      if (!pageNumbersContainer) return;
 
-        if (prevBtn) prevBtn.disabled = (currentPage === 1);
-        if (nextBtn) nextBtn.disabled = (currentPage === totalPages);
+      pageNumbersContainer.innerHTML = '';
 
-        if (pageNumbersContainer) {
-          pageNumbersContainer.innerHTML = '';
-          for (let i = 1; i <= totalPages; i++) {
-            const pageBtn = document.createElement('button');
-            pageBtn.innerText = i;
-            pageBtn.onclick = () => goToBlogPage(i);
+      for (let i = 1; i <= totalPages; i++) {
+        const pageBtn = document.createElement('button');
+        pageBtn.innerText = i;
+        pageBtn.onclick = () => goToBlogPage(i);
 
-            if (i === currentPage) {
-              pageBtn.className = 'w-9 h-9 rounded-xl bg-brand-gold text-black font-extrabold text-xs shadow-md shadow-brand-gold/20';
-            } else {
-              pageBtn.className = 'w-9 h-9 rounded-xl bg-brand-surface border border-brand-border text-gray-300 hover:text-white hover:border-brand-gold/60 text-xs font-semibold transition-all';
-            }
-            pageNumbersContainer.appendChild(pageBtn);
-          }
+        if (i === currentPage) {
+          pageBtn.className = 'w-10 h-10 rounded-xl bg-brand-gold text-black font-extrabold text-sm shadow-lg shadow-brand-gold/25 transition-transform scale-105';
+        } else {
+          pageBtn.className = 'w-10 h-10 rounded-xl bg-brand-surface border border-brand-border text-gray-300 hover:text-white hover:border-brand-gold/60 text-sm font-semibold transition-all hover:bg-brand-card';
         }
-
-        // Hide whole pagination container if only 1 page of results exists
-        const paginationWrapper = document.getElementById('blog-pagination');
-        if (paginationWrapper) {
-          paginationWrapper.style.display = totalPages > 1 ? 'flex' : 'none';
-        }
+        pageNumbersContainer.appendChild(pageBtn);
       }
+
+      // Hide container if there is only 1 page
+      const paginationWrapper = document.getElementById('blog-pagination');
+      if (paginationWrapper) {
+        paginationWrapper.style.display = totalPages > 1 ? 'flex' : 'none';
+      }
+    }
+
+    function goToBlogPage(pageNumber) {
+      currentPage = pageNumber;
+      filterBlogArticles();
+      scrollToGridTop();
+    }
+
+    function scrollToGridTop() {
+      const grid = document.getElementById('blog-articles-grid');
+      if (grid) {
+        grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
 
       function changeBlogPage(direction) {
         currentPage += direction;
