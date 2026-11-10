@@ -163,7 +163,7 @@
     initFAQ();
     initContactForm();
     initSliders();
-    initPageTransitions();
+    // initPageTransitions();
     if (typeof window.initAudit === 'function' && document.getElementById('audit-questions-view')) {
       window.initAudit();
     }
