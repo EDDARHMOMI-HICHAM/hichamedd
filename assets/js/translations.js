@@ -300,7 +300,9 @@ timeline_heading: "Chronologie & Jalons Clés :",
       v2_title: "Fichiers Ouverts & Propriété 100%",
       v2_desc: "Vous êtes propriétaire exclusif de toutes les créations, incluant les fichiers sources éditables (PSD, AI, PR, AE, Figma).",
       v3_title: "Facturation Transparente & Régularité",
-      v3_desc: "Émission systématique d'un devis préalable et d'une facture commerciale officielle pour la comptabilité de votre entreprise."
+      v3_desc: "Émission systématique d'un devis préalable et d'une facture commerciale officielle pour la comptabilité de votre entreprise.",
+      
+      experience_badge: "🔒 Clause de Confidentialité (NDA) & Marque Blanche",
     },
 
     // Contact
@@ -673,7 +675,8 @@ timeline_heading: "Chronologie & Jalons Clés :",
       v2_title: "الملفات المفتوحة ملكية ديالك 100%",
       v2_desc: "كتستلم الملفات الأصلية كاملة بـ PSD, AI, Premiere, After Effects باش تبقى محتافظ بأصول مشروعك.",
       v3_title: "الشفافية والفوترة القانونية",
-      v3_desc: "كنخدم بطرق رسمية وقانونية مع تسليم Devis مسبق وفاتورة رسمية (Facture) لضبط حسابات المحاسبة لشركتك."
+      v3_desc: "كنخدم بطرق رسمية وقانونية مع تسليم Devis مسبق وفاتورة رسمية (Facture) لضبط حسابات المحاسبة لشركتك.",
+      experience_badge: "🔒 التزام بالسرية التامة (NDA) والماركة البيضاء",
     },
 
     // Contact
