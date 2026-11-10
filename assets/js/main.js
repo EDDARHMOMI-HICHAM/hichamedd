@@ -930,7 +930,7 @@ function formatNumber(num) {
   // =========================================================================
   // REEL & VIDEO PLAYER MODAL (FOR ALL 3 PORTFOLIO PROJECTS)
   // =========================================================================
-const reelModalData = {
+  const reelModalData = {
     reels: {
       badge: { fr: "REELS & COULISSES MONTAGE IA", darija: "ريلز وكواليس المونتاج بالذكاء الاصطناعي" },
       title: { fr: "Spot Promotionnel & Reels — Baklawa.ma", darija: "سبوت ترويجي وريلز بالذكاء الاصطناعي — Baklawa.ma" },
@@ -984,8 +984,8 @@ const reelModalData = {
       mVideo.poster = data.poster;
       if (mSource) mSource.src = data.videoSrc;
       mVideo.load();
+      mVideo.play().catch(err => console.log('Autoplay prevented:', err));
     }
-
     if (waLink) {
       const msg = lang === 'fr'
         ? `Bonjour Hicham, j'ai vu votre réalisation [${data.title.fr}] et je souhaite commander un projet similaire avec Devis et Facture.`
@@ -996,15 +996,18 @@ const reelModalData = {
     modal.classList.remove('hidden');
   };
 
-  window.closeReelModal = function () {
+window.closeReelModal = function () {
     const modal = document.getElementById('reel-modal');
     if (modal) {
       const video = document.getElementById('reel-modal-video');
-      if (video) video.pause();
+      if (video) {
+        video.pause();
+        video.currentTime = 0; // Rewinds video to start
+      }
       modal.classList.add('hidden');
     }
   };
-
+  
   // =========================================================================
   // CERTIFICATE IMAGE DOWNLOAD (HTML2CANVAS + NATIVE CANVAS FALLBACK)
   // =========================================================================
