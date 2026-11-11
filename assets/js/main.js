@@ -1185,13 +1185,34 @@ window.closeReelModal = function () {
   // POSTS & CAROUSEL IMAGE GALLERY
   // =========================================================================
   // حط هنا أسماء الصور لي عندك فـ مجلد assets/images/posts/
-  const postGalleryImages = [
-    "assets/images/branding.jpg",
-    "assets/images/studio.jpg",
-    "assets/images/reels.jpg"
-    // زيد هنا: "assets/images/posts/post1.jpg", إلخ...
+const postGalleryImages = [
+    "assets/images/posts/image1.webp",
+    "assets/images/posts/image2.webp",
+    "assets/images/posts/image3.webp",
+    "assets/images/posts/image4.webp",
+    "assets/images/posts/image5.webp",
+    "assets/images/posts/image6.webp",
+    "assets/images/posts/image7.webp",
+    "assets/images/posts/image8.webp",
+    "assets/images/posts/image9.webp",
+    "assets/images/posts/image10.webp",
+    "assets/images/posts/image11.webp",
+    "assets/images/posts/image12.webp",
+    "assets/images/posts/image13.webp",
+    "assets/images/posts/image14.webp",
+    "assets/images/posts/image15.webp",
+    "assets/images/posts/image16.webp",
+    "assets/images/posts/image17.webp",
+    "assets/images/posts/image18.webp",
+    "assets/images/posts/image19.webp",
+    "assets/images/posts/image20.webp",
+    "assets/images/posts/image21.webp",
+    "assets/images/posts/image22.webp",
+    "assets/images/posts/image23.webp",
+    "assets/images/posts/image24.webp",
+    "assets/images/posts/image25.webp"
   ];
-
+  
   let currentGalleryIndex = 0;
 
   window.openPostsGallery = function () {
