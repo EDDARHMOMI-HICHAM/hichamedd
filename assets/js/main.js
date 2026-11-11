@@ -1181,4 +1181,76 @@ window.closeReelModal = function () {
     a.click();
   }
 
+  // =========================================================================
+  // POSTS & CAROUSEL IMAGE GALLERY
+  // =========================================================================
+  // حط هنا أسماء الصور لي عندك فـ مجلد assets/images/posts/
+  const postGalleryImages = [
+    "assets/images/branding.jpg",
+    "assets/images/studio.jpg",
+    "assets/images/reels.jpg"
+    // زيد هنا: "assets/images/posts/post1.jpg", إلخ...
+  ];
+
+  let currentGalleryIndex = 0;
+
+  window.openPostsGallery = function () {
+    const modal = document.getElementById('posts-gallery-modal');
+    if (!modal) return;
+    currentGalleryIndex = 0;
+    updateGalleryView();
+    modal.classList.remove('hidden');
+  };
+
+  window.closePostsGallery = function () {
+    const modal = document.getElementById('posts-gallery-modal');
+    if (modal) modal.classList.add('hidden');
+  };
+
+  window.nextGalleryImage = function () {
+    currentGalleryIndex = (currentGalleryIndex + 1) % postGalleryImages.length;
+    updateGalleryView();
+  };
+
+  window.prevGalleryImage = function () {
+    currentGalleryIndex = (currentGalleryIndex - 1 + postGalleryImages.length) % postGalleryImages.length;
+    updateGalleryView();
+  };
+
+  function updateGalleryView() {
+    const img = document.getElementById('gallery-current-img');
+    const counter = document.getElementById('gallery-counter');
+    const dotsContainer = document.getElementById('gallery-dots');
+
+    if (img) {
+      img.style.opacity = '0.3';
+      setTimeout(() => {
+        img.src = postGalleryImages[currentGalleryIndex];
+        img.style.opacity = '1';
+      }, 150);
+    }
+
+    if (counter) {
+      counter.innerText = currentLang === 'fr'
+        ? `Post ${currentGalleryIndex + 1} sur ${postGalleryImages.length}`
+        : `بوست ${currentGalleryIndex + 1} من ${postGalleryImages.length}`;
+    }
+
+    if (dotsContainer) {
+      dotsContainer.innerHTML = '';
+      postGalleryImages.forEach((_, idx) => {
+        const dot = document.createElement('button');
+        dot.className = idx === currentGalleryIndex
+          ? 'w-6 h-2 rounded-full bg-brand-gold transition-all'
+          : 'w-2 h-2 rounded-full bg-brand-border hover:bg-gray-400 transition-all';
+        dot.onclick = () => {
+          currentGalleryIndex = idx;
+          updateGalleryView();
+        };
+        dotsContainer.appendChild(dot);
+      });
+    }
+  }
+
+
 })();

@@ -195,7 +195,7 @@
           <!-- PROJECT 2: SOCIAL MEDIA POSTS (NIHAO BRAND - 1080x1350) -->
           <div class="bg-brand-card border border-brand-border rounded-2xl overflow-hidden card-hover flex flex-col justify-between reveal-item delay-100">
             <div>
-              <div class="relative h-64 overflow-hidden bg-black group cursor-pointer" onclick="openReelModal('social')">
+              <div class="relative h-64 overflow-hidden bg-black group cursor-pointer" onclick="openPostsGallery()">
                 <img src="assets/images/reels.jpg" alt="Social Media Posts" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
                 
@@ -222,8 +222,8 @@
             </div>
 
             <div class="p-6 pt-0">
-              <button onclick="openReelModal('social')" class="w-full py-2.5 rounded-xl bg-brand-surface hover:bg-brand-gold hover:text-black text-brand-gold font-bold text-xs text-center border border-brand-border hover:border-brand-gold transition-all flex items-center justify-center gap-2">
-                <span data-i18n="portfolio.p2_btn">Feuilleter les posts (Carrousel) ▶</span>
+              <button onclick="openPostsGallery()" class="w-full py-2.5 rounded-xl bg-brand-surface hover:bg-brand-gold hover:text-black text-brand-gold font-bold text-xs text-center border border-brand-border hover:border-brand-gold transition-all flex items-center justify-center gap-2">
+                <span data-i18n="portfolio.p2_btn">تصفح البوستات (كاروسيل) ◀</span>
               </button>
             </div>
           </div>
@@ -374,5 +374,51 @@
 
   <script src="assets/js/translations.js"></script>
   <script src="assets/js/main.js"></script>
+<!-- POSTS & CAROUSEL GALLERY MODAL -->
+  <div id="posts-gallery-modal" class="hidden fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+    <div class="relative w-full max-w-lg bg-[#141414] border border-brand-border rounded-3xl p-5 sm:p-7 shadow-2xl flex flex-col items-center">
+      
+      <!-- Close Button -->
+      <button onclick="closePostsGallery()" class="absolute top-4 right-4 rtl:right-auto rtl:left-4 w-9 h-9 rounded-full bg-brand-surface hover:bg-brand-card border border-brand-border text-gray-300 hover:text-white flex items-center justify-center text-sm transition-all z-20" aria-label="Fermer">
+        ✕
+      </button>
+
+      <!-- Modal Header -->
+      <div class="text-center mb-4 max-w-sm">
+        <span class="text-[10px] font-mono uppercase tracking-widest text-brand-gold bg-brand-gold/15 border border-brand-gold/30 px-3 py-1 rounded-full inline-block mb-2 font-bold">
+          معرض بوستات وكاروسيل (1080×1350)
+        </span>
+        <h3 class="text-lg font-black text-white">حملة سوشيال ميديا — Nihao Brand</h3>
+        <p class="text-xs text-gray-400 mt-1" id="gallery-counter">بوست 1 من 4</p>
+      </div>
+
+      <!-- Image Slide Container (Ratio 4:5 / 1080x1350) -->
+      <div class="relative w-full max-w-[320px] aspect-[4/5] rounded-2xl overflow-hidden border border-brand-border bg-black shadow-xl flex items-center justify-center group">
+        <img id="gallery-current-img" src="assets/images/branding.jpg" alt="Post Slide" class="w-full h-full object-cover transition-opacity duration-300">
+
+        <!-- Navigation Arrows -->
+        <button onclick="prevGalleryImage()" class="absolute left-2 w-9 h-9 rounded-full bg-black/70 hover:bg-brand-gold hover:text-black text-white flex items-center justify-center text-base transition-all border border-white/10 shadow-lg">
+          ‹
+        </button>
+        <button onclick="nextGalleryImage()" class="absolute right-2 w-9 h-9 rounded-full bg-black/70 hover:bg-brand-gold hover:text-black text-white flex items-center justify-center text-base transition-all border border-white/10 shadow-lg">
+          ›
+        </button>
+      </div>
+
+      <!-- Thumbnails Dots -->
+      <div id="gallery-dots" class="flex items-center gap-2 mt-4">
+        <!-- Dots injected by JS -->
+      </div>
+
+      <!-- Bottom WhatsApp CTA -->
+      <div class="mt-5 pt-4 border-t border-brand-border w-full flex items-center justify-center">
+        <a href="https://wa.me/212653342503?text=السلام%20عليكم%20هشام،%20باغي%20نطلب%20خدمة%20تصميم%20بوستات%20وكاروسيل%20لمشروعي." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-brand-gold hover:bg-brand-goldHover text-black font-extrabold text-xs transition-all flex items-center justify-center gap-2 shadow-lg shadow-brand-gold/20">
+          <span>طلب باقة تصاميم فـ WhatsApp 📲</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
 </body>
 </html>
