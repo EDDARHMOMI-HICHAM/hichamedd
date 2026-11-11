@@ -432,5 +432,52 @@
     <img id="gallery-fullscreen-img" src="" alt="Fullscreen Post" class="max-h-[92vh] max-w-[95vw] object-contain rounded-2xl shadow-2xl transition-all" onclick="event.stopPropagation()">
   </div>
 
+
+  <!-- WIDE BRANDBOOK GALLERY MODAL (HORIZONTAL SLIDES) -->
+  <div id="brandbook-modal" class="hidden fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex items-center justify-center p-2 sm:p-6 overflow-y-auto">
+    <div class="relative w-full max-w-6xl bg-[#141414] border border-brand-border rounded-3xl p-4 sm:p-7 shadow-2xl flex flex-col items-center">
+      
+      <!-- Close Button X -->
+      <button onclick="closeBrandbookModal()" class="absolute top-4 right-4 rtl:right-auto rtl:left-4 w-11 h-11 rounded-full bg-brand-surface hover:bg-brand-gold hover:text-black border border-brand-border text-white flex items-center justify-center text-lg font-bold transition-all z-20 shadow-xl" aria-label="Fermer">
+        ✕
+      </button>
+
+      <!-- Modal Header -->
+      <div class="text-center mb-4 max-w-xl">
+        <span class="text-[10px] font-mono uppercase tracking-widest text-brand-gold bg-brand-gold/15 border border-brand-gold/30 px-3 py-1 rounded-full inline-block mb-1.5 font-bold">
+          كتاب الهوية البصرية ودليل المعايير (10 سلايدات)
+        </span>
+        <h3 class="text-lg sm:text-xl font-black text-white">دليل الهوية البصرية الرسمية — Logistocean</h3>
+        <p class="text-xs text-gray-400 mt-1 font-mono" id="brandbook-counter">سلايد 1 من 10</p>
+      </div>
+
+      <!-- Wide Image Container (Large Horizontal View) -->
+      <div class="relative w-full max-h-[72vh] rounded-2xl overflow-hidden border border-brand-border bg-black/50 shadow-2xl flex items-center justify-center group">
+        <img id="brandbook-current-img" src="assets/images/branding.jpg" alt="Brandbook Slide" class="max-h-[70vh] w-auto max-w-full object-contain transition-opacity duration-300">
+
+        <!-- Navigation Arrows (Right & Left) -->
+        <button onclick="prevBrandbookSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/80 hover:bg-brand-gold hover:text-black text-white flex items-center justify-center text-xl transition-all border border-white/10 shadow-2xl" title="السابق">
+          ‹
+        </button>
+        <button onclick="nextBrandbookSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/80 hover:bg-brand-gold hover:text-black text-white flex items-center justify-center text-xl transition-all border border-white/10 shadow-2xl" title="التالي">
+          ›
+        </button>
+      </div>
+
+      <!-- Slide Navigation Pills / Dots -->
+      <div id="brandbook-dots" class="flex flex-wrap items-center justify-center gap-2 mt-4 max-w-lg">
+        <!-- Dots / Numbers injected by JS -->
+      </div>
+
+      <!-- WhatsApp CTA -->
+      <div class="mt-4 pt-4 border-t border-brand-border w-full flex items-center justify-center">
+        <a href="https://wa.me/212653342503?text=السلام%20عليكم%20هشام،%20باغي%20نطلب%20خدمة%20تصميم%20كتاب%20هوية%20بصرية%20(Brandbook)%20لمشروعي." target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 rounded-xl bg-brand-gold hover:bg-brand-goldHover text-black font-extrabold text-xs transition-all flex items-center justify-center gap-2 shadow-lg shadow-brand-gold/20">
+          <span>طلب تصميم دليل هوية بصرية مماثل فـ WhatsApp 📲</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+  
 </body>
 </html>

@@ -10,109 +10,7 @@
   const WHATSAPP_PHONE = "212653342503";
   let currentLang = 'darija'; // Default French
 
-  // Brandbook 10-Slide Dataset
-  const brandbookSlides = [
-    {
-      page: 1,
-      title: { fr: "Page 1 : Couverture & Logotype Officiel", darija: "الصفحة 1 : الغلاف وشعار Logistocean الرسمي" },
-      subtitle: { fr: "Cover & Official Brand Identity", darija: "Cover & Official Logotype" },
-      desc: { 
-        fr: "Le symbole géométrique allie le dynamisme d'une vague océanique et la robustesse d'un conteneur logistique.", 
-        darija: "الغلاف الرسمي لدليل الهوية البصرية مع شعار Logistocean المصمم بدقة هندسية تعكس السرعة والموثوقية." 
-      },
-      tag: "01 / 10"
-    },
-    {
-      page: 2,
-      title: { fr: "Page 2 : Grille de Construction & Proportions", darija: "الصفحة 2 : شبكة بناء الشعار والنسب الذهبية" },
-      subtitle: { fr: "Golden Ratio & Grid Construction", darija: "Grid Construction & Proportions" },
-      desc: { 
-        fr: "Structure vectorielle rigoureuse basée sur des cercles imbriqués garantissant une lisibilité parfaite à toute échelle.", 
-        darija: "توزيع الدوائر والخطوط الهندسية التي تشكل الرمز البصري مع مسافات الأمان ومحاذاة الحروف بدقة متناهية." 
-      },
-      tag: "02 / 10"
-    },
-    {
-      page: 3,
-      title: { fr: "Page 3 : Palette Chromatique Officielle", darija: "الصفحة 3 : لوحة الألوان الرسمية ورموز Hex" },
-      subtitle: { fr: "Primary & Secondary Color Codes", darija: "Official Color Palette" },
-      desc: { 
-        fr: "Bleu Océan Profond (#0A2540) pour la confiance institutionnelle et Bleu Cyan Vif (#0070F3) pour l'agilité numérique.", 
-        darija: "الأزرق الملكي البحري (#0A2540) والأزرق المشرق (#0070F3) مع الأبيض والرمادي التقني لطباعة موحدة." 
-      },
-      tag: "03 / 10"
-    },
-    {
-      page: 4,
-      title: { fr: "Page 4 : Système Typographique Corporatif", darija: "الصفحة 4 : منظومة الخطوط والتايبوغرافي" },
-      subtitle: { fr: "Corporate Typography Hierarchy", darija: "Typography Hierarchy" },
-      desc: { 
-        fr: "Hiérarchie avec Plus Jakarta Sans pour les titres percutants et Inter pour une lisibilité fluide des rapports.", 
-        darija: "اعتماد خط Plus Jakarta Sans للعناوين و Inter للنصوص، لضمان وضوح وقراءة ممتازة على الشاشات والمطبوعات." 
-      },
-      tag: "04 / 10"
-    },
-    {
-      page: 5,
-      title: { fr: "Page 5 : Zone de Sécurité & Tailles Minimales", darija: "الصفحة 5 : منطقة الأمان والاستخدامات المحظورة" },
-      subtitle: { fr: "Clearspace & Minimum Print/Digital Sizing", darija: "Clearspace & Protection" },
-      desc: { 
-        fr: "Zone d'exclusion obligatoire égale à la hauteur du monogramme 'L' pour préserver l'impact de la marque.", 
-        darija: "تحديد مسافة التنفس الإلزامية حول الشعار، وأصغر حجم مسموح به في المطبوعات (25mm) والشاشات (100px)." 
-      },
-      tag: "05 / 10"
-    },
-    {
-      page: 6,
-      title: { fr: "Page 6 : Cartes de Visite & Papeterie", darija: "الصفحة 6 : بطاقات العمل والقرطاسية الرسمية" },
-      subtitle: { fr: "Stationery, Letterhead & Business Cards", darija: "Business Cards & Stationery" },
-      desc: { 
-        fr: "Gabarits pour papier à en-tête officiel, enveloppes sécurisées et cartes de visite avec vernis sélectif.", 
-        darija: "تصاميم كروت العمل الورقية الفخمة مع الورق الرسمي (Letterhead) والأظرفة البريدية بلمسات فنية راقية." 
-      },
-      tag: "06 / 10"
-    },
-    {
-      page: 7,
-      title: { fr: "Page 7 : Packaging & Emballages Expédition", darija: "الصفحة 7 : تصاميم الباكاجينغ ومواد التغليف" },
-      subtitle: { fr: "Logistics Boxes, Tape & Delivery Packages", darija: "Packaging & Shipping" },
-      desc: { 
-        fr: "Déclinaisons sur cartons kraft, rubans adhésifs renforcés et étiquettes thermiques pour l'expédition e-commerce.", 
-        darija: "صناديق الشحن، أشرطة اللصق، والملصقات اللوجستية التي تعزز تجربة العميل أثناء استلام الطرود." 
-      },
-      tag: "07 / 10"
-    },
-    {
-      page: 8,
-      title: { fr: "Page 8 : Signalétique & Habillage Locaux", darija: "الصفحة 8 : لوحات المقر واللافتات الخارجية" },
-      subtitle: { fr: "Wayfinding & Exterior Warehouse Signage", darija: "Signage & Wayfinding" },
-      desc: { 
-        fr: "Enseignes rétroéclairées pour façades d'entrepôts, totems d'accueil et marquages directionnels intérieurs.", 
-        darija: "تطبيقات اللافتات المضيئة للمستودعات والمكاتب، مع علامات الإرشاد والتوجيه الداخلي للفرق والعملاء." 
-      },
-      tag: "08 / 10"
-    },
-    {
-      page: 9,
-      title: { fr: "Page 9 : Flotte de Transport & Tenues", darija: "الصفحة 9 : أسطول الشاحنات وألبسة العمل" },
-      subtitle: { fr: "Vehicle Fleet Branding & Uniforms", darija: "Fleet Branding & Uniforms" },
-      desc: { 
-        fr: "Habillage intégral des utilitaires et semi-remorques avec gilets haute visibilité floqués pour le personnel.", 
-        darija: "ملصقات الشاحنات وسيارات التوصيل بحجم كبير مع زي العمل الرسمي لسائقي وموظفي الشركة." 
-      },
-      tag: "09 / 10"
-    },
-    {
-      page: 10,
-      title: { fr: "Page 10 : Écosystème Numérique & Réseaux", darija: "الصفحة 10 : التطبيقات الرقمية ومواقع التواصل" },
-      subtitle: { fr: "Digital Banners, Social Media & App Icons", darija: "Digital Guidelines & Social Media" },
-      desc: { 
-        fr: "Règles pour bannières LinkedIn, signatures d'e-mails HTML, templates Instagram et icônes d'application mobile.", 
-        darija: "إرشادات استخدام الشعار والألوان في الموقع الإلكتروني، التواقيع البريدية، وقوالب السوشيال ميديا." 
-      },
-      tag: "10 / 10"
-    }
-  ];
+
 
   let currentBrandbookIndex = 0;
 
@@ -1212,7 +1110,7 @@ const postGalleryImages = [
     "assets/images/posts/image24.webp",
     "assets/images/posts/image25.webp"
   ];
-  
+
   let currentGalleryIndex = 0;
 
   window.openPostsGallery = function () {
@@ -1299,5 +1197,83 @@ const postGalleryImages = [
     }
   });
 
+  // =========================================================================
+  // BRANDBOOK WIDE SLIDER (10 SLIDES)
+  // =========================================================================
+  const brandbookGalleryImages = [
+    "assets/images/logistocean/img1.webp",
+    "assets/images/logistocean/img2.webp",
+    "assets/images/logistocean/img3.webp",
+    "assets/images/logistocean/img4.webp",
+    "assets/images/logistocean/img5.webp",
+    "assets/images/logistocean/img6.webp",
+    "assets/images/logistocean/img7.webp",
+    "assets/images/logistocean/img8.webp",
+    "assets/images/logistocean/img9.webp",
+    "assets/images/logistocean/img10.webp",
+    "assets/images/logistocean/img11.webp",
+    "assets/images/logistocean/img12.webp",
+    // زيد هنا مسارات صور السلايدات ديالك من بعد
+  ];
+
+
+  window.openBrandbookModal = function () {
+    const modal = document.getElementById('brandbook-modal');
+    if (!modal) return;
+    currentBrandbookIndex = 0;
+    updateBrandbookView();
+    modal.classList.remove('hidden');
+  };
+
+  window.closeBrandbookModal = function () {
+    const modal = document.getElementById('brandbook-modal');
+    if (modal) modal.classList.add('hidden');
+  };
+
+  window.nextBrandbookSlide = function () {
+    currentBrandbookIndex = (currentBrandbookIndex + 1) % brandbookGalleryImages.length;
+    updateBrandbookView();
+  };
+
+  window.prevBrandbookSlide = function () {
+    currentBrandbookIndex = (currentBrandbookIndex - 1 + brandbookGalleryImages.length) % brandbookGalleryImages.length;
+    updateBrandbookView();
+  };
+
+  function updateBrandbookView() {
+    const img = document.getElementById('brandbook-current-img');
+    const counter = document.getElementById('brandbook-counter');
+    const dotsContainer = document.getElementById('brandbook-dots');
+
+    if (img) {
+      img.style.opacity = '0.3';
+      setTimeout(() => {
+        img.src = brandbookGalleryImages[currentBrandbookIndex];
+        img.style.opacity = '1';
+      }, 150);
+    }
+
+    if (counter) {
+      counter.innerText = currentLang === 'fr'
+        ? `Slide ${currentBrandbookIndex + 1} sur ${brandbookGalleryImages.length}`
+        : `سلايد ${currentBrandbookIndex + 1} من ${brandbookGalleryImages.length}`;
+    }
+
+    if (dotsContainer) {
+      dotsContainer.innerHTML = '';
+      brandbookGalleryImages.forEach((_, idx) => {
+        const dot = document.createElement('button');
+        dot.className = idx === currentBrandbookIndex
+          ? 'px-3 py-1 rounded-lg bg-brand-gold text-black font-extrabold text-xs shadow-md shadow-brand-gold/20'
+          : 'px-3 py-1 rounded-lg bg-brand-surface border border-brand-border text-gray-400 hover:text-white text-xs font-semibold';
+        dot.innerText = idx + 1;
+        dot.onclick = () => {
+          currentBrandbookIndex = idx;
+          updateBrandbookView();
+        };
+        dotsContainer.appendChild(dot);
+      });
+    }
+  }
 
 })();
