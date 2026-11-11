@@ -61,7 +61,6 @@
     initFAQ();
     initContactForm();
     initSliders();
-    // initPageTransitions();
     if (typeof window.initAudit === 'function' && document.getElementById('audit-questions-view')) {
       window.initAudit();
     }
@@ -341,98 +340,6 @@ function formatNumber(num) {
     if (document.getElementById('social-slide-wrapper')) renderSocialSlide();
   }
 
-  window.openVideoModal = function (title, desc) {
-    const modal = document.getElementById('video-modal');
-    const modalTitle = document.getElementById('video-modal-title');
-    const modalDesc = document.getElementById('video-modal-desc');
-
-    if (modalTitle) modalTitle.innerText = title || "Spot Promotionnel & Reels — Baklawa.ma";
-    if (modalDesc) modalDesc.innerText = desc || "توليد الفيديوهات بالذكاء الاصطناعي والمونتاج ببرامج المونتاج الاحترافية بمقاس 9:16.";
-
-    if (modal) modal.classList.remove('hidden');
-  };
-
-  window.closeVideoModal = function () {
-    const modal = document.getElementById('video-modal');
-    if (modal) modal.classList.add('hidden');
-  };
-
-  window.openSocialModal = function () {
-    const modal = document.getElementById('social-modal');
-    if (modal) modal.classList.remove('hidden');
-    currentSocialIndex = 0;
-    renderSocialSlide();
-  };
-
-  window.closeSocialModal = function () {
-    const modal = document.getElementById('social-modal');
-    if (modal) modal.classList.add('hidden');
-  };
-
-  window.nextSocialSlide = function () {
-    currentSocialIndex = (currentSocialIndex + 1) % socialSlides.length;
-    renderSocialSlide();
-  };
-
-  window.prevSocialSlide = function () {
-    currentSocialIndex = (currentSocialIndex - 1 + socialSlides.length) % socialSlides.length;
-    renderSocialSlide();
-  };
-
-  function renderSocialSlide() {
-    const slide = socialSlides[currentSocialIndex];
-    const wrapper = document.getElementById('social-slide-wrapper');
-    const counter = document.getElementById('social-slide-counter');
-
-    if (counter) {
-      counter.innerText = currentLang === 'fr'
-        ? `Post ${slide.num} sur ${socialSlides.length}`
-        : `بوست ${slide.num} من ${socialSlides.length}`;
-    }
-
-    if (wrapper) {
-      wrapper.innerHTML = `
-        <div class="w-full h-full flex flex-col justify-between p-6 sm:p-8 bg-gradient-to-br from-[#1a1a1a] via-[#121212] to-[#0A0A0A] text-white">
-          <div class="flex items-center justify-between border-b border-white/10 pb-4">
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-brand-gold to-amber-500 flex items-center justify-center font-bold text-black text-sm">H</div>
-              <div>
-                <span class="text-xs sm:text-sm font-bold block">hixam.ed • Nihao Brand</span>
-                <span class="text-[10px] text-gray-400">Sponsorisé • Agadir, Maroc</span>
-              </div>
-            </div>
-            <span class="text-xs text-brand-gold font-mono px-2.5 py-1 rounded-md bg-brand-gold/10 border border-brand-gold/30">1080 × 1350</span>
-          </div>
-
-          <div class="my-auto text-center space-y-4 py-6">
-            <div class="w-16 h-16 rounded-2xl bg-brand-gold/15 border border-brand-gold/40 flex items-center justify-center text-brand-gold font-black text-2xl mx-auto shadow-xl shadow-brand-gold/10">
-              #0${slide.num}
-            </div>
-            <h3 class="text-xl sm:text-2xl font-extrabold text-white leading-tight max-w-sm mx-auto">
-              ${slide.title[currentLang]}
-            </h3>
-            <p class="text-xs sm:text-sm text-gray-300 max-w-sm mx-auto leading-relaxed">
-              ${slide.desc[currentLang]}
-            </p>
-            <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-brand-gold text-black text-xs font-bold shadow-lg shadow-brand-gold/20">
-              <span>Shop Now • اطلب الآن</span>
-              <span>→</span>
-            </div>
-          </div>
-
-          <div class="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-gray-400">
-            <div class="flex items-center gap-4 text-sm">
-              <span class="flex items-center gap-1.5"><span class="text-red-500">❤️</span> 1 420</span>
-              <span class="flex items-center gap-1.5">💬 138</span>
-              <span class="flex items-center gap-1.5">↗️ 92</span>
-            </div>
-            <span class="text-[11px] font-mono text-brand-gold">${slide.num} / ${socialSlides.length}</span>
-          </div>
-        </div>
-      `;
-    }
-  }
-
   window.openBrandbookModal = function () {
     const modal = document.getElementById('brandbook-modal');
     if (modal) modal.classList.remove('hidden');
@@ -594,38 +501,6 @@ function formatNumber(num) {
   // =========================================================================
   let isTransitioning = false;
 
-  function ensureProgressBar() {
-    let bar = document.getElementById('page-progress-bar');
-    if (!bar) {
-      bar = document.createElement('div');
-      bar.id = 'page-progress-bar';
-      document.body.prepend(bar);
-    }
-    return bar;
-  }
-
-  function startProgressBar() {
-    const bar = ensureProgressBar();
-    bar.style.transition = 'width 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease';
-    bar.style.opacity = '1';
-    bar.style.width = '35%';
-    setTimeout(() => {
-      if (bar.style.opacity === '1' && parseFloat(bar.style.width) < 80) {
-        bar.style.width = '75%';
-      }
-    }, 120);
-  }
-
-  function finishProgressBar() {
-    const bar = ensureProgressBar();
-    bar.style.width = '100%';
-    setTimeout(() => {
-      bar.style.opacity = '0';
-      setTimeout(() => {
-        bar.style.width = '0%';
-      }, 200);
-    }, 150);
-  }
 
   function handleLinkClick(e) {
     const link = e.target.closest('a');
@@ -694,7 +569,6 @@ function formatNumber(num) {
     }
 
     const main = document.querySelector('main');
-    startProgressBar();
 
     if (main) {
       main.classList.remove('page-transition-in');
@@ -794,35 +668,6 @@ function formatNumber(num) {
       });
   }
 
-  function handlePopState() {
-    navigateTo(window.location.href, false);
-  }
-
-  function initPageTransitions() {
-    ensureProgressBar();
-    document.addEventListener('click', handleLinkClick);
-    window.addEventListener('popstate', handlePopState);
-
-    // Safeguard for bfcache back/forward navigation
-    window.addEventListener('pageshow', () => {
-      const main = document.querySelector('main');
-      if (main) {
-        main.classList.remove('page-transition-out');
-        main.classList.add('page-transition-in');
-      }
-      const bar = document.getElementById('page-progress-bar');
-      if (bar) {
-        bar.style.opacity = '0';
-        bar.style.width = '0%';
-      }
-      isTransitioning = false;
-    });
-
-    const main = document.querySelector('main');
-    if (main) {
-      main.classList.add('page-transition-in');
-    }
-  }
 
 
   // =========================================================================
@@ -973,7 +818,7 @@ window.closeReelModal = function () {
     ctx.textAlign = 'center';
     ctx.fillStyle = '#F5B700';
     ctx.font = 'bold 18px "Plus Jakarta Sans", "Cairo", sans-serif';
-    ctx.fillText(isAr ? '• شهادة تدقيق رسميّة • 2026 •' : '• OFFICIAL CERTIFICATE • 2026 •', 600, 95);
+    ctx.fillText(isAr ? 'شهادة تدقيق رسميّة • 2026 •' : 'OFFICIAL CERTIFICATE • 2026 •', 600, 95);
 
     // Title
     ctx.fillStyle = '#FFFFFF';
