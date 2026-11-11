@@ -1252,5 +1252,31 @@ window.closeReelModal = function () {
     }
   }
 
+  // =========================================================================
+  // FULLSCREEN IMAGE ZOOM (100% LIGHTBOX)
+  // =========================================================================
+  window.openFullscreenImage = function () {
+    const currentImg = document.getElementById('gallery-current-img');
+    const fsModal = document.getElementById('gallery-fullscreen-lightbox');
+    const fsImg = document.getElementById('gallery-fullscreen-img');
+
+    if (currentImg && fsModal && fsImg) {
+      fsImg.src = currentImg.src;
+      fsModal.classList.remove('hidden');
+    }
+  };
+
+  window.closeFullscreenImage = function () {
+    const fsModal = document.getElementById('gallery-fullscreen-lightbox');
+    if (fsModal) fsModal.classList.add('hidden');
+  };
+
+  // إغلاق التكبير بزر Escape فـ الكيبورد
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeFullscreenImage();
+    }
+  });
+
 
 })();

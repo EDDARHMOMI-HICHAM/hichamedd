@@ -394,7 +394,7 @@
 
       <!-- Image Slide Container (Ratio 4:5 / 1080x1350) -->
       <div class="relative w-full max-w-[320px] aspect-[4/5] rounded-2xl overflow-hidden border border-brand-border bg-black shadow-xl flex items-center justify-center group">
-        <img id="gallery-current-img" src="assets/images/branding.jpg" alt="Post Slide" class="w-full h-full object-cover transition-opacity duration-300">
+        <img id="gallery-current-img" onclick="openFullscreenImage()" src="assets/images/branding.jpg" alt="Post Slide" class="w-full h-full object-cover transition-opacity duration-300 cursor-zoom-in hover:scale-105 transition-transform" title="اضغط للتكبير بحجم الشاشة">
 
         <!-- Navigation Arrows -->
         <button onclick="prevGalleryImage()" class="absolute left-2 w-9 h-9 rounded-full bg-black/70 hover:bg-brand-gold hover:text-black text-white flex items-center justify-center text-base transition-all border border-white/10 shadow-lg">
@@ -418,6 +418,18 @@
       </div>
 
     </div>
+  </div>
+
+  <!-- FULLSCREEN IMAGE LIGHTBOX (100% VIEW) -->
+  <div id="gallery-fullscreen-lightbox" class="hidden fixed inset-0 z-[60] bg-black/98 backdrop-blur-xl flex items-center justify-center p-2 sm:p-6" onclick="closeFullscreenImage()">
+    
+    <!-- زر الإغلاق X للعودة للمعرض -->
+    <button onclick="closeFullscreenImage()" class="absolute top-5 right-5 rtl:right-auto rtl:left-5 w-12 h-12 rounded-full bg-brand-surface hover:bg-brand-gold hover:text-black border border-brand-border text-white flex items-center justify-center text-xl font-bold transition-all z-30 shadow-2xl" title="الرجوع للمعرض (X)">
+      ✕
+    </button>
+
+    <!-- الصورة بحجم الشاشة 100% -->
+    <img id="gallery-fullscreen-img" src="" alt="Fullscreen Post" class="max-h-[92vh] max-w-[95vw] object-contain rounded-2xl shadow-2xl transition-all" onclick="event.stopPropagation()">
   </div>
 
 </body>
