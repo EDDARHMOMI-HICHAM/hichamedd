@@ -174,17 +174,20 @@
   // =========================================================================
   // NAVBAR ACTIVE STATE IN MULTI-PAGE ARCHITECTURE
   // =========================================================================
-  function highlightActivePageNav() {
-    const path = window.location.pathname;
+function highlightActivePageNav() {
+    const path = window.location.pathname.toLowerCase();
     let pageName = 'home';
 
     if (path.includes('services.html')) pageName = 'services';
-    else if (path.includes('portfolio.html') || path.includes('case-study')) pageName = 'portfolio';
     else if (path.includes('blog.html') || path.includes('/blog/')) pageName = 'blog';
     else if (path.includes('about.html')) pageName = 'about';
     else if (path.includes('contact.html')) pageName = 'contact';
     else if (path.includes('challenge.html')) pageName = 'challenge';
     else if (path.includes('audit.html')) pageName = 'audit';
+    else if (path.includes('privacy.html') || path.includes('terms.html')) pageName = '';
+    else if (path !== '/' && !path.endsWith('/index.html') && !path.endsWith('/')) {
+      pageName = 'portfolio';
+    }
 
     document.querySelectorAll('.nav-link-btn').forEach(btn => {
       const target = btn.getAttribute('data-page');
