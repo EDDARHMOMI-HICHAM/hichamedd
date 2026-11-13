@@ -179,7 +179,7 @@
     let pageName = 'home';
 
     if (path.includes('services.html')) pageName = 'services';
-    else if (path.includes('portfolio.html')) pageName = 'portfolio';
+    else if (path.includes('portfolio.html') || path.includes('case-study')) pageName = 'portfolio';
     else if (path.includes('blog.html') || path.includes('/blog/')) pageName = 'blog';
     else if (path.includes('about.html')) pageName = 'about';
     else if (path.includes('contact.html')) pageName = 'contact';
