@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr" class="scroll-smooth">
+<html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
   <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MKFV7MVS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-</script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services & Packs par Journée | Hicham Edd</title>
-  
-  <meta name="description" content="Tarifs et formules clairs par journée (Per Day) avec réduction de 30% et Devis/Facture légale.">
-  <meta name="keywords" content="Hicham Eddarhmoumi, هشام الدغمومي, Hicham Edd, Graphic Designer Morocco, ديزاينر بالنهار, مصمم جرافيك المغرب, Montage Video Maroc, مونتير فيديو المغرب, Branding Agadir, Designer Freelance Maroc, Devis Facture Maroc, Nihao Brand, Logistocean">
+  <title>عروض الأثمنة والتعاون | Hicham Edd</title>
+
+  <meta name="description" content="عروض الأثمنة المرنة: باقات الأيام الشهرية، نظام الفوترة بالساعة، والحلول الإبداعية المخصصة مع Hicham Edd.">
+  <meta name="keywords" content="Hicham Eddarhmoumi, هشام الدغمومي, Hicham Edd, Tarification Design Maroc, عروض الأثمنة, ديزاينر باليوم, ديزاينر بالساعة, باقات شهرية تصميم ومونتاج">
   <meta name="author" content="Hicham Eddarhmoumi">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://hichamedd.com/">
+  <link rel="canonical" href="https://www.hichamedd.com/services.html">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Services & Packs par Journée | Hicham Edd">
-  <meta property="og:description" content="Tarifs et formules clairs par journée (Per Day) avec réduction de 30% et Devis/Facture légale.">
-  <meta property="og:url" content="https://hichamedd.com/">
+  <meta property="og:title" content="عروض الأثمنة والتعاون | Hicham Edd">
+  <meta property="og:description" content="اختر صيغة العمل الأنسب لمشروعك: باقات الأيام الشهرية، نظام الساعات، أو العروض المخصصة.">
+  <meta property="og:url" content="https://www.hichamedd.com/services.html">
   <meta property="og:image" content="assets/images/avatar.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,6 +51,80 @@
     }
   </script>
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    :root {
+      --font-ar: 'Cairo', sans-serif;
+      --font-fr: 'Plus Jakarta Sans', sans-serif;
+    }
+    body {
+      font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
+      background-color: #0D0D0D;
+    }
+    #lang-switch-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(13, 13, 13, 0.92);
+      backdrop-filter: blur(8px);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    #lang-switch-overlay.active {
+      display: flex;
+    }
+    .spinner-gold {
+      width: 36px;
+      height: 36px;
+      border: 3px solid rgba(245, 183, 0, 0.2);
+      border-top-color: #F5B700;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 40;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: #FFFFFF;
+      padding: 12px 20px;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      text-decoration: none;
+    }
+    html[dir="rtl"] .whatsapp-float {
+      right: auto;
+      left: 24px;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+      color: #FFFFFF;
+    }
+    .offer-panel {
+      display: none;
+      animation: fadeSlideIn 0.28s ease-out forwards;
+    }
+    .offer-panel.active {
+      display: block;
+    }
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body class="antialiased bg-[#0D0D0D] text-gray-100 min-h-screen flex flex-col selection:bg-brand-gold selection:text-black">
 
@@ -61,7 +135,7 @@
       <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
     </span>
     <span id="top-announcement" data-i18n="announcement">
-      🔥 عرض خاص : -30% de réduction valable 30 jours à partir du 15 Novembre 2026 ! Devis & Facture Légale
+      🔥 عرض خاص: تخفيض 30% صالح لمدة 30 يوم ابتداءً من 15 نونبر 2026! مع Devis و Facture قانونية
     </span>
   </div>
 
@@ -69,33 +143,34 @@
   <header class="sticky top-0 z-50 bg-[#0D0D0D]/90 backdrop-blur-md border-b border-brand-border/60 transition-all duration-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       <a href="index.html" class="flex items-center group focus:outline-none flex-shrink-0">
-        <img src="assets/images/logo.png" alt="Hicham Edd" class="h-9 sm:h-10 w-auto object-contain group-hover:scale-105 transition-transform">
+        <img src="assets/images/logo.png" alt="Hicham Edd" class="h-9 sm:h-10 w-auto object-contain group-hover:scale-105 transition-transform" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+        <span style="display:none" class="text-lg font-black tracking-tight text-white">HICHAM <span class="text-brand-gold">EDD</span></span>
       </a>
 
       <nav class="hidden md:flex items-center gap-1 lg:gap-2 bg-brand-surface/80 p-1.5 rounded-full border border-brand-border overflow-x-auto">
-        <a href="index.html" data-page="home" class="nav-link-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all text-gray-300 hover:text-white hover:bg-brand-card/60" data-i18n="nav.home">Accueil</a>
-        <a href="services.html" data-page="services" class="nav-link-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all text-gray-300 hover:text-white hover:bg-brand-card/60" data-i18n="nav.services">Services & Packs</a>
-        <a href="portfolio.html" data-page="portfolio" class="nav-link-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all text-gray-300 hover:text-white hover:bg-brand-card/60" data-i18n="nav.portfolio">Portfolio</a>
-        <a href="blog.html" data-page="blog" class="nav-link-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all text-gray-300 hover:text-white hover:bg-brand-card/60" data-i18n="nav.blog">Articles</a>
-        <a href="about.html" data-page="about" class="nav-link-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all text-gray-300 hover:text-white hover:bg-brand-card/60" data-i18n="nav.about">À propos</a>
-        <a href="contact.html" data-page="contact" class="nav-link-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all text-gray-300 hover:text-white hover:bg-brand-card/60" data-i18n="nav.contact">Contact</a>
+        <a href="index.html" data-page="home" class="nav-link-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all text-gray-300 hover:text-white hover:bg-brand-card/60" data-i18n="nav.home">الرئيسية</a>
+        <a href="services.html" data-page="services" class="nav-link-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all text-gray-300 hover:text-white hover:bg-brand-card/60" data-i18n="nav.services">الخدمات والباقات</a>
+        <a href="portfolio.html" data-page="portfolio" class="nav-link-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all text-gray-300 hover:text-white hover:bg-brand-card/60" data-i18n="nav.portfolio">الأعمال</a>
+        <a href="blog.html" data-page="blog" class="nav-link-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all text-gray-300 hover:text-white hover:bg-brand-card/60" data-i18n="nav.blog">المقالات</a>
+        <a href="about.html" data-page="about" class="nav-link-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all text-gray-300 hover:text-white hover:bg-brand-card/60" data-i18n="nav.about">من أنا</a>
+        <a href="contact.html" data-page="contact" class="nav-link-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all text-gray-300 hover:text-white hover:bg-brand-card/60" data-i18n="nav.contact">اتصل بي</a>
       </nav>
 
       <div class="flex items-center gap-3 flex-shrink-0">
-        <!-- Desktop Language Switcher (Hidden on Mobile) -->
+        <!-- Desktop Language Switcher -->
         <button onclick="toggleLanguage()" class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-surface hover:bg-brand-card border border-brand-border text-xs font-bold text-gray-200 transition-all hover:border-brand-gold/50 shadow-sm whitespace-nowrap" title="Changer la langue / تبديل اللغة">
           <span class="current-lang-flag text-base" id="current-lang-flag">🇲🇦</span>
           <span class="current-lang-text text-xs" id="current-lang-text">الدارجة</span>
           <span class="text-[10px] text-brand-gold">⇄</span>
         </button>
 
-        <!-- Desktop Challenge Button (Hidden on Mobile) -->
+        <!-- Desktop Challenge Button -->
         <a id="nav-challenge-btn" href="challenge.html" class="hidden md:flex bg-brand-gold hover:bg-brand-goldHover text-black font-extrabold text-xs md:text-sm px-4 py-2 rounded-full shadow-lg shadow-brand-gold/15 transition-all items-center gap-1.5 whitespace-nowrap group">
           <span>🏆</span>
           <span data-i18n="nav.challenge">تحدي الإبداع</span>
         </a>
 
-        <!-- Mobile Hamburger Button: ONLY this button appears in the navbar on mobile screen -->
+        <!-- Mobile Hamburger Button -->
         <button onclick="toggleMobileMenu()" class="md:hidden flex items-center justify-center p-2.5 rounded-xl bg-brand-surface border border-brand-border text-gray-300 hover:text-white hover:border-brand-gold/50 focus:outline-none transition-colors" aria-label="Menu Mobile">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
         </button>
@@ -105,17 +180,15 @@
     <!-- Mobile Drawer -->
     <div id="mobile-menu" class="hidden md:hidden bg-brand-surface/98 backdrop-blur-xl border-b border-brand-border px-4 py-4 space-y-4 shadow-2xl">
       <nav class="space-y-1">
-        <a href="index.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-brand-card hover:text-brand-gold transition-colors" data-i18n="nav.home">Accueil</a>
-        <a href="services.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-brand-card hover:text-brand-gold transition-colors" data-i18n="nav.services">Services & Packs</a>
-        <a href="portfolio.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-brand-card hover:text-brand-gold transition-colors" data-i18n="nav.portfolio">Portfolio</a>
-        <a href="blog.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-brand-card hover:text-brand-gold transition-colors" data-i18n="nav.blog">Articles</a>
-        <a href="about.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-brand-card hover:text-brand-gold transition-colors" data-i18n="nav.about">À propos</a>
-        <a href="contact.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-brand-card hover:text-brand-gold transition-colors" data-i18n="nav.contact">Contact</a>
+        <a href="index.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-brand-card hover:text-brand-gold transition-colors" data-i18n="nav.home">الرئيسية</a>
+        <a href="services.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-brand-card hover:text-brand-gold transition-colors" data-i18n="nav.services">الخدمات والباقات</a>
+        <a href="portfolio.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-brand-card hover:text-brand-gold transition-colors" data-i18n="nav.portfolio">الأعمال</a>
+        <a href="blog.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-brand-card hover:text-brand-gold transition-colors" data-i18n="nav.blog">المقالات</a>
+        <a href="about.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-brand-card hover:text-brand-gold transition-colors" data-i18n="nav.about">من أنا</a>
+        <a href="contact.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-brand-card hover:text-brand-gold transition-colors" data-i18n="nav.contact">اتصل بي</a>
       </nav>
 
-      <!-- Action Buttons inside Mobile Menu Drawer (As Requested) -->
       <div class="pt-3 border-t border-brand-border/70 flex flex-col gap-2.5">
-        <!-- Language Switcher in Mobile Drawer -->
         <button onclick="toggleLanguage()" class="w-full flex items-center justify-between px-4 py-2.5 rounded-xl bg-brand-card hover:bg-brand-surface border border-brand-border text-xs font-bold text-gray-200 transition-all hover:border-brand-gold/50">
           <span class="flex items-center gap-2">
             <span class="current-lang-flag text-base">🇲🇦</span>
@@ -124,7 +197,6 @@
           <span class="text-xs text-brand-gold font-mono">Changer la langue / تبديل ⇄</span>
         </button>
 
-        <!-- Challenge Button in Mobile Drawer -->
         <a href="challenge.html" class="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-brand-gold hover:bg-brand-goldHover text-black font-extrabold text-sm shadow-md shadow-brand-gold/20 transition-all text-center">
           <span>🏆</span>
           <span data-i18n="nav.challenge">تحدي الإبداع</span>
@@ -139,303 +211,434 @@
     <span id="lang-switch-text" class="text-sm md:text-base font-bold text-white tracking-wide">Traduction en cours...</span>
   </div>
 
+  <!-- MAIN CONTENT -->
   <main class="flex-grow">
-<div class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-16 reveal-item">
-          <span class="badge-special-offer mb-3" data-i18n="pricing.special_offer">عرض خاص</span>
-          <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-1" data-i18n="pricing.title">
-            الباقات وعروض الأيام (Packs & Tarifs)
-          </h1>
-          <p class="text-gray-400 text-base mt-3" data-i18n="pricing.subtitle">
-            عروض واضحة بنظام الأيام مع تخفيض 30% فوري — Devis مسبق وفاتورة قانونية مضمونة.
-          </p>
-        </div>
+    <div class="py-10 sm:py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
 
-        
-        <!-- DIAGNOSTIC BRAND AUDIT CALLOUT BANNER -->
-        <div class="mb-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-brand-card via-[#1C180E] to-brand-card border-2 border-brand-gold/40 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
-          <div class="space-y-1.5 text-center md:text-left rtl:md:text-right">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-gold/15 text-brand-gold text-xs font-mono font-bold" data-i18n="services.audit_tag">💡 تدقيق تشخيصي مجاني</span>
-            <h3 class="text-xl sm:text-2xl font-black text-white" data-i18n="services.audit_title">باغي تعرف ثغرات علامتك قبل ما تختار الباقة؟</h3>
-            <p class="text-xs sm:text-sm text-gray-300 max-w-xl leading-relaxed" data-i18n="services.audit_desc">دوز فحص سريع من 12 معياراً وخذ تقرير فوري وشهادة تدقيق رسمية باش تعرف بالضبط شنو خاص مشروعك.</p>
+      <!-- Minimalist Page Header -->
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="inline-block px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/25 text-brand-gold text-xs font-bold" data-i18n="tarifs.page_badge">
+          عروض الأثمنة • Hicham Edd
+        </span>
+        <h1 class="text-3xl sm:text-4xl font-black text-white tracking-tight" data-i18n="tarifs.page_title">
+          اختر صيغة العمل المناسبة لمشروعك
+        </h1>
+        <p class="text-sm text-gray-400" data-i18n="tarifs.page_subtitle">
+          ثلاث صيغ واضحة ومرنة بدون تعقيدات — اضغط على أي عرض لعرض التفاصيل والأثمنة.
+        </p>
+      </div>
+
+      <!-- 3 FULL-WIDTH SIDE-BY-SIDE INTERACTIVE TABS -->
+      <div class="w-full grid grid-cols-3 gap-2 sm:gap-4 bg-brand-surface p-1.5 sm:p-2 rounded-2xl border border-brand-border" role="tablist" aria-label="عروض الأثمنة">
+        <button
+          type="button"
+          role="tab"
+          aria-selected="true"
+          data-tab="offer1"
+          onclick="switchOffer('offer1')"
+          class="offer-tab-btn w-full py-3.5 sm:py-4 px-2 sm:px-6 rounded-xl text-xs sm:text-sm md:text-base font-extrabold transition-all duration-200 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 bg-brand-gold text-black shadow-lg shadow-brand-gold/20"
+        >
+          <span>📅</span>
+          <span data-i18n="tarifs.tab1">العمل باليوم (الشهرية)</span>
+        </button>
+
+        <button
+          type="button"
+          role="tab"
+          aria-selected="false"
+          data-tab="offer2"
+          onclick="switchOffer('offer2')"
+          class="offer-tab-btn w-full py-3.5 sm:py-4 px-2 sm:px-6 rounded-xl text-xs sm:text-sm md:text-base font-bold transition-all duration-200 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-gray-300 hover:text-white hover:bg-brand-card"
+        >
+          <span>⏱️</span>
+          <span data-i18n="tarifs.tab2">نظام الساعات</span>
+        </button>
+
+        <button
+          type="button"
+          role="tab"
+          aria-selected="false"
+          data-tab="offer3"
+          onclick="switchOffer('offer3')"
+          class="offer-tab-btn w-full py-3.5 sm:py-4 px-2 sm:px-6 rounded-xl text-xs sm:text-sm md:text-base font-bold transition-all duration-200 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-gray-300 hover:text-white hover:bg-brand-card"
+        >
+          <span>✨</span>
+          <span data-i18n="tarifs.tab3">عروض مخصصة</span>
+        </button>
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- PANEL 1: العرض الأول - العمل باليوم / الصيغة الشهرية (Default Active)  -->
+      <!-- ===================================================================== -->
+      <section id="panel-offer1" class="offer-panel active space-y-8">
+        <!-- Intro -->
+        <div class="bg-brand-surface border border-brand-border rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div class="space-y-1.5">
+            <span class="text-xs font-mono text-brand-gold uppercase tracking-wider" data-i18n="tarifs.o1_tag">العرض الأول • العمل باليوم (Monthly Retainer Days)</span>
+            <h2 class="text-2xl sm:text-3xl font-black text-white" data-i18n="tarifs.o1_title">باقات الأيام الشهرية المخصصة</h2>
+            <p class="text-sm text-gray-400 max-w-2xl" data-i18n="tarifs.o1_desc">
+              حجز أيام عمل شهرية مخصصة لمشاريعكم مع تركيز كامل وجودة عالية بأسعار تفضيلية.
+            </p>
           </div>
-          <a href="audit.html" class="px-7 py-4 rounded-xl bg-brand-gold hover:bg-brand-goldHover text-black font-extrabold text-sm whitespace-nowrap shadow-xl shadow-brand-gold/25 transition-all hover:scale-105 active:scale-95 flex items-center gap-2" data-i18n="services.audit_btn">
-            <span>📊</span>
-            <span data-i18n="services.audit_btn">ابدأ تشخيص علامتك مجاناً</span>
+          <a
+            id="o1-top-wa"
+            href="https://wa.me/212653342503?text=%D8%B3%D9%84%D8%A7%D9%85%20%D9%87%D8%B4%D8%A7%D9%85%D8%8C%20%D8%AC%D9%8A%D8%AA%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%D9%85%D9%86%20%D8%A7%D9%84%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D8%A3%D9%88%D9%84%3A%20%D8%A7%D9%84%D8%B9%D9%85%D9%84%20%D8%A8%D8%A7%D9%84%D9%8A%D9%88%D9%85%20(%D8%A8%D8%A7%D9%82%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D9%8A%D8%A7%D9%85%20%D8%A7%D9%84%D8%B4%D9%87%D8%B1%D9%8A%D8%A9)%D8%8C%20%D9%88%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D8%AD%D8%AC%D8%B2%20%D8%A3%D9%8A%D8%A7%D9%85%20%D8%B9%D9%85%D9%84."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-brand-gold hover:bg-brand-goldHover text-black font-extrabold text-sm transition-all shadow-lg shadow-brand-gold/15"
+            data-i18n="tarifs.o1_btn"
+          >
+            احجز أيامك الشهرية ←
           </a>
         </div>
 
-        <!-- 4 PACKS GRID WITH EXACT PRICING RULES (RED STRIKETHROUGH & GREEN DISCOUNT) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          
-          <!-- Pack 1: Day Pass (300 درهم vs 430 درهم) -->
-          <div class="bg-brand-card border border-brand-border rounded-2xl p-6 card-hover flex flex-col justify-between reveal-item">
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-[10px] uppercase font-mono tracking-wider text-brand-gold" data-i18n="pricing.pack1_badge">للمشاريع السريعة</span>
-                <span class="badge-discount">-30%</span>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2" data-i18n="pricing.pack1_title">اليوم الحر (Day Pass)</h3>
-              <p class="text-xs text-gray-400 mb-6" data-i18n="pricing.pack1_desc">مثالي لتصفية قائمة مهام متراكمة (To-Do List)، تعديل تصاميم سابقة، أو تجهيز بوستات إعلانية مستعجلة فـ 24 ساعة.</p>
-              
-              <!-- Pricing Block -->
-              <div class="mb-6 pb-6 border-b border-brand-border">
-                <div class="flex items-center gap-2 mb-1">
-                  <span class="price-old text-sm font-mono" data-i18n="pricing.pack1_old_price">430 درهم</span>
-                  <span class="badge-special-offer text-[10px]" data-i18n="pricing.special_offer">عرض خاص</span>
-                </div>
-                <div class="flex items-baseline gap-1.5">
-                  <span class="text-3xl font-black price-new" data-i18n="pricing.pack1_new_price">300 درهم</span>
-                  <span class="text-xs text-emerald-400 font-bold" data-i18n="pricing.per_day">/ نهار</span>
-                </div>
-              </div>
-
-              <ul class="space-y-2.5 text-xs text-gray-300 mb-6">
-                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> <span data-i18n="pricing.pack1_f1">نهار كامل د الخدمة المركزة (7 ساعات مخصصة)</span></li>
-                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> <span data-i18n="pricing.pack1_f2">غرافيك ديزاين أو مونتاج فيديو حسب أولوياتك</span></li>
-                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> <span data-i18n="pricing.pack1_f3">تعديلات وتواصل مباشر وسريع فواتساب</span></li>
-                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> <span data-i18n="pricing.pack1_f4">ملفات مفتوحة بجودة عالية + Facture قانونية</span></li>
-              </ul>
-            </div>
-
-            <a href="https://wa.me/212653342503" target="_blank" rel="noopener noreferrer" class="whatsapp-general-link w-full py-2.5 rounded-xl bg-brand-surface hover:bg-brand-gold hover:text-black text-white font-semibold text-xs text-center border border-brand-border transition-all flex items-center justify-center gap-2">
-              <span data-i18n="cta.free_quote">طلب Devis مسبق</span>
-              <span>→</span>
-            </a>
-          </div>
-
-          <!-- Pack 2: Agency Backup (300 درهم vs 430 درهم) -->
-          <div class="bg-brand-card border-2 border-brand-gold rounded-2xl p-6 card-hover flex flex-col justify-between shadow-xl shadow-brand-gold/10 reveal-item delay-100">
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-[10px] uppercase font-mono tracking-wider text-brand-gold font-bold" data-i18n="pricing.pack2_badge">الأكثر طلباً للشركات</span>
-                <span class="badge-discount">-30%</span>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2" data-i18n="pricing.pack2_title">يومين ديال الخدمة المركزة (14 ساعة إنتاج)</h3>
-              <p class="text-xs text-gray-400 mb-6" data-i18n="pricing.pack2_desc">يومين متتابعين لإنتاج هوية متكاملة، إعلانات ممولة، أو فيديوهات ريلز بالذكاء الاصطناعي والمونتاج.</p>
-              
-              <!-- Pricing Block -->
-              <div class="mb-6 pb-6 border-b border-brand-border">
-                <div class="flex items-center gap-2 mb-1">
-                  <span class="price-old text-sm font-mono" data-i18n="pricing.pack2_old_price">430 درهم</span>
-                  <span class="badge-special-offer text-[10px]" data-i18n="pricing.special_offer">عرض خاص</span>
-                </div>
-                <div class="flex items-baseline gap-1.5">
-                  <span class="text-3xl font-black price-new" data-i18n="pricing.pack2_new_price">300 درهم</span>
-                  <span class="text-xs text-emerald-400 font-bold" data-i18n="pricing.per_day">/ نهار</span>
-                </div>
-              </div>
-
-              <ul class="space-y-2.5 text-xs text-gray-300 mb-6">
-                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> <span data-i18n="pricing.pack2_f1">يومين د الخدمة المكثفة (14 ساعة عمل حصرية)</span></li>
-                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> <span data-i18n="pricing.pack2_f2">لوغو، هوية بصرية، أو تصاميم الإعلانات والسوشيال</span></li>
-                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> <span data-i18n="pricing.pack2_f3">2 فيديوهات ريلز بتوليد الذكاء الاصطناعي والمونتاج</span></li>
-                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> <span data-i18n="pricing.pack2_f4">مواكبة سريعة ومباشرة فـ WhatsApp + Facture</span></li>
-              </ul>
-            </div>
-
-            <a href="https://wa.me/212653342503" target="_blank" rel="noopener noreferrer" class="whatsapp-general-link w-full py-2.5 rounded-xl bg-brand-gold hover:bg-brand-goldHover text-black font-bold text-xs text-center transition-all flex items-center justify-center gap-2">
-              <span data-i18n="cta.book_sprint">حجز هاد السبرينت</span>
-              <span>⚡</span>
-            </a>
-          </div>
-
-          <!-- Pack 3: Startup Launch (600 درهم vs 860 درهم) -->
-          <div class="bg-brand-card border border-brand-border rounded-2xl p-6 card-hover flex flex-col justify-between reveal-item delay-200">
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-[10px] uppercase font-mono tracking-wider text-amber-400" data-i18n="pricing.pack3_badge">لإطلاق براند جديدة</span>
-                <span class="badge-discount">-30%</span>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2" data-i18n="pricing.pack3_title">3 أيام لهوية وتصاميم متكاملة (Branding)</h3>
-              <p class="text-xs text-gray-400 mb-6" data-i18n="pricing.pack3_desc">ثلاثة أيام لبناء براند متكاملة من الصفر: لوغو، ألوان، خطوط، موكاب، وتصاميم الباكاجينغ والإعلانات.</p>
-              
-              <!-- Pricing Block -->
-              <div class="mb-6 pb-6 border-b border-brand-border">
-                <div class="flex items-center gap-2 mb-1">
-                  <span class="price-old text-sm font-mono" data-i18n="pricing.pack3_old_price">860 درهم</span>
-                  <span class="badge-special-offer text-[10px]" data-i18n="pricing.special_offer">عرض خاص</span>
-                </div>
-                <div class="flex items-baseline gap-1.5">
-                  <span class="text-3xl font-black price-new" data-i18n="pricing.pack3_new_price">600 درهم</span>
-                  <span class="text-xs text-emerald-400 font-bold" data-i18n="pricing.for_2days">(يومين)</span>
-                </div>
-              </div>
-
-              <ul class="space-y-2.5 text-xs text-gray-300 mb-6">
-                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> <span data-i18n="pricing.pack3_f1">3 أيام د الإنتاج الشامل (21 ساعة مخصصة)</span></li>
-                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> <span data-i18n="pricing.pack3_f2">دليل هوية متكامل (Brand Guidelines) من 10 لـ 20 صفحة</span></li>
-                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> <span data-i18n="pricing.pack3_f3">تصاميم الباكاجينغ 3D وبوستات إعلانية احترافية</span></li>
-                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> <span data-i18n="pricing.pack3_f4">توليد ومونتاج الفيديوهات بالذكاء الاصطناعي + Facture</span></li>
-              </ul>
-            </div>
-
-            <a href="https://wa.me/212653342503" target="_blank" rel="noopener noreferrer" class="whatsapp-general-link w-full py-2.5 rounded-xl bg-brand-surface hover:bg-brand-gold hover:text-black text-white font-semibold text-xs text-center border border-brand-border transition-all flex items-center justify-center gap-2">
-              <span data-i18n="cta.free_quote">طلب Devis مسبق</span>
-              <span>→</span>
-            </a>
-          </div>
-
-          <!-- Pack 4: Content 30 Days (600 درهم vs 860 درهم) -->
-          <div class="bg-brand-card border border-brand-border rounded-2xl p-6 card-hover flex flex-col justify-between reveal-item delay-300">
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-[10px] uppercase font-mono tracking-wider text-amber-400" data-i18n="pricing.pack4_badge">شريك إبداعي شهري</span>
-                <span class="badge-discount">-30%</span>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2" data-i18n="pricing.pack4_title">سبرينت أسبوع كامل (شريك شهري)</h3>
-              <p class="text-xs text-gray-400 mb-6" data-i18n="pricing.pack4_desc">خمسة أيام عمل كاملة مخصصة كشريك إبداعي لتجهيز محتوى الشهر كامل ومواكبة الحملات الإعلانية.</p>
-              
-              <!-- Pricing Block -->
-              <div class="mb-6 pb-6 border-b border-brand-border">
-                <div class="flex items-center gap-2 mb-1">
-                  <span class="price-old text-sm font-mono" data-i18n="pricing.pack4_old_price">860 درهم</span>
-                  <span class="badge-special-offer text-[10px]" data-i18n="pricing.special_offer">عرض خاص</span>
-                </div>
-                <div class="flex items-baseline gap-1.5">
-                  <span class="text-3xl font-black price-new" data-i18n="pricing.pack4_new_price">600 درهم</span>
-                  <span class="text-xs text-emerald-400 font-bold" data-i18n="pricing.for_2days">(يومين)</span>
-                </div>
-              </div>
-
-              <ul class="space-y-2.5 text-xs text-gray-300 mb-6">
-                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> <span data-i18n="pricing.pack4_f1">5 أيام د الخدمة الشاملة (35 ساعة عمل مخصصة)</span></li>
-                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> <span data-i18n="pricing.pack4_f2">حملة إعلانية كاملة: 15 بوست وكاروسيل 1080x1350</span></li>
-                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> <span data-i18n="pricing.pack4_f3">4 فيديوهات ريلز بالذكاء الاصطناعي والمونتاج</span></li>
-                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> <span data-i18n="pricing.pack4_f4">أولوية مطلقة فالتنفيذ + Facture قانونية كاملة</span></li>
-              </ul>
-            </div>
-
-            <a href="https://wa.me/212653342503" target="_blank" rel="noopener noreferrer" class="whatsapp-general-link w-full py-2.5 rounded-xl bg-brand-surface hover:bg-brand-gold hover:text-black text-white font-semibold text-xs text-center border border-brand-border transition-all flex items-center justify-center gap-2">
-              <span data-i18n="cta.free_quote">طلب Devis مسبق</span>
-              <span>→</span>
-            </a>
-          </div>
-
+        <!-- Workday Standard Note -->
+        <div class="bg-brand-card/70 border border-brand-border rounded-2xl px-5 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs sm:text-sm">
+          <span class="font-bold text-brand-gold" data-i18n="tarifs.o1_std_label">معيار يوم العمل المعتمد (Workday Standard):</span>
+          <span class="text-gray-300" data-i18n="tarifs.o1_std_val">1 يوم عمل = <strong class="text-white">6.5 ساعات صافية</strong> من التركيز والإنتاج الفعلي (8 ساعات إجمالية مع 1.5 ساعة استراحة).</span>
         </div>
 
-        <!-- =============================================================== -->
-        <!-- SPRINT CALCULATOR: STRICTLY 2 SERVICES (GRAPHIC & VIDEO)         -->
-        <!-- =============================================================== -->
-        <section class="mt-12 bg-gradient-to-br from-brand-card to-brand-surface border border-brand-border rounded-3xl p-6 sm:p-10 shadow-2xl reveal-item">
-          <div class="max-w-3xl mx-auto text-center mb-8">
-            <span class="badge-special-offer mb-2" data-i18n="pricing.special_offer">عرض خاص</span>
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-white" data-i18n="calc.title">
-              الآلة الحاسبة لسبرينت حسب الطلب
-            </h2>
-            <p class="text-xs sm:text-sm text-gray-400 mt-2" data-i18n="calc.subtitle">
-              حدد الخدمة وعدد الأيام وغيطلع ليك الثمن التقديري مباشرة مع تخفيض 30% فوري.
+        <!-- 2 Package Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-brand-card border border-brand-border rounded-2xl p-6 sm:p-8 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-bold text-white" data-i18n="tarifs.o1_c1_title">🎨 باقة التصميم الجرافيكي</span>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-xs font-bold text-emerald-400" data-i18n="tarifs.o1_discount_badge">خصم 30%</span>
+            </div>
+            <div class="flex items-baseline gap-3">
+              <span class="text-4xl font-black text-brand-gold" data-i18n="tarifs.o1_c1_price">300 درهم</span>
+              <span class="text-sm text-gray-400" data-i18n="tarifs.per_day">/ يوم</span>
+              <span class="text-xs text-red-400 line-through" data-i18n="tarifs.o1_c1_old">430 درهم</span>
+            </div>
+            <p class="text-xs text-emerald-400 font-semibold" data-i18n="tarifs.o1_c1_save">وفر 130 د.م لكل يوم عمل • معدل الساعة الصافية الفعلي: ~46 درهم/ساعة</p>
+            <p class="text-sm text-gray-300 leading-relaxed pt-1 border-t border-brand-border/60" data-i18n="tarifs.o1_c1_desc">
+              الهويات البصرية، منشورات السوشيال ميديا، المطبوعات، تصاميم الإعلانات والبنرات.
             </p>
           </div>
 
-          <div class="max-w-2xl mx-auto space-y-8">
-            
-            <!-- Step 1: Strictly 2 Services (Design 300 درهم vs Video 350 DH) -->
-            <div>
-              <label class="block text-xs sm:text-sm font-semibold text-gray-200 mb-3" data-i18n="calc.step1">
-                1. عزل نوع الخدمة اللي باغي:
-              </label>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                
-                <!-- Option 1: Graphic Design (300 درهم / day) -->
-                <button type="button" onclick="selectServiceModule('design')" data-service="design" class="calc-service-btn p-4 rounded-xl border border-brand-gold bg-brand-gold/10 text-white font-bold text-xs sm:text-sm text-left rtl:text-right transition-all">
-                  <div class="flex items-center justify-between mb-1.5">
-                    <span data-i18n="calc.opt_design">Graphic Design (300 درهم / jour)</span>
-                    <span class="badge-discount text-[10px]">-30%</span>
-                  </div>
-                  <span class="text-xs text-gray-400 font-normal block" data-i18n="calc.opt_design_note">300 درهم/j au lieu de 430 درهم (-30%)</span>
-                </button>
-
-                <!-- Option 2: Video Editing (350 DH / day) -->
-                <button type="button" onclick="selectServiceModule('video')" data-service="video" class="calc-service-btn p-4 rounded-xl border border-brand-border bg-brand-card text-gray-300 font-bold text-xs sm:text-sm text-left rtl:text-right transition-all hover:border-brand-gold/40">
-                  <div class="flex items-center justify-between mb-1.5">
-                    <span data-i18n="calc.opt_video">فيديو إيديتينغ وريلز (350 درهم / نهار)</span>
-                    <span class="badge-discount text-[10px]">-30%</span>
-                  </div>
-                  <span class="text-xs text-gray-400 font-normal block" data-i18n="calc.opt_video_note">350 درهم/نهار عوض 500 درهم (-30%)</span>
-                </button>
-
-              </div>
+          <div class="bg-brand-card border border-brand-gold/40 rounded-2xl p-6 sm:p-8 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-bold text-white" data-i18n="tarifs.o1_c2_title">🎬 باقة المونتاج وصناعة الفيديو</span>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-xs font-bold text-emerald-400" data-i18n="tarifs.o1_discount_badge">خصم 30%</span>
             </div>
-
-            <!-- Step 2: Strictly Days 1, 2, 3, 4, 5 -->
-            <div>
-              <label class="block text-xs sm:text-sm font-semibold text-gray-200 mb-3" data-i18n="calc.step2">
-                2. حدد عدد الأيام (من 1 حتى لـ 5 أيام):
-              </label>
-              <div class="grid grid-cols-5 gap-2 sm:gap-3">
-                <button type="button" onclick="selectSprintDays(1)" data-days="1" class="calc-day-btn py-3 rounded-xl border border-brand-gold bg-brand-gold text-black font-extrabold text-xs sm:text-sm text-center transition-all">
-                  1 J
-                </button>
-                <button type="button" onclick="selectSprintDays(2)" data-days="2" class="calc-day-btn py-3 rounded-xl border border-brand-border bg-brand-surface text-gray-300 font-semibold text-xs sm:text-sm text-center transition-all hover:border-brand-gold/40">
-                  2 J
-                </button>
-                <button type="button" onclick="selectSprintDays(3)" data-days="3" class="calc-day-btn py-3 rounded-xl border border-brand-border bg-brand-surface text-gray-300 font-semibold text-xs sm:text-sm text-center transition-all hover:border-brand-gold/40">
-                  3 J
-                </button>
-                <button type="button" onclick="selectSprintDays(4)" data-days="4" class="calc-day-btn py-3 rounded-xl border border-brand-border bg-brand-surface text-gray-300 font-semibold text-xs sm:text-sm text-center transition-all hover:border-brand-gold/40">
-                  4 J
-                </button>
-                <button type="button" onclick="selectSprintDays(5)" data-days="5" class="calc-day-btn py-3 rounded-xl border border-brand-border bg-brand-surface text-gray-300 font-semibold text-xs sm:text-sm text-center transition-all hover:border-brand-gold/40">
-                  5 J
-                </button>
-              </div>
+            <div class="flex items-baseline gap-3">
+              <span class="text-4xl font-black text-brand-gold" data-i18n="tarifs.o1_c2_price">350 درهم</span>
+              <span class="text-sm text-gray-400" data-i18n="tarifs.per_day">/ يوم</span>
+              <span class="text-xs text-red-400 line-through" data-i18n="tarifs.o1_c2_old">500 درهم</span>
             </div>
-
-            <!-- Calculation Output Card with Red Strikethrough & Green Price -->
-            <div class="bg-black/40 border border-brand-border rounded-2xl p-6 text-center space-y-4">
-              <span class="text-xs font-mono uppercase tracking-widest text-gray-400 block" data-i18n="calc.summary_heading">
-                تقدير مفصل لسعر السبرينت ديالك :
-              </span>
-              
-              <div class="flex items-center justify-center gap-4 text-xs font-semibold text-gray-300">
-                <span id="calc-summary-service">Graphic Design</span>
-                <span>•</span>
-                <span id="calc-summary-days">1 Jour</span>
-              </div>
-
-              <!-- Prices Display -->
-              <div class="space-y-1">
-                <div class="flex items-center justify-center gap-2">
-                  <span class="text-xs text-gray-400" data-i18n="calc.original_price_label">الثمن الأصلي :</span>
-                  <span id="calc-original-price" class="price-old font-mono text-base">430 درهم</span>
-                </div>
-                
-                <div class="flex items-baseline justify-center gap-2">
-                  <span id="calc-discounted-price" class="text-4xl sm:text-5xl font-black price-new">
-                    300 درهم
-                  </span>
-                  <span class="badge-special-offer text-xs" data-i18n="pricing.special_offer">عرض خاص</span>
-                </div>
-              </div>
-
-              <!-- Savings Badge -->
-              <div>
-                <span id="calc-savings-badge" class="badge-discount text-xs py-1 px-3">
-                  Économie : -130 DH (-30% عرض خاص)
-                </span>
-              </div>
-
-              <p class="text-[11px] text-gray-500 pt-2" data-i18n="calc.taxes_note">
-                * أثمنة صافية مع Devis مسبق وفاتورة قانونية Facture مقبولة ضريبياً.
-              </p>
-
-              <!-- WhatsApp Action Button -->
-              <div class="pt-2">
-                <button id="calc-whatsapp-btn" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-gold hover:bg-brand-goldHover text-black font-extrabold text-sm shadow-xl shadow-brand-gold/15 transition-all inline-flex items-center justify-center gap-2">
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.184 1.564 5.939l-1.564 5.889 6.033-1.582c1.707.935 3.666 1.468 5.751 1.468 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>
-                  <span data-i18n="calc.cta_whatsapp_calc">طلب هاد السبرينت فـ WhatsApp</span>
-                </button>
-              </div>
-
-            </div>
-
+            <p class="text-xs text-emerald-400 font-semibold" data-i18n="tarifs.o1_c2_save">وفر 150 د.م لكل يوم عمل • معدل الساعة الصافية الفعلي: ~53.8 درهم/ساعة</p>
+            <p class="text-sm text-gray-300 leading-relaxed pt-1 border-t border-brand-border/60" data-i18n="tarifs.o1_c2_desc">
+              ريلز وتيك توك، فيديوهات إعلانية، بودكاست، موشن جرافيك خفيف وتعديلات الفيديو.
+            </p>
           </div>
-        </section>
+        </div>
 
-      </div>
+        <!-- Monthly Packages Table -->
+        <div class="bg-brand-surface border border-brand-border rounded-2xl overflow-hidden">
+          <div class="px-6 py-4 border-b border-brand-border flex items-center justify-between">
+            <h3 class="text-base font-bold text-white" data-i18n="tarifs.o1_tbl_title">جدول محاكاة الباقات الشهرية المعتادة</h3>
+            <span class="text-xs text-gray-500" data-i18n="tarifs.o1_tbl_sub">أيام العمل في الشهر</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm text-start">
+              <thead class="bg-brand-card text-gray-400 text-xs">
+                <tr>
+                  <th class="py-3.5 px-4 font-semibold" data-i18n="tarifs.o1_th1">أيام الشهر</th>
+                  <th class="py-3.5 px-4 font-semibold" data-i18n="tarifs.o1_th2">الساعات الصافية</th>
+                  <th class="py-3.5 px-4 font-semibold" data-i18n="tarifs.o1_th3">التصميم (300 د.م/ي)</th>
+                  <th class="py-3.5 px-4 font-semibold" data-i18n="tarifs.o1_th4">المونتاج (350 د.م/ي)</th>
+                  <th class="py-3.5 px-4 font-semibold" data-i18n="tarifs.o1_th5">باقة مختلطة</th>
+                  <th class="py-3.5 px-4 font-semibold" data-i18n="tarifs.o1_th6">الملاءمة ونطاق الاستخدام</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-brand-border/60 text-gray-200">
+                <tr class="hover:bg-brand-card/40 transition-colors">
+                  <td class="py-3.5 px-4 font-bold" data-i18n="tarifs.o1_r1_d">2 أيام</td>
+                  <td class="py-3.5 px-4 font-mono text-xs" data-i18n="tarifs.o1_r1_h">13.0 س</td>
+                  <td class="py-3.5 px-4 font-bold text-white" data-i18n="tarifs.o1_r1_c1">600 درهم</td>
+                  <td class="py-3.5 px-4 font-bold text-white" data-i18n="tarifs.o1_r1_c2">700 درهم</td>
+                  <td class="py-3.5 px-4 font-bold text-brand-gold" data-i18n="tarifs.o1_r1_c3">650 درهم</td>
+                  <td class="py-3.5 px-4 text-xs text-gray-400" data-i18n="tarifs.o1_r1_n">يومان شهرياً: دعم دوري ومواكبة المهام الأساسية</td>
+                </tr>
+                <tr class="hover:bg-brand-card/40 transition-colors">
+                  <td class="py-3.5 px-4 font-bold" data-i18n="tarifs.o1_r2_d">4 أيام</td>
+                  <td class="py-3.5 px-4 font-mono text-xs" data-i18n="tarifs.o1_r2_h">26.0 س</td>
+                  <td class="py-3.5 px-4 font-bold text-white" data-i18n="tarifs.o1_r2_c1">1,200 درهم</td>
+                  <td class="py-3.5 px-4 font-bold text-white" data-i18n="tarifs.o1_r2_c2">1,400 درهم</td>
+                  <td class="py-3.5 px-4 font-bold text-brand-gold" data-i18n="tarifs.o1_r2_c3">1,300 درهم</td>
+                  <td class="py-3.5 px-4 text-xs text-gray-400" data-i18n="tarifs.o1_r2_n">4 أيام (يوم أسبوعياً): استمرارية منتظمة ومتواصلة</td>
+                </tr>
+                <tr class="hover:bg-brand-card/40 transition-colors">
+                  <td class="py-3.5 px-4 font-bold" data-i18n="tarifs.o1_r3_d">5 أيام</td>
+                  <td class="py-3.5 px-4 font-mono text-xs" data-i18n="tarifs.o1_r3_h">32.5 س</td>
+                  <td class="py-3.5 px-4 font-bold text-white" data-i18n="tarifs.o1_r3_c1">1,500 درهم</td>
+                  <td class="py-3.5 px-4 font-bold text-white" data-i18n="tarifs.o1_r3_c2">1,750 درهم</td>
+                  <td class="py-3.5 px-4 font-bold text-brand-gold" data-i18n="tarifs.o1_r3_c3">1,625 درهم</td>
+                  <td class="py-3.5 px-4 text-xs text-gray-400" data-i18n="tarifs.o1_r3_n">5 أيام شهرياً: وتيرة إنتاج سريعة ومتقدمة</td>
+                </tr>
+                <tr class="hover:bg-brand-card/40 transition-colors bg-brand-gold/5">
+                  <td class="py-3.5 px-4 font-bold text-brand-gold" data-i18n="tarifs.o1_r4_d">8 أيام</td>
+                  <td class="py-3.5 px-4 font-mono text-xs" data-i18n="tarifs.o1_r4_h">52.0 س</td>
+                  <td class="py-3.5 px-4 font-bold text-white" data-i18n="tarifs.o1_r4_c1">2,400 درهم</td>
+                  <td class="py-3.5 px-4 font-bold text-white" data-i18n="tarifs.o1_r4_c2">2,800 درهم</td>
+                  <td class="py-3.5 px-4 font-bold text-brand-gold" data-i18n="tarifs.o1_r4_c3">2,600 درهم</td>
+                  <td class="py-3.5 px-4 text-xs text-gray-300" data-i18n="tarifs.o1_r4_n">8 أيام (يومان أسبوعياً): مرافقة مكثفة وشبه متفرغة</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================== -->
+      <!-- PANEL 2: العرض الثاني - نظام الساعات (Hourly Rate)                     -->
+      <!-- ===================================================================== -->
+      <section id="panel-offer2" class="offer-panel space-y-8">
+        <!-- Intro -->
+        <div class="bg-brand-surface border border-brand-border rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div class="space-y-1.5">
+            <span class="text-xs font-mono text-brand-gold uppercase tracking-wider" data-i18n="tarifs.o2_tag">العرض الثاني • Hourly Rate</span>
+            <h2 class="text-2xl sm:text-3xl font-black text-white" data-i18n="tarifs.o2_title">نظام الفوترة بالساعة</h2>
+            <p class="text-sm text-gray-400 max-w-2xl" data-i18n="tarifs.o2_desc">
+              حل عملي للمشاريع المتطورة والمواكبة المستمرة — كتخلص فقط على الساعات الفعلية لي تخدمات بدون أي التزام مقيد.
+            </p>
+          </div>
+          <a
+            id="o2-top-wa"
+            href="https://wa.me/212653342503?text=%D8%B3%D9%84%D8%A7%D9%85%20%D9%87%D8%B4%D8%A7%D9%85%D8%8C%20%D8%AC%D9%8A%D8%AA%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%D9%85%D9%86%20%D8%A7%D9%84%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%3A%20%D9%86%D8%B8%D8%A7%D9%85%20%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A7%D8%AA%20(Hourly%20Rate)%D8%8C%20%D9%88%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D8%A8%D8%AF%D8%A7%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-brand-gold hover:bg-brand-goldHover text-black font-extrabold text-sm transition-all shadow-lg shadow-brand-gold/15"
+            data-i18n="tarifs.o2_btn"
+          >
+            ابدأ بنظام الساعات ←
+          </a>
+        </div>
+
+        <!-- 2 Pricing Tiers -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-brand-card border border-brand-border rounded-2xl p-6 sm:p-8 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-gray-400" data-i18n="tarifs.o2_t1_label">الشطر الأول</span>
+              <span class="px-2.5 py-1 rounded-full bg-brand-surface border border-brand-border text-xs text-gray-300" data-i18n="tarifs.o2_t1_range">من 1 إلى 25 ساعة</span>
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span class="text-4xl font-black text-white" data-i18n="tarifs.o2_t1_price">80 درهم</span>
+              <span class="text-sm text-gray-400" data-i18n="tarifs.per_hour">/ ساعة</span>
+            </div>
+            <p class="text-sm text-gray-300 leading-relaxed" data-i18n="tarifs.o2_t1_desc">
+              تغطية كافة ساعات العمل الشهرية الأولى من 1 إلى 25 ساعة. مثالي للمهام السريعة، الدعم التقني، والتعديلات الدورية المستمرة.
+            </p>
+          </div>
+
+          <div class="bg-brand-card border border-brand-gold/40 rounded-2xl p-6 sm:p-8 space-y-4 relative overflow-hidden">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-brand-gold" data-i18n="tarifs.o2_t2_label">الشطر الثاني</span>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-xs font-bold text-emerald-400" data-i18n="tarifs.o2_t2_badge">تخفيض تشجيعي</span>
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span class="text-4xl font-black text-brand-gold" data-i18n="tarifs.o2_t2_price">65 درهم</span>
+              <span class="text-sm text-gray-400" data-i18n="tarifs.o2_t2_unit">/ ساعة (ابتداءً من الساعة 26)</span>
+            </div>
+            <p class="text-sm text-gray-300 leading-relaxed" data-i18n="tarifs.o2_t2_desc">
+              سعر تفضيلي مخفض يطبق حصرياً على الساعات الإضافية (ساعة 26+). كتستافد من تخفيض فوري مع زيادة حجم الأعمال دون الحاجة لإعادة التفاوض.
+            </p>
+          </div>
+        </div>
+
+        <!-- Simulation Table -->
+        <div class="bg-brand-surface border border-brand-border rounded-2xl overflow-hidden">
+          <div class="px-6 py-4 border-b border-brand-border flex items-center justify-between">
+            <h3 class="text-base font-bold text-white" data-i18n="tarifs.o2_tbl_title">جدول محاكاة التكلفة الشهرية</h3>
+            <span class="text-xs text-gray-500" data-i18n="tarifs.o2_tbl_sub">نماذج حسابية واضحة</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm text-start">
+              <thead class="bg-brand-card text-gray-400 text-xs">
+                <tr>
+                  <th class="py-3.5 px-4 font-semibold" data-i18n="tarifs.o2_th1">حجم الساعات</th>
+                  <th class="py-3.5 px-4 font-semibold" data-i18n="tarifs.o2_th2">الشطر 1 (80 د.م)</th>
+                  <th class="py-3.5 px-4 font-semibold" data-i18n="tarifs.o2_th3">الشطر 2 (65 د.م)</th>
+                  <th class="py-3.5 px-4 font-semibold" data-i18n="tarifs.o2_th4">المجموع التقديري</th>
+                  <th class="py-3.5 px-4 font-semibold" data-i18n="tarifs.o2_th5">معدل الساعة الفعلي</th>
+                  <th class="py-3.5 px-4 font-semibold" data-i18n="tarifs.o2_th6">ملاحظات وتوفير</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-brand-border/60 text-gray-200">
+                <tr class="hover:bg-brand-card/40 transition-colors">
+                  <td class="py-3.5 px-4 font-bold" data-i18n="tarifs.o2_r1_h">10 ساعات</td>
+                  <td class="py-3.5 px-4">10</td>
+                  <td class="py-3.5 px-4 text-gray-500">0</td>
+                  <td class="py-3.5 px-4 font-bold text-white" data-i18n="tarifs.o2_r1_tot">800 درهم</td>
+                  <td class="py-3.5 px-4 font-mono text-xs" data-i18n="tarifs.o2_r1_avg">80.0 د.م/س</td>
+                  <td class="py-3.5 px-4 text-xs text-gray-400" data-i18n="tarifs.o2_r1_n">مهام دورية خفيفة وتعديلات متفرقة</td>
+                </tr>
+                <tr class="hover:bg-brand-card/40 transition-colors">
+                  <td class="py-3.5 px-4 font-bold" data-i18n="tarifs.o2_r2_h">20 ساعة</td>
+                  <td class="py-3.5 px-4">20</td>
+                  <td class="py-3.5 px-4 text-gray-500">0</td>
+                  <td class="py-3.5 px-4 font-bold text-white" data-i18n="tarifs.o2_r2_tot">1,600 درهم</td>
+                  <td class="py-3.5 px-4 font-mono text-xs" data-i18n="tarifs.o2_r2_avg">80.0 د.م/س</td>
+                  <td class="py-3.5 px-4 text-xs text-gray-400" data-i18n="tarifs.o2_r2_n">مرافقة أسبوعية بمعدل 5 ساعات أسبوعياً</td>
+                </tr>
+                <tr class="hover:bg-brand-card/40 transition-colors">
+                  <td class="py-3.5 px-4 font-bold" data-i18n="tarifs.o2_r3_h">25 ساعة</td>
+                  <td class="py-3.5 px-4">25</td>
+                  <td class="py-3.5 px-4 text-gray-500">0</td>
+                  <td class="py-3.5 px-4 font-bold text-white" data-i18n="tarifs.o2_r3_tot">2,000 درهم</td>
+                  <td class="py-3.5 px-4 font-mono text-xs" data-i18n="tarifs.o2_r3_avg">80.0 د.م/س</td>
+                  <td class="py-3.5 px-4 text-xs text-gray-400" data-i18n="tarifs.o2_r3_n">الحد الأقصى للشطر الأول (سقف 80 د.م)</td>
+                </tr>
+                <tr class="hover:bg-brand-card/40 transition-colors bg-brand-gold/5">
+                  <td class="py-3.5 px-4 font-bold text-brand-gold" data-i18n="tarifs.o2_r4_h">30 ساعة</td>
+                  <td class="py-3.5 px-4">25</td>
+                  <td class="py-3.5 px-4 text-emerald-400 font-semibold">5</td>
+                  <td class="py-3.5 px-4 font-bold text-brand-gold" data-i18n="tarifs.o2_r4_tot">2,325 درهم</td>
+                  <td class="py-3.5 px-4 font-mono text-xs text-emerald-400" data-i18n="tarifs.o2_r4_avg">77.5 د.م/س</td>
+                  <td class="py-3.5 px-4 text-xs text-emerald-300" data-i18n="tarifs.o2_r4_n">توفير: احتساب 5 ساعات بسعر 65 د.م فقط</td>
+                </tr>
+                <tr class="hover:bg-brand-card/40 transition-colors bg-brand-gold/5">
+                  <td class="py-3.5 px-4 font-bold text-brand-gold" data-i18n="tarifs.o2_r5_h">35 ساعة</td>
+                  <td class="py-3.5 px-4">25</td>
+                  <td class="py-3.5 px-4 text-emerald-400 font-semibold">10</td>
+                  <td class="py-3.5 px-4 font-bold text-brand-gold" data-i18n="tarifs.o2_r5_tot">2,650 درهم</td>
+                  <td class="py-3.5 px-4 font-mono text-xs text-emerald-400" data-i18n="tarifs.o2_r5_avg">75.7 د.م/س</td>
+                  <td class="py-3.5 px-4 text-xs text-emerald-300" data-i18n="tarifs.o2_r5_n">توفير: احتساب 10 ساعات بسعر 65 د.م فقط</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 3 Minimalist Advantages -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-brand-surface border border-brand-border rounded-2xl p-5 space-y-2">
+            <div class="text-sm font-bold text-white" data-i18n="tarifs.o2_f1_t">⚡ مرونة كاملة ومطلقة</div>
+            <p class="text-xs text-gray-400 leading-relaxed" data-i18n="tarifs.o2_f1_d">تحكم 100% في عدد الساعات والميزانية كل شهر، بدون إلزام بعدد أدنى من الساعات أو عقود مقيدة.</p>
+          </div>
+          <div class="bg-brand-surface border border-brand-border rounded-2xl p-5 space-y-2">
+            <div class="text-sm font-bold text-white" data-i18n="tarifs.o2_f2_t">📊 تتبع شفاف ودقيق</div>
+            <p class="text-xs text-gray-400 leading-relaxed" data-i18n="tarifs.o2_f2_d">تقرير زمني مفصل كيوثق كل مهمة، وقت الانطلاق، الإنجاز، والوقت المستغرق بالدقيقة والثانية.</p>
+          </div>
+          <div class="bg-brand-surface border border-brand-border rounded-2xl p-5 space-y-2">
+            <div class="text-sm font-bold text-white" data-i18n="tarifs.o2_f3_t">🎯 خلاص على العمل الفعلي</div>
+            <p class="text-xs text-gray-400 leading-relaxed" data-i18n="tarifs.o2_f3_d">كتخلص فقط على الوقت المستهلك في الإنتاج والتنفيذ الحقيقي؛ صفر هدر وقيمة مضافة مضمونة.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================== -->
+      <!-- PANEL 3: العرض الثالث - عروض مخصصة (Custom Tailored Solutions)         -->
+      <!-- ===================================================================== -->
+      <section id="panel-offer3" class="offer-panel space-y-8">
+        <!-- Intro -->
+        <div class="bg-brand-surface border border-brand-border rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div class="space-y-1.5">
+            <span class="text-xs font-mono text-brand-gold uppercase tracking-wider" data-i18n="tarifs.o3_tag">العرض الثالث • Custom Tailored Solutions</span>
+            <h2 class="text-2xl sm:text-3xl font-black text-white" data-i18n="tarifs.o3_title">حلول إبداعية مخصصة</h2>
+            <p class="text-sm text-gray-400 max-w-2xl" data-i18n="tarifs.o3_desc">
+              عروض مصممة خصيصاً لتناسب احتياجاتكم وميزانيتكم — كنصممو معاً صيغة مخصصة 100% تحقق أهدافكم بأعلى جودة.
+            </p>
+          </div>
+          <a
+            id="o3-top-wa"
+            href="https://wa.me/212653342503?text=%D8%B3%D9%84%D8%A7%D9%85%20%D9%87%D8%B4%D8%A7%D9%85%D8%8C%20%D8%AC%D9%8A%D8%AA%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%D9%85%D9%86%20%D8%A7%D9%84%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%3A%20%D8%A7%D9%84%D8%B9%D8%B1%D9%88%D8%B6%20%D8%A7%D9%84%D9%85%D8%AE%D8%B5%D8%B5%D8%A9%20(Custom%20Solutions)%D8%8C%20%D9%88%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D9%86%D8%A7%D9%82%D8%B4%20%D9%85%D8%B9%D8%A7%D9%83%20%D8%B9%D8%B1%D8%B6%20%D8%AE%D8%A7%D8%B5%20%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D9%8A."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-brand-gold hover:bg-brand-goldHover text-black font-extrabold text-sm transition-all shadow-lg shadow-brand-gold/15"
+            data-i18n="tarifs.o3_btn"
+          >
+            اطلب عرضاً مخصصاً ←
+          </a>
+        </div>
+
+        <!-- 4 Custom Models -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="bg-brand-card border border-brand-border rounded-2xl p-6 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-bold text-white" data-i18n="tarifs.o3_m1_t">📦 01. المشاريع المتكاملة (Project-Based)</h3>
+              <span class="text-xs text-brand-gold font-semibold" data-i18n="tarifs.o3_m1_b">تسعير ثابت</span>
+            </div>
+            <p class="text-sm text-gray-300 leading-relaxed" data-i18n="tarifs.o3_m1_d">
+              اتفاق مسبق على كافة المخرجات والمراحل (هوية بصرية متكاملة، فيديو ترويجي رئيسي، أو حملة إعلانية) مع التزام بموعد تسليم نهائي وضمان التعديلات.
+            </p>
+          </div>
+
+          <div class="bg-brand-card border border-brand-border rounded-2xl p-6 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-bold text-white" data-i18n="tarifs.o3_m2_t">🔄 02. المرافقة الشهرية الشاملة (Monthly Retainer)</h3>
+              <span class="text-xs text-brand-gold font-semibold" data-i18n="tarifs.o3_m2_b">أولوية مستمرة</span>
+            </div>
+            <p class="text-sm text-gray-300 leading-relaxed" data-i18n="tarifs.o3_m2_d">
+              مخرجات شهرية متفق عليها بوضوح: توليفة متوازنة تجمع بين منشورات السوشيال ميديا، فيديوهات الريلز، والتصميم المستمر مع تنسيق أسبوعي مباشر.
+            </p>
+          </div>
+
+          <div class="bg-brand-card border border-brand-border rounded-2xl p-6 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-bold text-white" data-i18n="tarifs.o3_m3_t">🚀 03. باقات الإطلاق والمناسبات (Launch Sprints)</h3>
+              <span class="text-xs text-brand-gold font-semibold" data-i18n="tarifs.o3_m3_b">إنتاج مكثف</span>
+            </div>
+            <p class="text-sm text-gray-300 leading-relaxed" data-i18n="tarifs.o3_m3_d">
+              إنتاج مكثف وسريع لمواكبة إطلاق منتج جديد، تغطية فعالية كبرى، أو حملة تسويقية موسمية مستعجلة لضمان الجاهزية قبل الموعد المحدد.
+            </p>
+          </div>
+
+          <div class="bg-brand-card border border-brand-border rounded-2xl p-6 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-bold text-white" data-i18n="tarifs.o3_m4_t">💡 04. الاستشارة والتوجيه الفني (Art Direction)</h3>
+              <span class="text-xs text-brand-gold font-semibold" data-i18n="tarifs.o3_m4_b">إشراف إبداعي</span>
+            </div>
+            <p class="text-sm text-gray-300 leading-relaxed" data-i18n="tarifs.o3_m4_d">
+              مراجعة جودة التصاميم، ضبط معايير البراند، وتوجيه فريق العمل عبر جلسات دورية وتوصيات عملية ملموسة لضمان هوية بصرية قوية متناسقة.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3-Step Process -->
+        <div class="bg-brand-surface border border-brand-border rounded-2xl p-6 sm:p-8 space-y-5">
+          <h3 class="text-lg font-bold text-white" data-i18n="tarifs.o3_proc_title">كيفاش كنتفقو؟ — منهجية العمل</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="space-y-1.5 border-s-2 border-brand-gold ps-4">
+              <span class="text-xs font-mono text-brand-gold" data-i18n="tarifs.o3_s1_k">01 • استشارة أولية مجانية</span>
+              <h4 class="text-sm font-bold text-white" data-i18n="tarifs.o3_s1_t">تواصل وتحديد الحاجيات</h4>
+              <p class="text-xs text-gray-400 leading-relaxed" data-i18n="tarifs.o3_s1_d">محادثة مباشرة عبر الواتساب أو اتصال سريع لتحديد نوعية المشروع، الأهداف، والمخرجات المطلوبة بدقة.</p>
+            </div>
+            <div class="space-y-1.5 border-s-2 border-brand-gold ps-4">
+              <span class="text-xs font-mono text-brand-gold" data-i18n="tarifs.o3_s2_k">02 • عرض مخصص وواضح</span>
+              <h4 class="text-sm font-bold text-white" data-i18n="tarifs.o3_s2_t">مقترح مالي وخطة عمل</h4>
+              <p class="text-xs text-gray-400 leading-relaxed" data-i18n="tarifs.o3_s2_d">تقديم مقترح مفصل يحدد حجم العمل، الميزانية الأنسب، والجدول الزمني الشفاف بدون أي مفاجآت.</p>
+            </div>
+            <div class="space-y-1.5 border-s-2 border-brand-gold ps-4">
+              <span class="text-xs font-mono text-brand-gold" data-i18n="tarifs.o3_s3_k">03 • تسليم في الموعد</span>
+              <h4 class="text-sm font-bold text-white" data-i18n="tarifs.o3_s3_t">الانطلاق وتتبع الإنجاز</h4>
+              <p class="text-xs text-gray-400 leading-relaxed" data-i18n="tarifs.o3_s3_d">بدء التنفيذ مع مشاركة المسودات أولاً بأول وأخذ ملاحظاتك وتعديلاتك حتى الاعتماد النهائي.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MINIMALIST DYNAMIC WHATSAPP CTA CARD -->
+      <section class="bg-gradient-to-br from-brand-card to-brand-surface border border-brand-gold/30 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="space-y-1 text-center sm:text-start">
+          <h3 class="text-lg sm:text-xl font-black text-white" data-i18n="tarifs.cta_heading">جاهز نبداو الخدمة؟ تواصل معايا مباشرة على واتساب</h3>
+          <p class="text-xs sm:text-sm text-gray-400" id="dynamic-cta-subtitle">
+            العرض المحدد حالياً: <span class="text-brand-gold font-bold">العرض الأول — العمل باليوم (الصيغة الشهرية)</span>
+          </p>
+        </div>
+        <a
+          id="dynamic-whatsapp-cta"
+          href="https://wa.me/212653342503?text=%D8%B3%D9%84%D8%A7%D9%85%20%D9%87%D8%B4%D8%A7%D9%85%D8%8C%20%D8%AC%D9%8A%D8%AA%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%D9%85%D9%86%20%D8%A7%D9%84%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D8%A3%D9%88%D9%84%3A%20%D8%A7%D9%84%D8%B9%D9%85%D9%84%20%D8%A8%D8%A7%D9%84%D9%8A%D9%88%D9%85%20(%D8%A8%D8%A7%D9%82%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D9%8A%D8%A7%D9%85%20%D8%A7%D9%84%D8%B4%D9%87%D8%B1%D9%8A%D8%A9)%D8%8C%20%D9%88%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D8%AD%D8%AC%D8%B2%20%D8%A3%D9%8A%D8%A7%D9%85%20%D8%B9%D9%85%D9%84."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-gold hover:bg-brand-goldHover text-black font-extrabold text-sm shadow-xl shadow-brand-gold/20 transition-all inline-flex items-center justify-center gap-2.5 whitespace-nowrap"
+        >
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.184 1.564 5.939l-1.564 5.889 6.033-1.582c1.707.935 3.666 1.468 5.751 1.468 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>
+          <span data-i18n="tarifs.cta_wa_btn">تواصل عبر الواتساب الآن</span>
+        </a>
+      </section>
+
+    </div>
   </main>
 
   <!-- FOOTER (EXACTLY 4 LINKS AS REQUESTED) -->
@@ -443,17 +646,17 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
       <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-400">
         <div class="flex flex-wrap items-center justify-center gap-6">
-          <a href="privacy.html" class="hover:text-brand-gold transition-colors" data-i18n="legal.privacy_title">Politique de Confidentialité & Données</a>
-          <a href="terms.html" class="hover:text-brand-gold transition-colors" data-i18n="legal.terms_title">Conditions d'Utilisation & Service Légal</a>
-          <a href="about.html" class="hover:text-brand-gold transition-colors" data-i18n="nav.about">À propos</a>
-          <a href="contact.html" class="hover:text-brand-gold transition-colors" data-i18n="nav.contact">Contact</a>
+          <a href="privacy.html" class="hover:text-brand-gold transition-colors" data-i18n="legal.privacy_title">سياسة الخصوصية وحماية المعطيات الشخصية</a>
+          <a href="terms.html" class="hover:text-brand-gold transition-colors" data-i18n="legal.terms_title">شروط الاستخدام والخدمة القانونية</a>
+          <a href="about.html" class="hover:text-brand-gold transition-colors" data-i18n="nav.about">من أنا</a>
+          <a href="contact.html" class="hover:text-brand-gold transition-colors" data-i18n="nav.contact">اتصل بي</a>
         </div>
         <div class="text-center md:text-right rtl:md:text-left text-[11px] text-gray-400">
-          <span data-i18n="legal.footer_rights">© 2026 Hicham Edd. Tous droits réservés. Devis & Facture Légale Maroc.</span>
+          <span data-i18n="legal.footer_rights">جميع الحقوق محفوظة. Devis و Facture قانونية فالمغرب.</span>
         </div>
       </div>
 
-      <!-- Social Media Icon Buttons (Pure Icons, No Text Names) -->
+      <!-- Social Media Icon Buttons -->
       <div class="pt-4 border-t border-brand-border/40 flex items-center justify-center flex-wrap gap-3">
         <a href="https://www.facebook.com/profile.php?id=61592426761611" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-brand-surface hover:bg-brand-gold hover:text-black text-gray-400 border border-brand-border hover:border-brand-gold flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Facebook" title="Facebook">
           <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -483,7 +686,213 @@
     <span class="hidden sm:inline">WhatsApp 06 53 34 25 03</span>
   </a>
 
+  <!-- INTERACTIVE OFFER SWITCHER + BILINGUAL WHATSAPP DYNAMIC MESSAGE -->
+  <script>
+    let currentOfferTab = 'offer1';
+
+    const offerMeta = {
+      darija: {
+        prefix: 'العرض المحدد حالياً:',
+        offer1: {
+          label: 'العرض الأول — العمل باليوم (الصيغة الشهرية)',
+          waMessage: 'سلام هشام، جيت من الموقع من العرض الأول: العمل باليوم (باقات الأيام الشهرية)، وبغيت نحجز أيام عمل.'
+        },
+        offer2: {
+          label: 'العرض الثاني — نظام الساعات',
+          waMessage: 'سلام هشام، جيت من الموقع من العرض الثاني: نظام الساعات (Hourly Rate)، وبغيت نبدا الخدمة.'
+        },
+        offer3: {
+          label: 'العرض الثالث — العروض المخصصة',
+          waMessage: 'سلام هشام، جيت من الموقع من العرض الثالث: العروض المخصصة (Custom Solutions)، وبغيت نناقش معاك عرض خاص لمشروعي.'
+        }
+      },
+      fr: {
+        prefix: 'Offre sélectionnée :',
+        offer1: {
+          label: 'Offre 1 — Travail à la journée (Forfaits Mensuels)',
+          waMessage: 'Bonjour Hicham, je viens du site web depuis l\'Offre 1 : Travail à la journée (Forfaits Mensuels), et je souhaite réserver des jours.'
+        },
+        offer2: {
+          label: 'Offre 2 — Facturation à l\'heure (Hourly Rate)',
+          waMessage: 'Bonjour Hicham, je viens du site web depuis l\'Offre 2 : Facturation à l\'heure (Hourly Rate), et je souhaite démarrer.'
+        },
+        offer3: {
+          label: 'Offre 3 — Solutions Sur Mesure (Custom)',
+          waMessage: 'Bonjour Hicham, je viens du site web depuis l\'Offre 3 : Solutions Sur Mesure, et je souhaite discuter d\'une offre adaptée à mon projet.'
+        }
+      }
+    };
+
+    function getActiveLangCode() {
+      return document.documentElement.lang === 'fr' ? 'fr' : 'darija';
+    }
+
+    function updateDynamicWhatsApp() {
+      const lang = getActiveLangCode();
+      const dict = offerMeta[lang] || offerMeta.darija;
+      const meta = dict[currentOfferTab];
+      if (!meta) return;
+
+      const subtitle = document.getElementById('dynamic-cta-subtitle');
+      const waBtn = document.getElementById('dynamic-whatsapp-cta');
+      if (subtitle) {
+        subtitle.innerHTML = dict.prefix + ' <span class="text-brand-gold font-bold">' + meta.label + '</span>';
+      }
+      if (waBtn) {
+        waBtn.href = 'https://wa.me/212653342503?text=' + encodeURIComponent(meta.waMessage);
+      }
+
+      // Also keep each panel's top WhatsApp button synced with current language
+      const b1 = document.getElementById('o1-top-wa');
+      const b2 = document.getElementById('o2-top-wa');
+      const b3 = document.getElementById('o3-top-wa');
+      if (b1) b1.href = 'https://wa.me/212653342503?text=' + encodeURIComponent(dict.offer1.waMessage);
+      if (b2) b2.href = 'https://wa.me/212653342503?text=' + encodeURIComponent(dict.offer2.waMessage);
+      if (b3) b3.href = 'https://wa.me/212653342503?text=' + encodeURIComponent(dict.offer3.waMessage);
+    }
+
+    function switchOffer(tabId) {
+      currentOfferTab = tabId;
+      document.querySelectorAll('.offer-tab-btn').forEach(btn => {
+        const isActive = btn.getAttribute('data-tab') === tabId;
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        if (isActive) {
+          btn.className = 'offer-tab-btn w-full py-3.5 sm:py-4 px-2 sm:px-6 rounded-xl text-xs sm:text-sm md:text-base font-extrabold transition-all duration-200 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 bg-brand-gold text-black shadow-lg shadow-brand-gold/20';
+        } else {
+          btn.className = 'offer-tab-btn w-full py-3.5 sm:py-4 px-2 sm:px-6 rounded-xl text-xs sm:text-sm md:text-base font-bold transition-all duration-200 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-gray-300 hover:text-white hover:bg-brand-card';
+        }
+      });
+
+      document.querySelectorAll('.offer-panel').forEach(panel => {
+        panel.classList.toggle('active', panel.id === 'panel-' + tabId);
+      });
+
+      updateDynamicWhatsApp();
+    }
+
+    // Watch language changes on <html lang="..."> triggered by main.js
+    const langObserver = new MutationObserver(() => {
+      updateDynamicWhatsApp();
+    });
+    langObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+    document.addEventListener('DOMContentLoaded', updateDynamicWhatsApp);
+
+    // Fallback mobile menu toggle if main.js is not loaded in standalone preview
+    if (typeof window.toggleMobileMenu !== 'function') {
+      window.toggleMobileMenu = function () {
+        const menu = document.getElementById('mobile-menu');
+        if (menu) menu.classList.toggle('hidden');
+      };
+    }
+  </script>
   <script src="assets/js/translations.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    // Standalone Canvas preview fallback when assets/js/main.js is not present
+    if (typeof window.toggleLanguage !== "function") {
+      let fallbackLang = "darija";
+      const fallbackDict = {
+        fr: {
+          dir: "ltr",
+          announcement: "🔥 Offre Spéciale : -30% de réduction ! Devis & Facture Légale Maroc",
+          nav: { home: "Accueil", services: "Services & Packs", portfolio: "Portfolio", blog: "Articles", about: "À propos", contact: "Contact", challenge: "Défi Créatif" },
+          legal: { privacy_title: "Politique de Confidentialité & Données", terms_title: "Conditions Générales", footer_rights: "© 2026 Hicham Edd. Tous droits réservés. Devis & Facture Légale Maroc." },
+          tarifs: {
+            page_badge: "Tarifs & Collaboration • Hicham Edd",
+            page_title: "Choisissez la formule adaptée à votre projet",
+            page_subtitle: "Trois formules claires et flexibles sans engagement — cliquez sur une offre pour afficher les détails et tarifs.",
+            tab1: "À la journée (Mensuel)",
+            tab2: "À l'heure (Hourly)",
+            tab3: "Sur mesure (Custom)",
+            o1_tag: "Offre 1 • Travail à la journée (Monthly Retainer Days)",
+            o1_title: "Forfaits Jours Mensuels Dédiés",
+            o1_desc: "Réservez des journées de travail mensuelles dédiées à vos projets avec une concentration totale et des tarifs préférentiels.",
+            o1_btn: "Réserver vos journées →",
+            o1_std_label: "Standard d'une journée de travail :",
+            o1_std_val: "1 journée = <strong class=\"text-white\">6,5 heures nettes</strong> de production focalisée (8h au total avec 1h30 de pause).",
+            o1_discount_badge: "-30%",
+            per_day: "/ jour",
+            o1_c1_title: "🎨 Pack Design Graphique",
+            o1_c1_price: "300 DH",
+            o1_c1_old: "430 DH",
+            o1_c1_save: "Économisez 130 DH/jour • Taux horaire net réel : ~46 DH/h",
+            o1_c1_desc: "Identités visuelles, posts réseaux sociaux, supports print, visuels publicitaires et bannières Ads.",
+            o1_c2_title: "🎬 Pack Montage & Création Vidéo",
+            o1_c2_price: "350 DH",
+            o1_c2_old: "500 DH",
+            o1_c2_save: "Économisez 150 DH/jour • Taux horaire net réel : ~53,8 DH/h",
+            o1_c2_desc: "Reels & TikTok, vidéos publicitaires, podcasts, motion design léger et montage vidéo.",
+            o1_tbl_title: "Simulation des forfaits mensuels courants",
+            o1_tbl_sub: "Jours travaillés par mois",
+            o1_th1: "Jours / mois", o1_th2: "Heures nettes", o1_th3: "Design (300 DH/j)", o1_th4: "Vidéo (350 DH/j)", o1_th5: "Pack Mixte", o1_th6: "Usage recommandé",
+            o1_r1_d: "2 Jours", o1_r1_h: "13,0 h", o1_r1_c1: "600 DH", o1_r1_c2: "700 DH", o1_r1_c3: "650 DH", o1_r1_n: "2 jours/mois : support régulier et tâches essentielles",
+            o1_r2_d: "4 Jours", o1_r2_h: "26,0 h", o1_r2_c1: "1 200 DH", o1_r2_c2: "1 400 DH", o1_r2_c3: "1 300 DH", o1_r2_n: "4 jours (1 j/semaine) : continuité régulière",
+            o1_r3_d: "5 Jours", o1_r3_h: "32,5 h", o1_r3_c1: "1 500 DH", o1_r3_c2: "1 750 DH", o1_r3_c3: "1 625 DH", o1_r3_n: "5 jours/mois : rythme de production soutenu",
+            o1_r4_d: "8 Jours", o1_r4_h: "52,0 h", o1_r4_c1: "2 400 DH", o1_r4_c2: "2 800 DH", o1_r4_c3: "2 600 DH", o1_r4_n: "8 jours (2 j/semaine) : accompagnement intensif quasi dédié",
+            o2_tag: "Offre 2 • Facturation à l'heure (Hourly Rate)",
+            o2_title: "Facturation à l'Heure",
+            o2_desc: "Une solution flexible pour les projets évolutifs : vous ne payez que les heures réellement travaillées, sans engagement.",
+            o2_btn: "Démarrer à l'heure →",
+            per_hour: "/ heure",
+            o2_t1_label: "Tranche 1", o2_t1_range: "De 1 à 25 heures", o2_t1_price: "80 DH",
+            o2_t1_desc: "Couvre les 25 premières heures mensuelles. Idéal pour les tâches rapides, le support continu et les retouches régulières.",
+            o2_t2_label: "Tranche 2", o2_t2_badge: "Tarif dégressif", o2_t2_price: "65 DH", o2_t2_unit: "/ heure (dès la 26e heure)",
+            o2_t2_desc: "Tarif préférentiel appliqué automatiquement dès la 26e heure : vous économisez immédiatement lorsque votre volume augmente.",
+            o2_tbl_title: "Simulation du coût mensuel", o2_tbl_sub: "Exemples de calcul transparents",
+            o2_th1: "Volume d'heures", o2_th2: "Tranche 1 (80 DH)", o2_th3: "Tranche 2 (65 DH)", o2_th4: "Total estimé", o2_th5: "Taux moyen réel", o2_th6: "Remarques & économies",
+            o2_r1_h: "10 heures", o2_r1_tot: "800 DH", o2_r1_avg: "80,0 DH/h", o2_r1_n: "Tâches légères et retouches ponctuelles",
+            o2_r2_h: "20 heures", o2_r2_tot: "1 600 DH", o2_r2_avg: "80,0 DH/h", o2_r2_n: "Accompagnement hebdomadaire (~5h/semaine)",
+            o2_r3_h: "25 heures", o2_r3_tot: "2 000 DH", o2_r3_avg: "80,0 DH/h", o2_r3_n: "Plafond de la tranche 1 (80 DH/h)",
+            o2_r4_h: "30 heures", o2_r4_tot: "2 325 DH", o2_r4_avg: "77,5 DH/h", o2_r4_n: "Économie : 5h facturées à 65 DH seulement",
+            o2_r5_h: "35 heures", o2_r5_tot: "2 650 DH", o2_r5_avg: "75,7 DH/h", o2_r5_n: "Économie : 10h facturées à 65 DH seulement",
+            o2_f1_t: "⚡ Flexibilité totale", o2_f1_d: "Contrôle à 100% de votre budget et du volume horaire chaque mois, sans minimum imposé.",
+            o2_f2_t: "📊 Suivi transparent", o2_f2_d: "Rapport détaillé documentant chaque tâche et le temps exact passé à la minute près.",
+            o2_f3_t: "🎯 Paiement au réel", o2_f3_d: "Vous ne réglez que le temps de production effectif ; zéro gaspillage.",
+            o3_tag: "Offre 3 • Solutions Sur Mesure (Custom Solutions)",
+            o3_title: "Solutions Créatives Sur Mesure",
+            o3_desc: "Des formules conçues selon vos besoins et votre budget — construisons ensemble un format 100% adapté à vos objectifs.",
+            o3_btn: "Demander une offre sur mesure →",
+            o3_m1_t: "📦 01. Projets Clés en Main (Project-Based)", o3_m1_b: "Forfait fixe",
+            o3_m1_d: "Accord préalable sur tous les livrables (identité complète, vidéo principale ou campagne) avec délai garanti et révisions incluses.",
+            o3_m2_t: "🔄 02. Accompagnement Mensuel (Monthly Retainer)", o3_m2_b: "Priorité continue",
+            o3_m2_d: "Livrables mensuels définis : mix équilibré entre posts réseaux sociaux, Reels et design continu avec point hebdomadaire.",
+            o3_m3_t: "🚀 03. Sprints Lancement & Événements", o3_m3_b: "Production intensive",
+            o3_m3_d: "Production rapide et intensive pour accompagner un lancement de produit, un événement majeur ou une campagne saisonnière.",
+            o3_m4_t: "💡 04. Conseil & Direction Artistique", o3_m4_b: "Supervision créative",
+            o3_m4_d: "Audit visuel, cohérence de marque et accompagnement de votre équipe via des sessions régulières.",
+            o3_proc_title: "Comment démarrer ? — Notre méthode",
+            o3_s1_k: "01 • Premier échange gratuit", o3_s1_t: "Prise de besoin", o3_s1_d: "Discussion directe sur WhatsApp ou appel rapide pour cadrer le projet, les objectifs et les livrables.",
+            o3_s2_k: "02 • Offre claire et détaillée", o3_s2_t: "Proposition & planning", o3_s2_d: "Envoi d'un devis détaillé précisant le périmètre, le budget adapté et le calendrier sans surprise.",
+            o3_s3_k: "03 • Livraison dans les délais", o3_s3_t: "Production & suivi", o3_s3_d: "Partage continu des maquettes et ajustements jusqu'à validation finale.",
+            cta_heading: "Prêt à démarrer ? Contactez-moi directement sur WhatsApp",
+            cta_wa_btn: "Contacter sur WhatsApp"
+          }
+        },
+        darija: {}
+      };
+      // Save initial Darija HTML on load
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        el.dataset.darijaHtml = el.innerHTML;
+      });
+      window.toggleLanguage = function () {
+        fallbackLang = fallbackLang === "fr" ? "darija" : "fr";
+        document.documentElement.lang = fallbackLang === "fr" ? "fr" : "ar";
+        document.documentElement.dir = fallbackLang === "fr" ? "ltr" : "rtl";
+        document.querySelectorAll(".current-lang-text").forEach(el => { el.innerText = fallbackLang === "fr" ? "الدارجة" : "Français"; });
+        document.querySelectorAll(".current-lang-flag").forEach(el => { el.innerText = fallbackLang === "fr" ? "🇲🇦" : "🇫🇷"; });
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+          if (fallbackLang === "darija") {
+            if (el.dataset.darijaHtml) el.innerHTML = el.dataset.darijaHtml;
+          } else {
+            const parts = el.getAttribute("data-i18n").split(".");
+            let val = fallbackDict.fr;
+            for (const p of parts) { val = val ? val[p] : undefined; }
+            if (val !== undefined) el.innerHTML = val;
+          }
+        });
+        updateDynamicWhatsApp();
+      };
+    }
+  </script>
 </body>
 </html>
